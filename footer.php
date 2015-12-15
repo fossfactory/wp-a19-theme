@@ -11,16 +11,227 @@
 
 ?>
 
-	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'article-19' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'article-19' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'article-19' ), 'article-19', '<a href="http://elvisbmartins.com.br/" rel="designer">elvisbmartins.com.br</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<!-- BEGIN NEWSLETTER RESPONSIVE SECTION -->
+    <div class="hidden-lg hidden-md hidden-sm section news-letter-desktop-box">
+      <div class="container">
+        <div class="row">
+            <h3 class="newsletter-custom-element newsletter-text-responsivo">Receba nosso boletim!</h3>
+          </div>
+        <div class="row">
+          <div class="col-md-12">
+            <form role="form" class="">
+              <div class="form-group newsletter-text">
+                <label class="control-label" for="exampleInputEmail1">Nome</label>
+                <input class="form-control" id="exampleInputEmail1" placeholder="NOME"
+                type="email">
+              </div>
+              <div class="form-group newsletter-text">
+                <label class="control-label" for="exampleInputPassword1">E-mail</label>
+                <input class="form-control" id="exampleInputPassword1" placeholder="E-MAIL"
+                type="password">
+              </div>
+              <button type="submit" class="btn btn-default">Assinar!</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- END NEWSLETTER RESPONSIVE SECTION -->
+<!-- BEGIN mapa-site SECTION -->
+                <div id="mapa-site">
+                    <div class="container hidden-xs">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <span class="footer-links">
+                                    <a href="#">Notícias</a>
+                                </span><br>
+                                <span class="footer-links">
+                                    <a href="#">Vídeos</a>
+                                </span><br>
+                                <span class="footer-links">
+                                    <a href="#">Imprensa</a>
+                                </span><br>
+                                <span class="footer-links">
+                                    <a href="#">Publicações</a>
+                                </span><br>
+                                <span class="footer-links">
+                                    <a href="#">Projetos</a>
+                                </span><br>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="footer-links">
+                                      <a href="#">Programas</a><br>
+                                </span>
+                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
+                                <h5>
+                                    <a href="#">Centro</a>
+                                </h5>
+                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
+                                <h5>
+                                    <a href="#">Proteção</a>
+                                </h5>
+                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
+                                <h5>
+                                    <a href="#">Acesso</a>
+                                </h5>
+                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
+                                <h5>
+                                    <a href="#">Direitos Digitais</a>
+                                </h5>
+                            </div>
+                            <div class="col-sm-3">
+                                <span class="footer-links">
+                                    <a href="#">Quem somos</a><br>
+                                </span>
+                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
+                                <h5>
+                                    <a href="#">A organização</a>
+                                </h5>
+                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
+                                <h5>
+                                    <a href="#">Missão</a>
+                                </h5>
+                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
+                                <h5>
+                                    <a href="#">Temas de Trabalho</a>
+                                </h5>
+                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
+                                <h5>
+                                    <a href="#">Projetos</a>
+                                </h5>
+                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
+                                <h5>
+                                    <a href="#">Transparência</a>
+                                </h5>
+                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
+                                <h5>
+                                    <a href="#">Conselho e equipe</a>
+                                </h5>
+                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
+                                <h5>
+                                    <a href="#">Perguntas &amp; Respostas</a>
+                                </h5>
+                            </div>
+                            <div class="col-sm-3">
+                                <span class="footer-links">
+                                    <a href="#">Contato</a><br>
+                                </span>
+<!--                                <span class="footer-links">
+                                    <a href="#">ARTIGO 19 na mídia</a>
+                                </span><br>-->
+                            </div>
+                            <div class="col-sm-2">
+                                <a><i class="fa fa-2x fa-fw text-warning fa-angle-double-up pull-left"></i></a>
+                                <span class="footer-links">
+                                    <a href="#">Topo</a>
+                                </span><br>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+<!--END mapa-site SECTION -->
+<!--BEGIN FOOTER SECTION -->
+                <footer class="section section-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <span class="footer-highlight">ARTIGO19 Brasil</span><br><br>
+                                <span class="footer-text"><i class="fa fa-1x fa-fw fa-map-marker text-inverse"></i>Edifício das Bandeiras Rua João Adolfo, 118 - conjunto 802 - São Paulo/SP</span><br>
+                                <span class="footer-text"><i class="fa fa-1x fa-fw fa-phone text-inverse"></i>+55 (11) 3057 0042</span><br>
+                                <span class="footer-text"><i class="fa fa-1x fa-fw fa-envelope text-inverse"></i> comunicacao (arroba) artigo19.org</span><br>
+                                <br><br>
+                            </div>
+                        </div>
+                                             
+                                <div class="row">
+                                    <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+                                        <a href="https://instagram.com/artigo19"><i class="fa fa-2x fa-fw fa-instagram text-inverse"></i></a>
+                                        <a href="https://twitter.com/artigo19"><i class="fa fa-2x fa-fw fa-twitter text-inverse"></i></a>
+                                        <a href="https://www.facebook.com/artigo19brasil"><i class="fa fa-2x fa-fw fa-facebook text-inverse"></i></a>
+                                        <a href="#RSS"><i class="fa fa-2x fa-fw text-inverse fa-rss-square"></i></a>
+
+                                  <br><br>
+                                   </div> 
+                                </div>
+                          <div class="row">                         
+                               <div class="col-md-12 hidden-xs">
+                                  <div class="text-left"><a href="http://creativecommons.org/licenses/by/3.0/br/"><img src="https://licensebuttons.net/l/by/3.0/br/80x15.png"></a><span class="copyright"> Licença: Creative Commons - 3.0.</span>
+                                  </div> 
+                                  <div class="text-right">
+                                        <a href="https://instagram.com/artigo19"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                                        <a href="https://twitter.com/artigo19"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                                        <a href="https://www.facebook.com/artigo19brasil"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                                        <a href="#"><i class="fa fa-3x fa-fw text-inverse fa-rss-square"></i></a>
+                                   </div>
+                                </div>
+                                  
+                          </div>
+                        </div>
+                              <!--  </div>
+                            </div>
+                        </div>-->
+                    </div>
+                </footer>
+
+
+<!-- BEGIN FOOTER NEWSLETTER DESKTOP -->
+<div id="footer-bar" class="section hidden-xs">
+    <div class="section hidden-xs">
+     <div id="footer-news-letter">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-12 text-center">
+    <p class="newsletter-custom-element newsletter-text text-center">Receba nosso boletim!</p>
+    <form role="form">
+                <input class="newsletter-custom-element text-center" type="text" placeholder="NOME">
+                <input class="newsletter-custom-element text-center" type="text" placeholder="E-MAIL">
+                <span class="newsletter-custom-element input-group-btn text-center">
+                  <a class="btn-news" type="submit">Assinar!</a>
+                </span>
+                </form>
+         </div>
+       </div>
+</div>
+              <div style=""><span class="button-close-footer fa fa-2x fa-times-circle-o text-inverse" onclick="$('#footer-bar').toggle();"></span></div>
+      </div>
+
+
+<!--
+<div id="footer-bar" class="section hidden-xs">
+     <div id="footer-news-letter">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-12 text-center">
+        <p class="newsletter-custom-element text-center newsletter-text">Receba nosso boletim!</p>
+        <form role="form">
+                <input class="newsletter-custom-element text-center" type="text" placeholder="NOME">
+                <input class="newsletter-custom-element text-center" type="text" placeholder="E-MAIL">
+                <span class="newsletter-custom-element input-group-btn text-center">
+                    <a class="btn-news" type="submit">Assinar!</a>
+                </span>
+                </form>
+
+      </div>
+
+     </div>
+        </div>
+      </div>
+
+    </div>
+-->
+
+<!-- FIM FOOTER NEWS LETTER para DESKTOP -->
+
+<!--
+            </div>
+        </div>
+  -->    
+
 
 <?php wp_footer(); ?>
 

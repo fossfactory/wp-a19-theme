@@ -21,30 +21,93 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'article-19' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+<div class="section-danger2">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-9 hidden-xs text-right space-correction2">
+                <a href="#"><i class="fa fa-2x fa-fw fa-instagram text-inverse"></i></a>
+                <a href="#"><i class="fa fa-2x fa-fw fa-twitter text-inverse"></i></a>
+                <a href="#"><i class="fa fa-2x fa-facebook fa-fw text-inverse"></i></a>
+                <a href="#"><i class="fa fa-2x fa-fw fa-rss-square text-inverse"></i></a>
+            </div>
+            <div class="col-md-3 hidden-xs hidden-sm hidden-md text-right space-correction">
+                <form role="form">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Digite um termo de busca">
+                            <span class="input-group-btn">
+                                <a class="btn btn-warning" type="submit">buscar</a>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--- end row -->
+    </div>
+</div>
+<div class="navbar navbar-default navbar-static-top">
+    <div class="container correction-nav">
+        <div class="navbar-header">
+                  <span class="hidden-xs hidden-sm navbar-logo-desktop"></span>
+                  <span class="hidden-lg hidden-md navbar-logo"></span>
+				<!-- < ?php
+				if ( is_front_page() && is_home() ) : ?>
+					<h1 class="site-title"><a href="< ?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="hidden-xs hidden-sm navbar-logo-desktop"><?php bloginfo( 'name' ); ?></a></h1>
+					<h1 class="site-title"><a href="< ?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="hidden-lg hidden-md navbar-logo"><?php bloginfo( 'name' ); ?></a></h1>
+				< ?php else : ?>
+					<p class="site-title"><a href="< ?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="hidden-xs hidden-sm navbar-logo-desktop"><span class="hidden-xs hidden-sm navbar-logo-desktop"></span>
+                  <span class="hidden-lg hidden-md navbar-logo"></span>< ?php bloginfo( 'name' ); ?></a></p>
+				    <p class="site-title"><a href="< ?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="hidden-lg hidden-md navbar-logo"><?php bloginfo( 'name' ); ?></a></p>
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+                < ?php
+				endif;
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'article-19' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+				$description = get_bloginfo( 'description', 'display' );
+				if ( $description || is_customize_preview() ) : ?>
+					<p class="site-description">< ?php echo $description; /* WPCS: xss ok. */ ?></p>
+				< ?php
+				endif; ?> -->
 
-	<div id="content" class="site-content">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+
+        <?php
+
+            $defaults = array(
+                'theme_location'  => '',
+                'menu'            => '',
+                'container'       => 'div',
+                'container_class' => '',
+                'container_id'    => '',
+                'menu_class'      => 'menu',
+                'menu_id'         => '',
+                'echo'            => true,
+                'fallback_cb'     => 'wp_page_menu',
+                'before'          => '',
+                'after'           => '',
+                'link_before'     => '',
+                'link_after'      => '',
+                'items_wrap'      => '<ul id="%1$s" class="nav navbar-nav navbar-right">%3$s</ul>',
+                'depth'           => 0,
+                'walker'          => ''
+            );
+
+            wp_nav_menu( $defaults );
+
+        ?>
+		
+	
+
+            
+        </div>
+    </div>
+</div>
+

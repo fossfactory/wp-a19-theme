@@ -115,9 +115,21 @@ add_action( 'widgets_init', 'article_19_widgets_init' );
  */
 function article_19_scripts() {
 	wp_enqueue_style( 'article-19-style', get_stylesheet_uri() );
+	
+	wp_enqueue_style( 'article-19-fonts', 'http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css' );	
 
+	wp_enqueue_style( 'article-19-main',  get_template_directory_uri() . '/css/main.css' );	
+
+	wp_enqueue_script( 'article-19-jquery', 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js', array(), '20151212', true );
+
+	wp_enqueue_script( 'article-19-boostrap', 'http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array(), '20151212', true );
+	
+
+
+	/*
+	 * Undescore.me
+	 */
 	wp_enqueue_script( 'article-19-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
 	wp_enqueue_script( 'article-19-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -155,4 +167,11 @@ require get_template_directory() . '/inc/jetpack.php';
 /*
 * Includes Congelado: PostTypes, MetaBoxes, Actions,
 */
-include dirname(__FILE__).'/includes/congelado-functions.php';
+include dirname(__FILE__) . '/inc/congelado-functions.php';
+
+
+
+
+
+
+
