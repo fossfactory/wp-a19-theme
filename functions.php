@@ -167,7 +167,7 @@ require get_template_directory() . '/inc/jetpack.php';
 /*
 * Includes Congelado: PostTypes, MetaBoxes, Actions,
 */
-include dirname(__FILE__) . '/inc/congelado-functions.php';
+include get_template_directory() . '/inc/congelado-functions.php';
 
 
 

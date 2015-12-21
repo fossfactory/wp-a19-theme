@@ -89,39 +89,38 @@ get_header(); ?>
 <div class="section hidden-xs">
     <div class="container">
         <div class="row destaque2">
-            <div class="col-md-4">
-                <img src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena1.jpg" class="img-responsive">
-                <h3>
-                    <a href="pagina.html">Monitoramento da Lei de Acesso à Informação Pública em 2014</a>
-                </h3>
-                <p class="a-black">
-                    <a href="pagina.html">Relatório que analisa a adequação de 51 órgãos públicos federais à Lei de Acesso à Informação com base em dados de 2014.</a>
-                </p>
-                <div class="date-news">01.10.2015</div>
-            </div>
-            <div class="col-md-4">
-                <img src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena3.jpg" class="img-responsive">
-                <h3>
-                    <a href="pagina.html">Tentativa de assassinato de blogueiro em Pernambuco reacende debate</a>
-                </h3>
-                <p class="a-black">
-                    <a href="pagina.html">Ed Soares foi atacado por dois homens quando retornava a sua residência,
-                      no município de Barreiros. Policia do estado investiga o caso.</a>
-                  </p>
-                  <div class="date-news">09.09.2015</div>
-              </div>
 
-              <div class="col-md-4">
-                <img src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena2.jpg" class="img-responsive">
+            <?php
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 3,
+                    'category_name' => 'noticias',
+                );
+                
+                $loop_carrousel = new WP_Query($args);
+                $count_banner = 0;
+
+
+                while ($loop_carrousel->have_posts()) :$loop_carrousel->the_post();
+                    $count_banner++;
+
+                    $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
+                ?>
+            <div class="col-md-4">
+                <img src="<?php echo $url_thumb ?>" class="img-responsive">
                 <h3>
-                    <a href="pagina.html">ONU escolhe seu primeiro relator sobre o direito à privacidade</a>
+                    <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
                 </h3>
                 <p class="a-black">
-                    <a href="pagina.html">Natural de Malta, Joseph Cannataci estará a frente da Relatoria Especial
-                        sobre o o Direito à Privacidade, criada em março deste ano.</a>
-                    </p>
-                    <div class="date-news">25.09.2015</div>
-                </div>
+                    <a href="<?php the_permalink() ?>"><?php echo substr(the_content(), 0, 100); ?></a>
+                </p>
+                <div class="date-news"><?php the_date( );  ?></div>
+            </div>
+            <?php
+                endwhile;
+                wp_reset_query();
+            ?> 
+
             </div>
         </div>
     </div>
