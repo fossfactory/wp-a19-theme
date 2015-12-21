@@ -14,169 +14,160 @@
 
 get_header(); ?>
 
-	
-        
+
+
 
 <!-- INICIO carrossel para DESKTOP -->
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="carroussel-a19" data-interval="3000" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <?php
+                            $args = array(
+                                'post_type' => 'post',
+                                'posts_per_page' => 4,
+                                'category_name' => 'noticias',
+                            );
+                            
+                            $loop_carrousel = new WP_Query($args);
+                            $count_banner = 0;
 
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div id="carroussel-a19" data-interval="3000" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
 
+                            while ($loop_carrousel->have_posts()) :$loop_carrousel->the_post();
+                                $count_banner++;
 
-                                <div class="item active">
-                                    <img src="http://localhost/article19/wp-content/uploads/2015/12/foto2_ultrawide.jpg">
+                                $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
+                                if( $count_banner == 1){
+                                    $active = "active";
+                                }else{
+                                    $active = " ";
+                                }
+                            ?>
+                            <div class="item <?php echo $active ?>">
+                                    <img src="<?php echo $url_thumb ?>">
 
-                                    <div class="carousel-text-banner hidden-sm hidden-xs">
-                                        <div class="carousel-caption">
-                                            <h2 class="text-center"><a href="#">Título completo de notícia em destaque: complemento de título (1)</a></h2>
-                                        </div>
+                                <div class="carousel-text-banner hidden-sm hidden-xs">
+                                    <div class="carousel-caption">
+                                        <h2 class="text-center"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
                                     </div>
-                                    <!-- BEGIN carrossel RESPONSIVE -->
-              					  <div class="box-carrossel-responsivo hidden-lg hidden-md">
-					                  <div class="carousel-caption-responsivo">
-              					      <h4 class="text-center"><a href="#">Título completo de notícia em destaque: complemento de título (1)</a></h4>
-					                 </div>
-					             </div>
-                                    <!-- END carrossel RESPONSIVE -->
                                 </div>
-
-
-                                <div class="item">
-                                    <img src="http://localhost/article19/wp-content/uploads/2015/12/foto1_ultrawide.jpg">
-                                    <div class="carousel-text-banner hidden-sm hidden-xs">
-                                        <div class="carousel-caption">
-                                            <h2 class="text-center"><a href="#">Título completo de notícia em destaque: complemento de título (2)</a></h2>
-                                        </div>
+                                <!-- BEGIN carrossel RESPONSIVE -->
+                                <div class="box-carrossel-responsivo hidden-lg hidden-md">
+                                    <div class="carousel-caption-responsivo">
+                                       <h4 class="text-center"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
                                     </div>
+                               </div>
+                               <!-- END carrossel RESPONSIVE -->
+                           </div>
 
-					<div class="box-carrossel-responsivo hidden-lg hidden-md">
-					  <div class="carousel-caption-responsivo">
-					    <h4 class="text-center"><a href="#">Título completo de notícia em destaque: complemento de título (2)</a></h4>
-					  </div>
-					 </div>
-
-                                </div>
-
-                                <div class="item">
-                                    <img src="http://localhost/article19/wp-content/uploads/2015/12/foto1_ultrawide.jpg">
-                                    <div class="carousel-text-banner hidden-sm hidden-xs">
-                                        <div class="carousel-caption">
-                                            <h2 class="text-center"><a href="#">Título completo de notícia em destaque: complemento de título (3)</a></h2>
-                                        </div>
-                                    </div>
-
-					<div class="box-carrossel-responsivo hidden-lg hidden-md">
-					  <div class="carousel-caption-responsivo">
-					    <h4 class="text-center"><a href="#">Título completo de notícia em destaque: complemento de título (3)</a></h4>
-					  </div>
-					 </div>
-
-                                </div>
-                                <!-- BEGIN Indicators -->
-                                <ol class="carousel-indicators hidden-sm hidden-xs">
-                                    <li data-target="#carroussel-a19" data-slide-to="0"></li>
-                                    <li data-target="#carroussel-a19" data-slide-to="1"></li>
-                                    <li data-target="#carroussel-a19" data-slide-to="2"></li>
-                                </ol>
-                                <a class="left carousel-control" href="#carroussel-a19" data-slide="prev"><i class="icon-prev fa fa-5x fa-angle-left"></i></a>
-                                <a class="right carousel-control" href="#carroussel-a19" data-slide="next"><i class="icon-next fa fa-5x fa-angle-right"></i></a>
-                            </div>
-
-
-
-                        </div>
+                            <?php
+                                endwhile;
+                                wp_reset_query();
+                            ?>  
+                           <!-- BEGIN Indicators -->
+                           <ol class="carousel-indicators hidden-sm hidden-xs">
+                            <?php 
+                                for ($i = 0; $i < $count_banner; $i++) {
+                            ?>
+                                <li data-target="#carroussel-a19" data-slide-to="<?php echo $i ?>"></li>
+                            <?php
+                                }
+                            ?>
+                          </ol>
+                        <a class="left carousel-control" href="#carroussel-a19" data-slide="prev"><i class="icon-prev fa fa-5x fa-angle-left"></i></a>
+                        <a class="right carousel-control" href="#carroussel-a19" data-slide="next"><i class="icon-next fa fa-5x fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 </BR>
 <!-- FIM carrossel para DESKTOP -->
 <!-- BEGIN SECONDARY HIGHLIGHTS DESKTOP SECTION -->
-            <div class="section hidden-xs">
-                <div class="container">
-                    <div class="row destaque2">
-                        <div class="col-md-4">
-                            <img src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena1.jpg" class="img-responsive">
-                            <h3>
-                                <a href="pagina.html">Monitoramento da Lei de Acesso à Informação Pública em 2014</a>
-                            </h3>
-                            <p class="a-black">
-                                <a href="pagina.html">Relatório que analisa a adequação de 51 órgãos públicos federais à Lei de Acesso à Informação com base em dados de 2014.</a>
-                            </p>
-                            <div class="date-news">01.10.2015</div>
-                        </div>
-                        <div class="col-md-4">
-                            <img src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena3.jpg" class="img-responsive">
-                            <h3>
-                                <a href="pagina.html">Tentativa de assassinato de blogueiro em Pernambuco reacende debate</a>
-                            </h3>
-                            <p class="a-black">
-                                <a href="pagina.html">Ed Soares foi atacado por dois homens quando retornava a sua residência,
-              no município de Barreiros. Policia do estado investiga o caso.</a>
-                            </p>
-                            <div class="date-news">09.09.2015</div>
-                        </div>
+<div class="section hidden-xs">
+    <div class="container">
+        <div class="row destaque2">
+            <div class="col-md-4">
+                <img src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena1.jpg" class="img-responsive">
+                <h3>
+                    <a href="pagina.html">Monitoramento da Lei de Acesso à Informação Pública em 2014</a>
+                </h3>
+                <p class="a-black">
+                    <a href="pagina.html">Relatório que analisa a adequação de 51 órgãos públicos federais à Lei de Acesso à Informação com base em dados de 2014.</a>
+                </p>
+                <div class="date-news">01.10.2015</div>
+            </div>
+            <div class="col-md-4">
+                <img src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena3.jpg" class="img-responsive">
+                <h3>
+                    <a href="pagina.html">Tentativa de assassinato de blogueiro em Pernambuco reacende debate</a>
+                </h3>
+                <p class="a-black">
+                    <a href="pagina.html">Ed Soares foi atacado por dois homens quando retornava a sua residência,
+                      no município de Barreiros. Policia do estado investiga o caso.</a>
+                  </p>
+                  <div class="date-news">09.09.2015</div>
+              </div>
 
-                        <div class="col-md-4">
-                            <img src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena2.jpg" class="img-responsive">
-                            <h3>
-                                <a href="pagina.html">ONU escolhe seu primeiro relator sobre o direito à privacidade</a>
-                            </h3>
-                            <p class="a-black">
-                                <a href="pagina.html">Natural de Malta, Joseph Cannataci estará a frente da Relatoria Especial
-                sobre o o Direito à Privacidade, criada em março deste ano.</a>
-                            </p>
-                            <div class="date-news">25.09.2015</div>
-                        </div>
-                    </div>
+              <div class="col-md-4">
+                <img src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena2.jpg" class="img-responsive">
+                <h3>
+                    <a href="pagina.html">ONU escolhe seu primeiro relator sobre o direito à privacidade</a>
+                </h3>
+                <p class="a-black">
+                    <a href="pagina.html">Natural de Malta, Joseph Cannataci estará a frente da Relatoria Especial
+                        sobre o o Direito à Privacidade, criada em março deste ano.</a>
+                    </p>
+                    <div class="date-news">25.09.2015</div>
                 </div>
             </div>
-<!-- END SECONDARY HIGHLIGHT DESKTOP SECTION -->
-<!-- BEGIN SECONDARY HIGHLIGHT RESPONSIVE SECTION -->
-            <div class="section hidden-lg hidden-md">
-              <div class="container">
-                  <div class="row">
-                        <div class="col-md-3 title-box">
-                           <ul class="media-list">
-                                <li>
-                                  <!-- <div class="media-body">-->
-                                        <a href="#"><img class="media_secondary_responsive" src="http://localhost/article19/wp-content/uploads/2015/12/secondary_highlight_responsive_1.jpg"></a>
+        </div>
+    </div>
+    <!-- END SECONDARY HIGHLIGHT DESKTOP SECTION -->
+    <!-- BEGIN SECONDARY HIGHLIGHT RESPONSIVE SECTION -->
+    <div class="section hidden-lg hidden-md">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-3 title-box">
+             <ul class="media-list">
+                <li>
+                  <!-- <div class="media-body">-->
+                  <a href="#"><img class="media_secondary_responsive" src="http://localhost/article19/wp-content/uploads/2015/12/secondary_highlight_responsive_1.jpg"></a>
 
-                                        <a href="#"><span class="media-secondary-heading-h4 text-danger">Monitoramento da Lei de Acesso à Informação Pública em 2014</span></a>
+                  <a href="#"><span class="media-secondary-heading-h4 text-danger">Monitoramento da Lei de Acesso à Informação Pública em 2014</span></a>
 
-                                        <p class="secondary_hg_responsive_date a-black">01.10.2015</p>
-                                        <p class="secondary_hg_responsive a-black">Relatório que analisa a adequação de 51 órgãos públicos federais à Lei de Acesso à Informação com base em dados de 2014.</p>
-                                   <!-- </div>-->
-                                </li>
-                                <hr></hr>
-                                <li>
-                                  <!-- <div class="media-body">-->
-                                        <a href="#"><img class="media_secondary_responsive" src="http://localhost/article19/wp-content/uploads/2015/12/secondary_highlight_responsive_2.jpg"></a>
+                  <p class="secondary_hg_responsive_date a-black">01.10.2015</p>
+                  <p class="secondary_hg_responsive a-black">Relatório que analisa a adequação de 51 órgãos públicos federais à Lei de Acesso à Informação com base em dados de 2014.</p>
+                  <!-- </div>-->
+              </li>
+              <hr></hr>
+              <li>
+                  <!-- <div class="media-body">-->
+                  <a href="#"><img class="media_secondary_responsive" src="http://localhost/article19/wp-content/uploads/2015/12/secondary_highlight_responsive_2.jpg"></a>
 
-                                        <a href="#"><span class="media-secondary-heading-h4 text-danger">Tentativa de assassinato de blogueiro em Pernambuco reacende debate</a></span>
-                                        <p class="secondary_hg_responsive_date">09.09.2015</p>
-                                        <p class="secondary_hg_responsive">Ed Soares foi atacado por dois homens quando retornava a sua residência,
-              no município de Barreiros. Policia do estado investiga o caso.</p>
-                                   <!-- </div>-->
-                                </li>
-                               <hr></hr>
-                                <li>
-                                   <!-- <div class="media-body">-->
-                                        <a href="#"><img class="media_secondary_responsive" src="http://localhost/article19/wp-content/uploads/2015/12/secondary_highlight_responsive_3.jpg"></a>
-                                        <a href="#"><span class="media-secondary-heading-h4 text-danger">ONU escolhe seu primeiro relator sobre o direito à privacidade</span></a>
-                                        <p class="secondary_hg_responsive_date">25.09.2015</p>
-                                        <p class="secondary_hg_responsive">Natural de Malta, Joseph Cannataci estará a frente da Relatoria Especial sobre o o Direito à Privacidade, criada em março deste ano.</p>
-                                   <!-- </div>-->
-                                </li>
-                                <hr></hr>
-                            </ul>
-                        </div>
-            </div>
-          </div>
-            </div>  
+                  <a href="#"><span class="media-secondary-heading-h4 text-danger">Tentativa de assassinato de blogueiro em Pernambuco reacende debate</a></span>
+                  <p class="secondary_hg_responsive_date">09.09.2015</p>
+                  <p class="secondary_hg_responsive">Ed Soares foi atacado por dois homens quando retornava a sua residência,
+                      no município de Barreiros. Policia do estado investiga o caso.</p>
+                      <!-- </div>-->
+                  </li>
+                  <hr></hr>
+                  <li>
+                     <!-- <div class="media-body">-->
+                     <a href="#"><img class="media_secondary_responsive" src="http://localhost/article19/wp-content/uploads/2015/12/secondary_highlight_responsive_3.jpg"></a>
+                     <a href="#"><span class="media-secondary-heading-h4 text-danger">ONU escolhe seu primeiro relator sobre o direito à privacidade</span></a>
+                     <p class="secondary_hg_responsive_date">25.09.2015</p>
+                     <p class="secondary_hg_responsive">Natural de Malta, Joseph Cannataci estará a frente da Relatoria Especial sobre o o Direito à Privacidade, criada em março deste ano.</p>
+                     <!-- </div>-->
+                 </li>
+                 <hr></hr>
+             </ul>
+         </div>
+     </div>
+ </div>
+</div>  
 <!-- END SECONDARY HIGHLIGHT RESPONSIVE SECTION -->
 <!-- OLD BEGIN SECONDARY HIGHLIGHT RESPONSIVE SECTION
             <div class="section hidden-md hidden-lg">
@@ -199,8 +190,8 @@ get_header(); ?>
                             <p class="a-black"><span class="">31.09.2015</span>
                                Ed Soares foi atacado por dois homens quando retornava a sua residência,
               no município de Barreiros. Policia do estado investiga o caso.
-                            </p>-->
-                        <!--    <div class="date-news">09.09.2015</div>-->
+          </p>-->
+          <!--    <div class="date-news">09.09.2015</div>-->
 <!-- OLD                        </div>
                         <hr>
 
@@ -217,29 +208,29 @@ get_header(); ?>
                     <hr>
                 </div>
             </div>-->
-<!-- END SECONDARY HIGHLIGHT RESPONSIVE SECTION -->
-<!-- INICIO Destaque eventual para DESKTOP -->
-    <div class="section hidden-xs">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <a href="#" class=""><img src="http://localhost/article19/wp-content/uploads/2015/12/2015_destaque_eventual_desktop_1140x200.png" class="img-responsive"></a>
-          </div>
+            <!-- END SECONDARY HIGHLIGHT RESPONSIVE SECTION -->
+            <!-- INICIO Destaque eventual para DESKTOP -->
+            <div class="section hidden-xs">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <a href="#" class=""><img src="http://localhost/article19/wp-content/uploads/2015/12/2015_destaque_eventual_desktop_1140x200.png" class="img-responsive"></a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
-<!-- FIM Destaque eventual para DESKTOP -->
-<!-- INICIO Destaque eventual para responsivo -->
+    <!-- FIM Destaque eventual para DESKTOP -->
+    <!-- INICIO Destaque eventual para responsivo -->
     <div class="section hidden-lg hidden-md hidden-sm">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <a href="#" class=""><img src="http://localhost/article19/wp-content/uploads/2015/12/2015_destaque_eventual_responsivo_730x480.png" class="img-responsive"></a>
-          </div>
         </div>
-      </div>
     </div>
+</div>
+</div>
 <!--- FIM Destaque eventual para responsivo --->
 <!--- INICIO sessão VIDEOS --->
     <div class="section">
@@ -281,109 +272,109 @@ get_header(); ?>
 
 <!--- FIM sessão VIDEOS --->
 <!-- BEGIN Publicacoes SECTION -->
-            <div class="section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 title-box">
-                            <h3>
-                                <b>
-                                    <a href="categoria.html">PUBLICAÇÕES</a>
-                                </b>
-                            </h3>
-                            <div class="box-publicacoes">
-                                <ul class="media-list">
-                                    <li class="media">
-                                        <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
-                                        <div class="media-body">
-                                            <h3 class="media-heading text-danger">
-                                                <a href="pagina.html">Monitoramento da Lei de Acesso à Informação Pública em 2014</a>
-                                            </h3>
-                                        </div>
-                                    </li>
-                                    <li class="media">
-                                        <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
-                                        <div class="media-body">
-                                            <h3 class="media-heading text-danger">
-                                                <a href="pagina.html">Violações à Liberdade de Expressão – Relatório Anual 2015</a>
-                                            </h3>
-                                        </div>
-                                    </li>
-                                    <li class="media">
-                                        <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
-                                        <div class="media-body">
-                                            <h3 class="media-heading text-danger">
-                                                <a href="pagina.html">Violações à Liberdade de Expressão – Relatório Anual 2016</a>
-                                            </h3>
-                                        </div>
-                                    </li>
-                                    <li class="media">
-                                        <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
-                                        <div class="media-body">
-                                            <h3 class="media-heading text-danger">
-                                                <a href="pagina.html">Violações à Liberdade de Expressão – Relatório Anual 2017</a>
-                                            </h3>
-                                        </div>
-                                    </li>
-                                    <li class="media">
-                                        <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
-                                        <div class="media-body">
-                                            <h3 class="media-heading text-danger">
-                                                <a href="pagina.html">Violações à Liberdade de Expressão – Relatório Anual 2018</a>
-                                            </h3>
-                                        </div>
-                                    </li>
-                                </ul>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 title-box">
+                <h3>
+                    <b>
+                        <a href="categoria.html">PUBLICAÇÕES</a>
+                    </b>
+                </h3>
+                <div class="box-publicacoes">
+                    <ul class="media-list">
+                        <li class="media">
+                            <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
+                            <div class="media-body">
+                                <h3 class="media-heading text-danger">
+                                    <a href="pagina.html">Monitoramento da Lei de Acesso à Informação Pública em 2014</a>
+                                </h3>
                             </div>
-                        </div>
-<!-- END PUBLICACOES SECTION -->
-<!-- BEGIN IMPRENSA SECTION -->
-                        <div class="col-md-3 title-box">
-                            <h3>
-                                <b>
-                                    <a href="categoria.html">ARTIGO19 NA MÍDIA</a>
-                                </b>
-                            </h3>
-                            <ul class="media-list">
-                                <li class="media">
-                                    <a class="pull-left" href="#"><img class="media-object" src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena9_na_imprensa1.jpg" height="64" width="64"></a>
-                                    <div class="media-body">
-                                        <a href="#"><h4 class="media-heading text-danger">
-                    Entidades denunciam à OEA casos de abuso policial durante manifestações
-                  </h4></a>
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <a class="pull-left" href="#"><img class="media-object" src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena9_na_imprensa2.jpg" height="64" width="64"></a>
-                                    <div class="media-body">
-                                        <a href="#"><h4 class="media-heading text-danger">Os abusos policiais durante os protestos no Brasil chegam ao cenário
-                    internacional</h4></a>
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <a class="pull-left" href="#"><img class="media-object" src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena9_na_imprensa3.jpg" height="64" width="64"></a>
-                                    <div class="media-body">
-                                        <a href="#"><h4 class="media-heading text-danger">Brasil é acusado na OEA de violar direitos humanos em protestos</h4></a>
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <a class="pull-left" href="#"><img class="media-object" src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena9_na_imprensa3.jpg" height="64" width="64"></a>
-                                    <div class="media-body">
-                                        <a href="#"><h4 class="media-heading text-danger">Brasil é acusado na OEA de violar direitos humanos em protestos</h4></a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-<!--END IMPRENSA SECTION -->
-<!-- BEGIN FORMS SECTION -->
-                        <div class="col-md-3">
-                				<h3><br> </h3>
-                            <a href="#"><img src="http://localhost/article19/wp-content/uploads/2015/12/2015_banner_horizontal_640x400.png" class="img-responsive"></a><br>
-                            <a href="#"><img src="http://localhost/article19/wp-content/uploads/2015/12/2015_banner_horizontal_640x400-2.png" class="img-responsive"></a>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="media">
+                            <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
+                            <div class="media-body">
+                                <h3 class="media-heading text-danger">
+                                    <a href="pagina.html">Violações à Liberdade de Expressão – Relatório Anual 2015</a>
+                                </h3>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
+                            <div class="media-body">
+                                <h3 class="media-heading text-danger">
+                                    <a href="pagina.html">Violações à Liberdade de Expressão – Relatório Anual 2016</a>
+                                </h3>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
+                            <div class="media-body">
+                                <h3 class="media-heading text-danger">
+                                    <a href="pagina.html">Violações à Liberdade de Expressão – Relatório Anual 2017</a>
+                                </h3>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
+                            <div class="media-body">
+                                <h3 class="media-heading text-danger">
+                                    <a href="pagina.html">Violações à Liberdade de Expressão – Relatório Anual 2018</a>
+                                </h3>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-<!-- END FORMS SECTION -->
+            <!-- END PUBLICACOES SECTION -->
+            <!-- BEGIN IMPRENSA SECTION -->
+            <div class="col-md-3 title-box">
+                <h3>
+                    <b>
+                        <a href="categoria.html">ARTIGO19 NA MÍDIA</a>
+                    </b>
+                </h3>
+                <ul class="media-list">
+                    <li class="media">
+                        <a class="pull-left" href="#"><img class="media-object" src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena9_na_imprensa1.jpg" height="64" width="64"></a>
+                        <div class="media-body">
+                            <a href="#"><h4 class="media-heading text-danger">
+                                Entidades denunciam à OEA casos de abuso policial durante manifestações
+                            </h4></a>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <a class="pull-left" href="#"><img class="media-object" src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena9_na_imprensa2.jpg" height="64" width="64"></a>
+                        <div class="media-body">
+                            <a href="#"><h4 class="media-heading text-danger">Os abusos policiais durante os protestos no Brasil chegam ao cenário
+                                internacional</h4></a>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <a class="pull-left" href="#"><img class="media-object" src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena9_na_imprensa3.jpg" height="64" width="64"></a>
+                            <div class="media-body">
+                                <a href="#"><h4 class="media-heading text-danger">Brasil é acusado na OEA de violar direitos humanos em protestos</h4></a>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <a class="pull-left" href="#"><img class="media-object" src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena9_na_imprensa3.jpg" height="64" width="64"></a>
+                            <div class="media-body">
+                                <a href="#"><h4 class="media-heading text-danger">Brasil é acusado na OEA de violar direitos humanos em protestos</h4></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--END IMPRENSA SECTION -->
+                <!-- BEGIN FORMS SECTION -->
+                <div class="col-md-3">
+                    <h3><br> </h3>
+                    <a href="#"><img src="http://localhost/article19/wp-content/uploads/2015/12/2015_banner_horizontal_640x400.png" class="img-responsive"></a><br>
+                    <a href="#"><img src="http://localhost/article19/wp-content/uploads/2015/12/2015_banner_horizontal_640x400-2.png" class="img-responsive"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END FORMS SECTION -->
 <!--- INICIO sessão PROJETO --->
     <div class="section">
       <div class="container">
@@ -426,6 +417,6 @@ get_header(); ?>
         </div>
       </div>
     </div>
-<!-- END PROJETO SECTION -->
-<?php
-get_footer();
+    <!-- END PROJETO SECTION -->
+    <?php
+    get_footer();
