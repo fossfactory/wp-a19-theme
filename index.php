@@ -25,64 +25,64 @@ get_header(); ?>
                 <div id="carroussel-a19" data-interval="3000" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <?php
-                            $args = array(
-                                'post_type' => 'post',
-                                'posts_per_page' => 4,
-                                'category_name' => 'noticias',
+                        $args = array(
+                            'post_type' => 'post',
+                            'posts_per_page' => 4,
+                            'category_name' => 'noticias',
                             );
-                            
-                            $loop_carrousel = new WP_Query($args);
-                            $count_banner = 0;
+
+                        $loop_carrousel = new WP_Query($args);
+                        $count_banner = 0;
 
 
-                            while ($loop_carrousel->have_posts()) :$loop_carrousel->the_post();
-                                $count_banner++;
+                        while ($loop_carrousel->have_posts()) :$loop_carrousel->the_post();
+                        $count_banner++;
 
-                                $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
-                                if( $count_banner == 1){
-                                    $active = "active";
-                                }else{
-                                    $active = " ";
-                                }
-                            ?>
-                            <div class="item <?php echo $active ?>">
-                                    <img src="<?php echo $url_thumb ?>">
+                        $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
+                        if( $count_banner == 1){
+                            $active = "active";
+                        }else{
+                            $active = " ";
+                        }
+                        ?>
+                        <div class="item <?php echo $active ?>">
+                            <img src="<?php echo $url_thumb ?>">
 
-                                <div class="carousel-text-banner hidden-sm hidden-xs">
-                                    <div class="carousel-caption">
-                                        <h2 class="text-center"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-                                    </div>
+                            <div class="carousel-text-banner hidden-sm hidden-xs">
+                                <div class="carousel-caption">
+                                    <h2 class="text-center"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
                                 </div>
-                                <!-- BEGIN carrossel RESPONSIVE -->
-                                <div class="box-carrossel-responsivo hidden-lg hidden-md">
-                                    <div class="carousel-caption-responsivo">
-                                       <h4 class="text-center"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
-                                    </div>
-                               </div>
-                               <!-- END carrossel RESPONSIVE -->
-                           </div>
+                            </div>
+                            <!-- BEGIN carrossel RESPONSIVE -->
+                            <div class="box-carrossel-responsivo hidden-lg hidden-md">
+                                <div class="carousel-caption-responsivo">
+                                 <h4 class="text-center"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+                             </div>
+                         </div>
+                         <!-- END carrossel RESPONSIVE -->
+                     </div>
 
-                            <?php
-                                endwhile;
-                                wp_reset_query();
-                            ?>  
-                           <!-- BEGIN Indicators -->
-                           <ol class="carousel-indicators hidden-sm hidden-xs">
-                            <?php 
-                                for ($i = 0; $i < $count_banner; $i++) {
+                     <?php
+                     endwhile;
+                     wp_reset_query();
+                     ?>  
+                     <!-- BEGIN Indicators -->
+                     <ol class="carousel-indicators hidden-sm hidden-xs">
+                        <?php 
+                        for ($i = 0; $i < $count_banner; $i++) {
                             ?>
-                                <li data-target="#carroussel-a19" data-slide-to="<?php echo $i ?>"></li>
+                            <li data-target="#carroussel-a19" data-slide-to="<?php echo $i ?>"></li>
                             <?php
-                                }
-                            ?>
-                          </ol>
-                        <a class="left carousel-control" href="#carroussel-a19" data-slide="prev"><i class="icon-prev fa fa-5x fa-angle-left"></i></a>
-                        <a class="right carousel-control" href="#carroussel-a19" data-slide="next"><i class="icon-next fa fa-5x fa-angle-right"></i></a>
-                    </div>
+                        }
+                        ?>
+                    </ol>
+                    <a class="left carousel-control" href="#carroussel-a19" data-slide="prev"><i class="icon-prev fa fa-5x fa-angle-left"></i></a>
+                    <a class="right carousel-control" href="#carroussel-a19" data-slide="next"><i class="icon-next fa fa-5x fa-angle-right"></i></a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </BR>
 <!-- FIM carrossel para DESKTOP -->
 <!-- BEGIN SECONDARY HIGHLIGHTS DESKTOP SECTION -->
@@ -91,21 +91,21 @@ get_header(); ?>
         <div class="row destaque2">
 
             <?php
-                $args = array(
-                    'post_type' => 'post',
-                    'posts_per_page' => 3,
-                    'category_name' => 'noticias',
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 3,
+                'category_name' => 'noticias',
                 );
-                
-                $loop_carrousel = new WP_Query($args);
-                $count_banner = 0;
+
+            $loop_carrousel = new WP_Query($args);
+            $count_banner = 0;
 
 
-                while ($loop_carrousel->have_posts()) :$loop_carrousel->the_post();
-                    $count_banner++;
+            while ($loop_carrousel->have_posts()) :$loop_carrousel->the_post();
+            $count_banner++;
 
-                    $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
-                ?>
+            $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
+            ?>
             <div class="col-md-4">
                 <img src="<?php echo $url_thumb ?>" class="img-responsive">
                 <h3>
@@ -117,117 +117,76 @@ get_header(); ?>
                 <div class="date-news"><?php the_date( );  ?></div>
             </div>
             <?php
-                endwhile;
-                wp_reset_query();
+            endwhile;
+            wp_reset_query();
             ?> 
 
-            </div>
         </div>
     </div>
-    <!-- END SECONDARY HIGHLIGHT DESKTOP SECTION -->
-    <!-- BEGIN SECONDARY HIGHLIGHT RESPONSIVE SECTION -->
-    <div class="section hidden-lg hidden-md">
-      <div class="container">
-          <div class="row">
-            <div class="col-md-3 title-box">
-             <ul class="media-list">
-                <li>
+</div>
+<!-- END SECONDARY HIGHLIGHT DESKTOP SECTION -->
+<!-- BEGIN SECONDARY HIGHLIGHT RESPONSIVE SECTION -->
+<div class="section hidden-lg hidden-md">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-3 title-box">
+           <ul class="media-list">
+              <?php
+              $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 3,
+                'category_name' => 'noticias',
+                );
+
+              $loop_carrousel = new WP_Query($args);
+              $count_banner = 0;
+
+
+              while ($loop_carrousel->have_posts()) :$loop_carrousel->the_post();
+              $count_banner++;
+
+              $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
+              ?>
+              <li>
                   <!-- <div class="media-body">-->
-                  <a href="#"><img class="media_secondary_responsive" src="http://localhost/article19/wp-content/uploads/2015/12/secondary_highlight_responsive_1.jpg"></a>
+                  <a href="<?php the_permalink() ?>"><img class="media_secondary_responsive" src="<?php echo $url_thumb ?>"></a>
 
-                  <a href="#"><span class="media-secondary-heading-h4 text-danger">Monitoramento da Lei de Acesso à Informação Pública em 2014</span></a>
+                  <a href="<?php the_permalink() ?>"><span class="media-secondary-heading-h4 text-danger">Monitoramento da Lei de Acesso à Informação Pública em 2014</span></a>
 
-                  <p class="secondary_hg_responsive_date a-black">01.10.2015</p>
-                  <p class="secondary_hg_responsive a-black">Relatório que analisa a adequação de 51 órgãos públicos federais à Lei de Acesso à Informação com base em dados de 2014.</p>
+                  <p class="secondary_hg_responsive_date a-black"><?php the_title() ?></p>
+                  <p class="secondary_hg_responsive a-black"><?php echo substr(the_content(), 0, 100); ?></p>
                   <!-- </div>-->
               </li>
               <hr></hr>
-              <li>
-                  <!-- <div class="media-body">-->
-                  <a href="#"><img class="media_secondary_responsive" src="http://localhost/article19/wp-content/uploads/2015/12/secondary_highlight_responsive_2.jpg"></a>
-
-                  <a href="#"><span class="media-secondary-heading-h4 text-danger">Tentativa de assassinato de blogueiro em Pernambuco reacende debate</a></span>
-                  <p class="secondary_hg_responsive_date">09.09.2015</p>
-                  <p class="secondary_hg_responsive">Ed Soares foi atacado por dois homens quando retornava a sua residência,
-                      no município de Barreiros. Policia do estado investiga o caso.</p>
-                      <!-- </div>-->
-                  </li>
-                  <hr></hr>
-                  <li>
-                     <!-- <div class="media-body">-->
-                     <a href="#"><img class="media_secondary_responsive" src="http://localhost/article19/wp-content/uploads/2015/12/secondary_highlight_responsive_3.jpg"></a>
-                     <a href="#"><span class="media-secondary-heading-h4 text-danger">ONU escolhe seu primeiro relator sobre o direito à privacidade</span></a>
-                     <p class="secondary_hg_responsive_date">25.09.2015</p>
-                     <p class="secondary_hg_responsive">Natural de Malta, Joseph Cannataci estará a frente da Relatoria Especial sobre o o Direito à Privacidade, criada em março deste ano.</p>
-                     <!-- </div>-->
-                 </li>
-                 <hr></hr>
-             </ul>
-         </div>
-     </div>
- </div>
+              <?php
+              endwhile;
+              wp_reset_query();
+              ?> 
+          </ul>
+      </div>
+  </div>
+</div>
 </div>  
-<!-- END SECONDARY HIGHLIGHT RESPONSIVE SECTION -->
-<!-- OLD BEGIN SECONDARY HIGHLIGHT RESPONSIVE SECTION
-            <div class="section hidden-md hidden-lg">
-                <div class="container">
-                    <div class="row destaque2">
-                      <hr>
-                        <div class="col-md-3">
-                            <h3>
-                                <a href="pagina.html">Monitoramento da Lei de Acesso à Informação Pública em 2014</a>
-                            </h3>
-                            <p class="a-black"><span class="">01.10.2015</span>
-                            Relatório que analisa a adequação de 51 órgãos públicos federais à Lei de Acesso à Informação com base em dados de 2014.
-                            </p>
-                        </div>
-                        <hr>
-                        <div class="col-md-4">
-                            <h3>
-                                <a href="pagina.html">Tentativa de assassinato de blogueiro em Pernambuco reacende debate</a>
-                            </h3>
-                            <p class="a-black"><span class="">31.09.2015</span>
-                               Ed Soares foi atacado por dois homens quando retornava a sua residência,
-              no município de Barreiros. Policia do estado investiga o caso.
-          </p>-->
-          <!--    <div class="date-news">09.09.2015</div>-->
-<!-- OLD                        </div>
-                        <hr>
 
-                        <div class="col-md-4">
-                            <h3>
-                                <a href="pagina.html">ONU escolhe seu primeiro relator sobre o direito à privacidade</a>
-                            </h3>
-                            <p class="a-black"><span class="">31.09.2015</span>
-                            Natural de Malta, Joseph Cannataci estará a frente da Relatoria Especial
-                sobre o o Direito à Privacidade, criada em março deste ano.
-                            </p>
-                        </div>
-                    </div>
-                    <hr>
-                </div>
-            </div>-->
-            <!-- END SECONDARY HIGHLIGHT RESPONSIVE SECTION -->
-            <!-- INICIO Destaque eventual para DESKTOP -->
-            <div class="section hidden-xs">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-12">
-                    <a href="#" class=""><img src="http://localhost/article19/wp-content/uploads/2015/12/2015_destaque_eventual_desktop_1140x200.png" class="img-responsive"></a>
-                </div>
+<div class="section hidden-xs">
+   <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#" class=""><img src="http://localhost/article19/wp-content/uploads/2015/12/2015_destaque_eventual_desktop_1140x200.png" class="img-responsive"></a>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- FIM Destaque eventual para DESKTOP -->
-    <!-- INICIO Destaque eventual para responsivo -->
-    <div class="section hidden-lg hidden-md hidden-sm">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <a href="#" class=""><img src="http://localhost/article19/wp-content/uploads/2015/12/2015_destaque_eventual_responsivo_730x480.png" class="img-responsive"></a>
-        </div>
+<!-- FIM Destaque eventual para DESKTOP -->
+<!-- INICIO Destaque eventual para responsivo -->
+<div class="section hidden-lg hidden-md hidden-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <a href="#" class=""><img src="http://localhost/article19/wp-content/uploads/2015/12/2015_destaque_eventual_responsivo_730x480.png" class="img-responsive"></a>
     </div>
+</div>
 </div>
 </div>
 <!--- FIM Destaque eventual para responsivo --->
