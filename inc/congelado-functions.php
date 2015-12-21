@@ -3,8 +3,8 @@
 
 
 $autoinclude_folders = array(
-    // 'metaboxes/',
-    // 'post-types/',
+    'metaboxes/',
+    //'post-types/',
 );
 
 foreach ($autoinclude_folders as $folder) {
