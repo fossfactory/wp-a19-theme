@@ -156,13 +156,17 @@
 
           <div class="col-md-12 text-center">
     <p class="newsletter-custom-element newsletter-text text-center">Receba nosso boletim!</p>
-    <form role="form">
-                <input class="newsletter-custom-element text-center" type="text" placeholder="NOME">
-                <input class="newsletter-custom-element text-center" type="text" placeholder="E-MAIL">
-                <span class="newsletter-custom-element input-group-btn text-center">
-                  <a class="btn-news" type="submit">Assinar!</a>
-                </span>
-                </form>
+
+
+<form action="https://docs.google.com/forms/d/1MezS9Q4CN_PJKVXHO5RvAoWAOtJGdqch1mlgDxHzVHo/formResponse" method="POST" id="ss-form" target="iframe_news" onsubmit="">
+      <input type="text" name="entry.1248542274" value="" class="ss-q-short newsletter-custom-element text-center" id="entry_1248542274" dir="auto" aria-label="Nome  "   placeholder="NOME"title="">
+      <input type="text" name="entry.631883918" value="" class="ss-q-short newsletter-custom-element text-center" id="entry_631883918" dir="auto" aria-label="Email  " title=""  placeholder="E-MAIL">
+      <input type="submit" class="btn-news" value="Assinar!">
+</form>
+
+<iframe name="iframe_news" id="iframe_news"></iframe>
+
+
          </div>
        </div>
 </div>
