@@ -110,6 +110,63 @@ function article_19_widgets_init() {
 }
 add_action( 'widgets_init', 'article_19_widgets_init' );
 
+
+/**
+*
+* Banner home 1
+*/
+function article_19_widgets_home() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Banner Home1', 'article-19' ),
+		'id'            => 'banner-home1',
+		'description'   => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'article_19_widgets_home' );
+
+
+
+/**
+*
+* Banner home Lateral 1
+*/
+function article_19_widgets_bannher_l1() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Banner Home Lateral1', 'article-19' ),
+		'id'            => 'banner-home-lateral1',
+		'description'   => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'article_19_widgets_bannher_l1' );
+
+/**
+*
+* Banner home Lateral 1
+*/
+function article_19_widgets_bannher_l2() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Banner Home Lateral2', 'article-19' ),
+		'id'            => 'banner-home-lateral2',
+		'description'   => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'article_19_widgets_bannher_l2' );
+
+
+
+
 /**
  * Enqueue scripts and styles.
  */

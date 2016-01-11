@@ -109,7 +109,7 @@ get_header(); ?>
             <div class="col-md-4">
                 <img src="<?php echo $url_thumb ?>" class="img-responsive">
                 <h3>
-                    <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
+                    <a href="<?php the_permalink(); ?>"><?php the_title() ?></a>
                 </h3>
                 <p class="a-black">
                     <a href="<?php the_permalink() ?>"><?php echo substr(the_content(), 0, 100); ?></a>
@@ -167,16 +167,17 @@ get_header(); ?>
   </div>
 </div>
 </div>  
-
 <div class="section hidden-xs">
    <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <a href="#" class=""><img src="http://localhost/article19/wp-content/uploads/2015/12/2015_destaque_eventual_desktop_1140x200.png" class="img-responsive"></a>
+              <?php dynamic_sidebar( 'banner-home1' ); ?>
             </div>
         </div>
     </div>
 </div>
+
+
 
 <!-- FIM Destaque eventual para DESKTOP -->
 <!-- INICIO Destaque eventual para responsivo -->
@@ -184,45 +185,68 @@ get_header(); ?>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <a href="#" class=""><img src="http://localhost/article19/wp-content/uploads/2015/12/2015_destaque_eventual_responsivo_730x480.png" class="img-responsive"></a>
+        <?php dynamic_sidebar( 'banner-home1' ); ?>      
+      </div>
     </div>
+  </div>
 </div>
-</div>
-</div>
-<!--- FIM Destaque eventual para responsivo --->
-<!--- INICIO sessão VIDEOS --->
+<!-- FIM Destaque eventual para responsivo -->
+<!-- INICIO sessão VIDEOS -->
     <div class="section">
       <div class="container">
         <div class="row">
 
           <div class="col-md-12 box-orange-artigo">
-            <a href="#" class=""><img style="width:250px;" src="images/logo_artigo19tv.svg" class=""></a>
+            <a href="#" class="">
+            <img style="width:250px;" src="<?php bloginfo('template_url'); ?>/cat-img/4.svg" title="Artigo 19 na TV" alt="img"/>
           </div>
 
           <div class="col-md-12">
             <p></p>
           </div>
 
-          <div class="col-md-8">
-           <div class="embed-responsive embed-responsive-16by9">
-             <iframe src="https://www.youtube.com/embed/aQU-NVuV_EQ" 
-		allowfullscreen="" frameborder="0"></iframe>
-            </div>
-	  </div>
+           <?php
+              $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 3,
+                'category_name' => 'artigo19tv',
+              );
 
-          <div class="col-md-4">
+              $loop_tv = new WP_Query($args);
+              $primeiro_item = 1;
 
-           <div class="embed-responsive embed-responsive-16by9 hidden-sm hidden-xs">
-             <iframe src="https://www.youtube.com/embed/aQU-NVuV_EQ" 
-		allowfullscreen="" frameborder="0"></iframe>
-            </div>
-		<p></p>
-           <div class="embed-responsive embed-responsive-16by9 hidden-sm hidden-xs">
-             <iframe src="https://www.youtube.com/embed/aQU-NVuV_EQ" 
-		allowfullscreen="" frameborder="0"></iframe>
-            </div>
+              while ($loop_tv->have_posts()) :$loop_tv->the_post();
 
-	  </div>
+              $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
+              ?>
+              <?php
+
+                if($primeiro_item == 1){
+               ?>
+                  <div class="col-md-8">
+                       <div class="embed-responsive embed-responsive-16by9">
+                           <?php  the_content(); ?>
+                        </div>
+                </div>
+
+              <div class="col-md-4">
+               <?php
+                $primeiro_item = 2;
+               
+                } else{
+
+               ?>
+                <div class="embed-responsive embed-responsive-16by9 hidden-sm hidden-xs">
+                  <?php  the_content(); ?>
+                </div>
+                <p></p>
+
+              <?php
+              } 
+              endwhile;
+              wp_reset_query();
+              ?>
+	           </div>
 
         </div>
       </div>
@@ -241,46 +265,29 @@ get_header(); ?>
                 </h3>
                 <div class="box-publicacoes">
                     <ul class="media-list">
+                      <?php
+                        $args = array(
+                          'post_type' => 'post',
+                          'posts_per_page' => 5,
+                          'category_name' => 'publicacoes',
+                        );
+
+                        $loop_publicacoes = new WP_Query($args);
+
+                        while ($loop_publicacoes->have_posts()) :$loop_publicacoes->the_post();
+                        ?>
                         <li class="media">
                             <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
                             <div class="media-body">
                                 <h3 class="media-heading text-danger">
-                                    <a href="pagina.html">Monitoramento da Lei de Acesso à Informação Pública em 2014</a>
+                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                 </h3>
                             </div>
                         </li>
-                        <li class="media">
-                            <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
-                            <div class="media-body">
-                                <h3 class="media-heading text-danger">
-                                    <a href="pagina.html">Violações à Liberdade de Expressão – Relatório Anual 2015</a>
-                                </h3>
-                            </div>
-                        </li>
-                        <li class="media">
-                            <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
-                            <div class="media-body">
-                                <h3 class="media-heading text-danger">
-                                    <a href="pagina.html">Violações à Liberdade de Expressão – Relatório Anual 2016</a>
-                                </h3>
-                            </div>
-                        </li>
-                        <li class="media">
-                            <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
-                            <div class="media-body">
-                                <h3 class="media-heading text-danger">
-                                    <a href="pagina.html">Violações à Liberdade de Expressão – Relatório Anual 2017</a>
-                                </h3>
-                            </div>
-                        </li>
-                        <li class="media">
-                            <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
-                            <div class="media-body">
-                                <h3 class="media-heading text-danger">
-                                    <a href="pagina.html">Violações à Liberdade de Expressão – Relatório Anual 2018</a>
-                                </h3>
-                            </div>
-                        </li>
+                        <?php
+                        endwhile;
+                        wp_reset_query();
+                        ?>
                     </ul>
                 </div>
             </div>
@@ -293,47 +300,47 @@ get_header(); ?>
                     </b>
                 </h3>
                 <ul class="media-list">
-                    <li class="media">
-                        <a class="pull-left" href="#"><img class="media-object" src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena9_na_imprensa1.jpg" height="64" width="64"></a>
+                  <?php
+                        $args = array(
+                          'post_type' => 'post',
+                          'posts_per_page' => 4,
+                          'category_name' => 'artigo19namidia',
+                        );
+
+                        $loop_namidia = new WP_Query($args);
+
+                        while ($loop_namidia->have_posts()) :$loop_namidia->the_post();
+
+                        $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
+                  ?>
+                  <li class="media">
+                        <a class="pull-left" href="<?php the_permalink(); ?>">
+                          <img class="media-object" src="<?php echo $url_thumb; ?>" height="64" width="64"></a>
                         <div class="media-body">
-                            <a href="#"><h4 class="media-heading text-danger">
-                                Entidades denunciam à OEA casos de abuso policial durante manifestações
+                            <a href="<?php the_permalink(); ?>"><h4 class="media-heading text-danger">
+                               <?php the_title(); ?>
                             </h4></a>
                         </div>
                     </li>
-                    <li class="media">
-                        <a class="pull-left" href="#"><img class="media-object" src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena9_na_imprensa2.jpg" height="64" width="64"></a>
-                        <div class="media-body">
-                            <a href="#"><h4 class="media-heading text-danger">Os abusos policiais durante os protestos no Brasil chegam ao cenário
-                                internacional</h4></a>
-                            </div>
-                        </li>
-                        <li class="media">
-                            <a class="pull-left" href="#"><img class="media-object" src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena9_na_imprensa3.jpg" height="64" width="64"></a>
-                            <div class="media-body">
-                                <a href="#"><h4 class="media-heading text-danger">Brasil é acusado na OEA de violar direitos humanos em protestos</h4></a>
-                            </div>
-                        </li>
-                        <li class="media">
-                            <a class="pull-left" href="#"><img class="media-object" src="http://localhost/article19/wp-content/uploads/2015/12/foto_pequena9_na_imprensa3.jpg" height="64" width="64"></a>
-                            <div class="media-body">
-                                <a href="#"><h4 class="media-heading text-danger">Brasil é acusado na OEA de violar direitos humanos em protestos</h4></a>
-                            </div>
-                        </li>
+                  <?php
+                    endwhile;
+                    wp_reset_query();
+                  ?>
                     </ul>
                 </div>
                 <!--END IMPRENSA SECTION -->
                 <!-- BEGIN FORMS SECTION -->
                 <div class="col-md-3">
                     <h3><br> </h3>
-                    <a href="#"><img src="http://localhost/article19/wp-content/uploads/2015/12/2015_banner_horizontal_640x400.png" class="img-responsive"></a><br>
-                    <a href="#"><img src="http://localhost/article19/wp-content/uploads/2015/12/2015_banner_horizontal_640x400-2.png" class="img-responsive"></a>
-                </div>
+                    <?php dynamic_sidebar( 'banner-home-lateral1' ); ?>
+                    <br>  
+                    <?php dynamic_sidebar( 'banner-home-lateral2' ); ?>   
+               </div>
             </div>
         </div>
     </div>
     <!-- END FORMS SECTION -->
-<!--- INICIO sessão PROJETO --->
+<!-- INICIO sessão PROJETO -->
     <div class="section">
       <div class="container">
          <div class="row">
@@ -341,35 +348,31 @@ get_header(); ?>
              <h3><b><a href="categoria.html">PROJETOS</a></b></h3>
 	   </div>
           
-	<div class="col-md-12 title-box">                        
-          <div class="col-md-3-projetos">
-            <div class="min-3md-box-home">
-             <a href="#"><img src="images/2015_banner_site_400x240_peca01.png" class="img-responsive"></a>
-                <p class="title"><b>CENTRO DE REFERÊNCIA LEGAL</b></p>
-		<p>Descrição site. Descrição site. Descrição site. Descrição.&nbsp;</p>
-            </div>
-	  </div>
-          <div class="col-md-3-projetos">
-	    <div class="min-3md-box-home">
-              <a href="#"><img src="images/2015_banner_site_400x240_peca02.png" class="img-responsive"></a>
-               <p class="title"><b>LIBERDADE DIGITAL</b></p>
-	       <p>Descrição site. Descrição site. Descrição site. Descrição.&nbsp;</p>
-             </div>
-	  </div>
-          <div class="col-md-3-projetos">
-             <div class="min-3md-box-home">
-               <a href="#"><img src="images/2015_banner_site_400x240_peca03.png" class="img-responsive"></a>
-               <p class="title"><b>LIVRE ACESSO</b></p>
-	       <p>Descrição site. Descrição site. Descrição site. Descrição.&nbsp;</p>
-             </div>
-          </div>
-          <div class="col-md-3-projetos">
-	    <div class="min-3md-box-home">
-              <a href="#"><img src="images/2015_banner_site_400x240_peca04.png" class="img-responsive"></a>
-              <p class="title"><b>VIOLAÇÕES A LIBERDADE DE EXPRESSÃO</b></p>
-	       <p>Descrição site. Descrição site. Descrição site. Descrição.&nbsp;</p>
-            </div>
-	  </div>
+	<div class="col-md-12 title-box"> 
+        <?php
+                        $args = array(
+                          'post_type' => 'post',
+                          'posts_per_page' => 4,
+                          'category_name' => 'projetos',
+                        );
+
+                        $loop_projetos = new WP_Query($args);
+
+                        while ($loop_projetos->have_posts()) :$loop_projetos->the_post();
+
+                        $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
+                  ?>
+                  <div class="col-md-3-projetos">
+                          <div class="min-3md-box-home">
+                           <a href="<?php the_permalink(); ?>"><img src="<?php echo $url_thumb ?>" class="img-responsive"></a>
+                              <p class="title"><b><?php the_title(); ?></b></p>
+                              <p><?php the_excerpt(); ?></p>
+                          </div>
+                  </div>
+                  <?php
+                    endwhile;
+                    wp_reset_query();
+                  ?>
 	</div>
 	
         </div>
