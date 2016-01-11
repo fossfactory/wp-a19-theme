@@ -83,7 +83,7 @@
 
             $defaults = array(
                 'theme_location'  => '',
-                'menu'            => '',
+                'menu'            => 'menu-1',
                 'container'       => 'div',
                 'container_class' => '',
                 'container_id'    => '',
