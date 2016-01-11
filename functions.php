@@ -165,6 +165,41 @@ function article_19_widgets_bannher_l2() {
 add_action( 'widgets_init', 'article_19_widgets_bannher_l2' );
 
 
+/**
+*
+* Banner Single Lateral 1
+*/
+function article_19_widgets_bannher_single_l1() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Banner Single Lateral1', 'article-19' ),
+		'id'            => 'banner-single-lateral1',
+		'description'   => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'article_19_widgets_bannher_single_l1' );
+
+/**
+*
+* Banner home Lateral 1
+*/
+function article_19_widgets_bannher_single_l2() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Banner Single Lateral2', 'article-19' ),
+		'id'            => 'banner-single-lateral2',
+		'description'   => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'article_19_widgets_bannher_single_l2' );
+
+
 
 
 /**
