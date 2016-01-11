@@ -4316,6 +4316,17 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   line-height: 20px;
   text-align: right;
 }
+#mapa-site .navbar-nav > li {
+  display: block;
+  width:100%;
+  
+}
+#mapa-site .navbar-nav > li > a{
+  padding: 5px;
+  text-align: left;
+  
+}
+
 @media (max-width: 767px) {
     .navbar-fixed-top {
     position: relative;

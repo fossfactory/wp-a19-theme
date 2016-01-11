@@ -44,83 +44,53 @@
                     <div class="container hidden-xs">
                         <div class="row">
                             <div class="col-sm-2">
-                                <span class="footer-links">
-                                    <a href="#">Notícias</a>
-                                </span><br>
-                                <span class="footer-links">
-                                    <a href="#">Vídeos</a>
-                                </span><br>
-                                <span class="footer-links">
-                                    <a href="#">Imprensa</a>
-                                </span><br>
-                                <span class="footer-links">
-                                    <a href="#">Publicações</a>
-                                </span><br>
-                                <span class="footer-links">
-                                    <a href="#">Projetos</a>
-                                </span><br>
+
+                             <?php
+
+                                $defaults = array(
+                                    'theme_location'  => '',
+                                    'menu'            => 'menu-1',
+                                    'container'       => 'div',
+                                    'container_class' => '',
+                                    'container_id'    => '',
+                                    'menu_class'      => 'menu',
+                                    'menu_id'         => '',
+                                    'echo'            => true,
+                                    'fallback_cb'     => 'wp_page_menu',
+                                    'before'          => '',
+                                    'after'           => '',
+                                    'link_before'     => '',
+                                    'link_after'      => '',
+                                    'items_wrap'      => '<ul id="%1$s" class="nav navbar-nav footer-links">%3$s</ul>',
+                                    'depth'           => 0,
+                                    'walker'          => ''
+                                );
+
+                                wp_nav_menu( $defaults );
+
+                            ?>
+        
+
+
                             </div>
                             <div class="col-sm-2">
                                 <span class="footer-links">
                                       <a href="#">Programas</a><br>
                                 </span>
-                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
-                                <h5>
-                                    <a href="#">Centro</a>
-                                </h5>
-                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
-                                <h5>
-                                    <a href="#">Proteção</a>
-                                </h5>
-                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
-                                <h5>
-                                    <a href="#">Acesso</a>
-                                </h5>
-                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
-                                <h5>
-                                    <a href="#">Direitos Digitais</a>
-                                </h5>
+
+                                <?php wp_nav_menu( array( 'menu' => 'programas', 'link_before' => '<h5><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i>', 'link_after' => '</h5>' ) ); ?>
                             </div>
                             <div class="col-sm-3">
                                 <span class="footer-links">
                                     <a href="#">Quem somos</a><br>
                                 </span>
-                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
-                                <h5>
-                                    <a href="#">A organização</a>
-                                </h5>
-                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
-                                <h5>
-                                    <a href="#">Missão</a>
-                                </h5>
-                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
-                                <h5>
-                                    <a href="#">Temas de Trabalho</a>
-                                </h5>
-                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
-                                <h5>
-                                    <a href="#">Projetos</a>
-                                </h5>
-                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
-                                <h5>
-                                    <a href="#">Transparência</a>
-                                </h5>
-                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
-                                <h5>
-                                    <a href="#">Conselho e equipe</a>
-                                </h5>
-                                <a><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i></a>
-                                <h5>
-                                    <a href="#">Perguntas &amp; Respostas</a>
-                                </h5>
+                                <?php wp_nav_menu( array( 'menu' => 'quem-somos', 'link_before' => '<h5><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i>', 'link_after' => '</h5>' ) ); ?>
+
                             </div>
                             <div class="col-sm-3">
                                 <span class="footer-links">
-                                    <a href="#">Contato</a><br>
+                                    <?php wp_nav_menu( array( 'menu' => 'contato' ) ); ?>
                                 </span>
-<!--                                <span class="footer-links">
-                                    <a href="#">ARTIGO 19 na mídia</a>
-                                </span><br>-->
                             </div>
                             <div class="col-sm-2">
                                 <a><i class="fa fa-2x fa-fw text-warning fa-angle-double-up pull-left"></i></a>
