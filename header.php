@@ -35,9 +35,14 @@
                 <form role="form">
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Digite um termo de busca">
-                            <span class="input-group-btn">
-                                <a class="btn btn-warning" type="submit">buscar</a>
+ <span class="input-group-btn">
+                             <form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+                                <label for="s" class="assistive-text"><?php _e( 'Search', 'shape' ); ?></label>
+                                <input type="text" class="field form-control" name="s"placeholder="Digite um termo de busca" value="<?php echo esc_attr( get_search_query() ); ?>" id="s" placeholder="<?php esc_attr_e( 'Search &hellip;', 'shape' ); ?>" />
+                                <input type="submit" class="submit btn btn-warning" name="submit" id="searchsubmit" value="buscar" />
+                            </form>
+                          
+                             
                             </span>
                         </div>
                     </div>

@@ -3789,7 +3789,7 @@ tbody.collapse.in {
   position: relative;
   z-index: 2;
   float: left;
-  width: 100%;
+  width: 80%;
   margin-bottom: 0;
 }
 .input-group-lg > .form-control,
