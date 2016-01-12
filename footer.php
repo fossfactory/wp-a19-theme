@@ -118,11 +118,11 @@
                                              
                                 <div class="row">
                                     <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
-                                        <a href="https://instagram.com/artigo19"><i class="fa fa-2x fa-fw fa-instagram text-inverse"></i></a>
-                                        <a href="https://twitter.com/artigo19"><i class="fa fa-2x fa-fw fa-twitter text-inverse"></i></a>
-                                        <a href="https://www.facebook.com/artigo19brasil"><i class="fa fa-2x fa-fw fa-facebook text-inverse"></i></a>
-                                        <a href="#RSS"><i class="fa fa-2x fa-fw text-inverse fa-rss-square"></i></a>
-
+                                    <a target="_blank" href="https://www.instagram.com/artigo19/"><i class="fa fa-2x fa-fw fa-instagram text-inverse"></i></a>
+                                    <a target="_blank" href="http://twitter.com/artigo19"><i class="fa fa-2x fa-fw fa-twitter text-inverse"></i></a>
+                                    <a target="_blank" href="https://www.facebook.com/artigo19brasil"><i class="fa fa-2x fa-facebook fa-fw text-inverse"></i></a>
+                                    <a href="#"><i class="fa fa-2x fa-fw fa-rss-square text-inverse"></i></a>
+ 
                                   <br><br>
                                    </div> 
                                 </div>
@@ -131,9 +131,9 @@
                                   <div class="text-left"><a href="http://creativecommons.org/licenses/by/3.0/br/"><img src="https://licensebuttons.net/l/by/3.0/br/80x15.png"></a><span class="copyright"> Licença: Creative Commons - 3.0.</span>
                                   </div> 
                                   <div class="text-right">
-                                        <a href="https://instagram.com/artigo19"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-                                        <a href="https://twitter.com/artigo19"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-                                        <a href="https://www.facebook.com/artigo19brasil"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                                        <a target="_blank" href="https://www.instagram.com/artigo19/"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                                        <a target="_blank" href="http://twitter.com/artigo19"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                                        <a target="_blank" href="https://www.facebook.com/artigo19brasil"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
                                         <a href="#"><i class="fa fa-3x fa-fw text-inverse fa-rss-square"></i></a>
                                    </div>
                                 </div>
