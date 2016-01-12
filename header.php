@@ -55,8 +55,10 @@
 <div class="navbar navbar-default navbar-static-top">
     <div class="container correction-nav">
         <div class="navbar-header">
+                <a href="<?php home_url( '/' )  ?>">
                   <span class="hidden-xs hidden-sm navbar-logo-desktop"></span>
                   <span class="hidden-lg hidden-md navbar-logo"></span>
+                </a>
 				<!-- < ?php
 				if ( is_front_page() && is_home() ) : ?>
 					<h1 class="site-title"><a href="< ?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="hidden-xs hidden-sm navbar-logo-desktop"><?php bloginfo( 'name' ); ?></a></h1>
