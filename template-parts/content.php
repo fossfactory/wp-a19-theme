@@ -39,9 +39,9 @@ $post_id = get_the_id();
 			</header><!-- .entry-header -->
 
             <div style="float: right; margin-top:7px;">
-               <a href="#"><i class="fa fa-1x fa-fw fa-lg fa-whatsapp text-danger"></i></a>
-               <a href="#"><i class="fa fa-1x fa-fw fa-lg fa-twitter text-danger"></i></a>
-               <a href="#"><i class="fa fa-1x fa-facebook fa-fw fa-lg text-danger"></i></a>
+               <a href="whatsapp://send?text=Compartilhe a Artigo 19!" data-action="share/whatsapp/share"><i class="fa fa-1x fa-fw fa-lg fa-whatsapp text-danger"></i></a>
+               <a target="_blank" href="http://twitter.com/artigo19"><i class="fa fa-1x fa-fw fa-lg fa-twitter text-danger"></i></a>
+               <a target="_blank" href="https://www.facebook.com/artigo19brasil"><i class="fa fa-1x fa-facebook fa-fw fa-lg text-danger"></i></a>
                <a href="#"><i class="fa fa-1x fa-fw fa-google-plus-square fa-lg hub text-danger"></i></a>
             </div>
             <br>
