@@ -1372,6 +1372,11 @@ mark,
   background-color: #f8d9ac;
   padding: .2em;
 }
+
+.section-footer .text-right{
+  margin-top:-30px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -3948,7 +3953,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  fv
 }
 .nav > li.disabled > a {
   color: #777777;
@@ -5223,6 +5228,10 @@ a.thumbnail.active {
 .media-heading {
   margin-top: 0;
   margin-bottom: 5px;
+}
+
+.box-sidebar-publicacoes .media-list{
+      margin: 0px 5px;
 }
 .media-list {
   padding-left: 0;
@@ -7070,9 +7079,9 @@ margin-bottom: 1px;
 }
 
 .min-3md-box-home p.title, p{
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
 }
 
 .date-news {
@@ -7122,12 +7131,17 @@ margin-bottom: 1px;
 	padding: 15px 5px 5px 5px;
 }
 
-.box-publicacoes h3 {
+
+.box-publicacoes h3.media-heading {
 	font-size: 1.4em;
 }
 
 .box-publicacoes h3 a{
 	color: #686868;
+}
+
+.box-publicacoes ul{
+  margin:5px;
 }
 
 .box-sidebar-publicacoes h4 a{
@@ -7172,6 +7186,10 @@ margin-bottom: 1px;
     background:#3d3d3d;
 }
 
+
+#footer-news-letter .text-center{
+  margin-left: 15%;
+}
 .newsletter-custom-element {
 	display: inline-block;
 	max-height: 35px;

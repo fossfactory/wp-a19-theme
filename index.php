@@ -28,7 +28,7 @@ get_header(); ?>
                         $args = array(
                             'post_type' => 'post',
                             'posts_per_page' => 4,
-                            'category_name' => 'noticias',
+                            'category_name' => 'destaque',
                             );
 
                         $loop_carrousel = new WP_Query($args);
@@ -345,7 +345,7 @@ get_header(); ?>
       <div class="container">
          <div class="row">
            <div class="col-md-12 title-box">
-             <h3><b><a href="categoria.html">PROJETOS</a></b></h3>
+             <h3><b><a href="categoria.html">Áreas</a></b></h3>
 	   </div>
           
 	<div class="col-md-12 title-box"> 
@@ -353,7 +353,7 @@ get_header(); ?>
                         $args = array(
                           'post_type' => 'post',
                           'posts_per_page' => 4,
-                          'category_name' => 'projetos',
+                          'category_name' => 'areas',
                         );
 
                         $loop_projetos = new WP_Query($args);
