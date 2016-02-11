@@ -104,7 +104,7 @@
                 'link_after'      => '',
                 'items_wrap'      => '<ul id="%1$s" class="nav navbar-nav navbar-right">%3$s</ul>',
                 'depth'           => 0,
-                'walker'          => ''
+                'walker'          => new My_Sub_Menu()
             );
 
             wp_nav_menu( $defaults );

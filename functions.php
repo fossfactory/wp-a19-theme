@@ -125,8 +125,23 @@ function article_19_widgets_home() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Banner Home1 Responsivo', 'article-19' ),
+		'id'            => 'banner-home1-respon',
+		'description'   => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'article_19_widgets_home' );
+
+
+
+
+
 
 
 
@@ -295,6 +310,31 @@ require get_template_directory() . '/inc/jetpack.php';
 * Includes Congelado: PostTypes, MetaBoxes, Actions,
 */
 include get_template_directory() . '/inc/congelado-functions.php';
+
+
+class My_Sub_Menu extends Walker_Nav_Menu {
+  function start_lvl(&$output, $depth) {
+    $indent = str_repeat("\t", $depth);
+    $output .= "\n$indent<ul class=\"dropdown-menu\" role=\"menu\">\n";
+  }
+  function end_lvl(&$output, $depth) {
+    $indent = str_repeat("\t", $depth);
+    $output .= "$indent</ul>\n";
+  }
+}
+
+
+function change_submenu_class($menu) {  
+  $menu = preg_replace('/ class="menu-item /','/ class="dropdown menu-item  ',$menu);  
+  return $menu;  
+}  
+add_filter('wp_nav_menu','change_submenu_class');  
+
+
+function add_menuclass( $ulclass ) {
+  return preg_replace('/<a href="#"/', '<a class="dropdown-toggle fa fa-caret-down"  data-toggle="dropdown" role="button" aria-expanded="false"', $ulclass);
+}
+add_filter('wp_nav_menu','add_menuclass');
 
 
 

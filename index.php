@@ -114,7 +114,7 @@ get_header(); ?>
                 <p class="a-black">
                     <a href="<?php the_permalink() ?>"><?php echo substr(the_content(), 0, 100); ?></a>
                 </p>
-                <div class="date-news"><?php the_date( );  ?></div>
+                <div class="date-news"><?php echo get_the_date( 'd-m-Y'  ,$post->ID); ?></div>
             </div>
             <?php
             endwhile;
@@ -126,11 +126,11 @@ get_header(); ?>
 </div>
 <!-- END SECONDARY HIGHLIGHT DESKTOP SECTION -->
 <!-- BEGIN SECONDARY HIGHLIGHT RESPONSIVE SECTION -->
-<div class="section hidden-lg hidden-md">
-  <div class="container">
-      <div class="row">
-        <div class="col-md-3 title-box">
-           <ul class="media-list">
+ <div class="section hidden-lg hidden-md">
+              <div class="container">
+                  <div class="row">
+                        <div class="col-md-3 title-box">
+                           <ul class="media-list">
               <?php
               $args = array(
                 'post_type' => 'post',
@@ -153,7 +153,7 @@ get_header(); ?>
 
                   <a href="<?php the_permalink() ?>"><span class="media-secondary-heading-h4 text-danger">Monitoramento da Lei de Acesso à Informação Pública em 2014</span></a>
 
-                  <p class="secondary_hg_responsive_date a-black"><?php the_title() ?></p>
+                  <p class="secondary_hg_responsive_date a-black"><?php echo get_the_date( 'd-m-Y'  ,$post->ID); ?></p>
                   <p class="secondary_hg_responsive a-black"><?php echo substr(the_content(), 0, 100); ?></p>
                   <!-- </div>-->
               </li>
@@ -185,7 +185,7 @@ get_header(); ?>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <?php dynamic_sidebar( 'banner-home1' ); ?>      
+        <?php dynamic_sidebar( 'banner-home1-respon' ); ?>      
       </div>
     </div>
   </div>
