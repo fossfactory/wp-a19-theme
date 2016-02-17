@@ -7402,3 +7402,48 @@ margin-bottom: 1px;
       float: right;
     padding-left: 10px;
 }
+
+
+.ninja-forms-required-items{
+  display: none;
+}
+
+.text{
+  margin: 40px 0px;
+}
+.field-wrap {
+   width: 49%;
+   display: inline-block;
+}
+input[type="text"]{
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #d9d9d9;
+}
+
+.textarea-wrap, .submit-wrap{
+  width: 99%;
+}
+
+input[type="submit"]{
+    padding: 10px 20px;
+    border: 0px;
+    color: #fff;
+    background: #f50;
+    text-transform: uppercase;
+}
+
+textarea{
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  color: #666;
+}
+
+.checkbox-wrap label{
+    display: inline-block!important;
+    margin-left: 10px;
+}
+.checkbox-wrap input{
+  display: inline-block;
+  float: left;
+}
