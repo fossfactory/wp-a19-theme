@@ -166,7 +166,7 @@ $post_id = get_the_id();
                     $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
             ?>
                 <li class="media">
-	               <a class="pull-left" href="<?php the_permalink(); ?>"><img class="media-object" src="imagens_posts/capa-SITE-evento-SP.png" height="64" width="64"></a>
+	               <a class="pull-left" href="<?php the_permalink(); ?>"><img class="media-object" src="<?php echo $url_thumb; ?>" height="64" width="64"></a>
 	               <div class="media-body">
 	                  <h4 class="media-heading a-orange">
 	                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
