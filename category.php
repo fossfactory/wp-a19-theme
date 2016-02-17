@@ -47,7 +47,7 @@ get_header();
 
                $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
 
-               $content =  the_content();
+               $content =  the_excerpt();
         ?>
                <li class="media">
                 <a class="pull-left" href="<?php the_permalink(); ?>"><img class="media-object" src="<?php echo $url_thumb ?>" height="64" width="64"></a>
