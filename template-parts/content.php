@@ -176,7 +176,7 @@ $post_id = get_the_id();
 	               <p class="a-black">
 	               	<a href="<?php the_permalink(); ?>">
 	               	<?php 
-	               		$resumo = substr(the_content(), 150);
+	               		$resumo = substr( the_excerpt(), 150 );
 	               		echo $resumo;
 	               	?>
 	               </a>
