@@ -7470,3 +7470,28 @@ textarea{
   float: none;
   display: inline-block;
 }
+
+
+.comentario{
+  
+}
+
+.comentario label{
+      width: 7%;
+      margin-bottom: 10px;
+}
+.comentario input[type="text"],
+.comentario input[type="email"],
+.comentario input[type="url"] {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #d9d9d9;
+    width: 60%;
+    
+}
+
+.comentario textarea{
+    width: 68%;
+    margin-bottom: 10px;
+    display: block;
+}

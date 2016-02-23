@@ -84,17 +84,19 @@
             wp_reset_query();
           ?>
 	    </div>
+          <hr /> 
          <!-- BEGIN COMMENTS SECTION -->
-         <br>   
+         <div class="comentario">
+         
          <?php
 			
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+      			// If comments are open or we have at least one comment, load up the comment template.
+      			if ( comments_open() || get_comments_number() ) :
+      				comments_template();
+      			endif;
 
          ?>
-         <br>
+       </div>
          <!-- end comments section -->
       </div>
       <!-- FIM Notícias Relacionadas -->
