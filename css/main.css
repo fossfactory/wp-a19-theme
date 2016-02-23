@@ -7325,6 +7325,14 @@ margin-bottom: 1px;
     padding-top:10px;
     color: #ffffff;
 }
+
+.footer-links a:before{
+  display: none;
+}
+
+.footer-links a.dropdown-toggle{
+  font-weight: bold;
+}
 .footer-links > h4,
 .footer-links:hover,
 .footer-links:focus,
