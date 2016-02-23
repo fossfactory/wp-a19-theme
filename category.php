@@ -45,15 +45,16 @@ get_header();
         if ($query->have_posts()) {
                while ($query->have_posts()): $query->the_post(); 
 
-               $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
-
-               $content =  the_excerpt();
+               
+               $url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' );
+               
         ?>
                <li class="media">
-                <a class="pull-left" href="<?php the_permalink(); ?>"><img class="media-object" src="<?php echo $url_thumb ?>" height="64" width="64"></a>
+                <a class="pull-left" href="<?php the_permalink(); ?>"><img class="media-object" src="<?php echo $url_thumb[0] ?>" height="64" width="64"></a>
                 <div class="media-body">
                   <h4 class="media-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                  <p><a href="<?php the_permalink(); ?>"><?php echo substr( $content, 50); ?></a></p>
+                  <p class="data"><?php the_date();?></p>
+                  <p><a href="<?php the_permalink(); ?>"><?php echo the_excerpt(); ?></a></p>
                 </div>
               </li><hr>
 
