@@ -143,7 +143,7 @@
                                         <a target="_blank" href="https://www.instagram.com/artigo19/"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
                                         <a target="_blank" href="http://twitter.com/artigo19"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
                                         <a target="_blank" href="https://www.facebook.com/artigo19brasil"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-                                        <a href="#"><i class="fa fa-3x fa-fw text-inverse fa-rss-square"></i></a>
+                                        <a target="_blank" href="<?php bloginfo('rss2_url'); ?>"><i class="fa fa-3x fa-fw text-inverse fa-rss-square"></i></a>
                                    </div>
                                 </div>
                                   
