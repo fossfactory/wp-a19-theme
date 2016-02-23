@@ -47,10 +47,17 @@ get_header();
 
                
                $url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' );
+               if( empty( $url_thumb ) ){
+                  $url_thumb = get_template_directory_uri() . "/images/logo.png";
+               }else{
+                 $url_thumb = $url_thumb[0];
+               }
+
+               
                
         ?>
                <li class="media">
-                <a class="pull-left" href="<?php the_permalink(); ?>"><img class="media-object" src="<?php echo $url_thumb[0] ?>" height="64" width="64"></a>
+                <a class="pull-left" href="<?php the_permalink(); ?>"><img class="media-object" src="<?php echo $url_thumb ?>" height="64" width="64"></a>
                 <div class="media-body">
                   <h4 class="media-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                   <p class="data"><?php the_date();?></p>
