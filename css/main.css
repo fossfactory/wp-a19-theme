@@ -7431,6 +7431,7 @@ input[type="submit"]{
     color: #fff;
     background: #f50;
     text-transform: uppercase;
+    
 }
 
 textarea{
@@ -7446,4 +7447,13 @@ textarea{
 .checkbox-wrap input{
   display: inline-block;
   float: left;
+}
+.space-correction input[type="text"]{
+  float: none;
+  display: inline-block;
+  width: 60%;
+}
+.space-correction input[type="submit"]{
+  float: none;
+  display: inline-block;
 }

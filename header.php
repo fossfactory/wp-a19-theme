@@ -25,13 +25,13 @@
 <div class="section-danger2">
     <div class="container">
         <div class="row">
-        <div class="col-md-9 hidden-xs text-right space-correction2">
+        <div class="col-md-8 hidden-xs text-right space-correction2">
                 <a target="_blank" href="https://www.instagram.com/artigo19/"><i class="fa fa-2x fa-fw fa-instagram text-inverse"></i></a>
                 <a target="_blank" href="http://twitter.com/artigo19"><i class="fa fa-2x fa-fw fa-twitter text-inverse"></i></a>
                 <a target="_blank" href="https://www.facebook.com/artigo19brasil?_rdr=p"><i class="fa fa-2x fa-facebook fa-fw text-inverse"></i></a>
                 <a href="#"><i class="fa fa-2x fa-fw fa-rss-square text-inverse"></i></a>
             </div>
-            <div class="col-md-3 hidden-xs hidden-sm hidden-md text-right space-correction">
+            <div class="col-md-4 hidden-xs hidden-sm hidden-md text-right space-correction">
                 <form role="form">
                     <div class="form-group">
                         <div class="input-group">
