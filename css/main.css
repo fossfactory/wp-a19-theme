@@ -7326,6 +7326,14 @@ margin-bottom: 1px;
     color: #ffffff;
 }
 
+#mapa-site a:before{
+  display: none;
+}
+
+#mapa-site .sub-menu{
+  display: none!important;
+}
+
 .footer-links a:before{
   display: none;
 }
