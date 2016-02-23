@@ -7330,6 +7330,16 @@ margin-bottom: 1px;
   display: none;
 }
 
+#mapa-site a:hover{
+  background: none;
+}
+#mapa-site a h5{
+  background: none;
+  margin-left: -3px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 #mapa-site .sub-menu{
   display: none!important;
 }
