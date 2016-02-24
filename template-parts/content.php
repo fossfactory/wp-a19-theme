@@ -57,8 +57,7 @@ $post_id = get_the_id();
                <a href="#"><i class="fa fa-1x fa-fw fa-google-plus-square fa-lg hub text-danger"></i></a>
       
             </div>
-            <div style:"float:left; margin-top:9px; margin-bottom:2px;"><b>LINK:</b> <a class="barra-ferramentas_input"> <?php echo get_permalink(); ?>  </a>
-         </div>
+            <div style:"float:left; margin-top:9px; margin-bottom:2px;"><?php the_shortlink(); ?></div>
          <hr>
          <!-- INICIO Notícias Relacionadas -->
          <!-- <div class="title-box hidden-sm hidden-md">-->
