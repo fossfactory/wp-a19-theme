@@ -87,6 +87,7 @@ get_header();
              ?>
             </ul>
           </div>
+<!--          
           <div class="col-md-4">
             <div class="box-orange-artigo">
               <h3>Publicações</h3>
@@ -106,6 +107,79 @@ get_header();
               </ul>
               <hr>
             </div>
+-->
+         <div class="col-md-3 hidden-xs hidden-sm hidden-md">
+            <div class="box-orange-sidebar">
+            <h3>Últimas Notícias</h3>
+               </div>
+         <br>
+         <ul class="media-list">
+          <?php
+                    $args = array(
+                      'post_type' => 'post',
+                      'post__not_in' => array( $post_id ) ,
+                      'posts_per_page' => 4,
+                      'category_name' => $categoria_slug,
+                      
+                    );
+                    $loop_categoria = new WP_Query($args);
+                    while ($loop_categoria->have_posts()) :$loop_categoria->the_post();
+                    $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
+            ?>
+                <li class="media">
+                 <a class="pull-left" href="<?php the_permalink(); ?>"><img class="media-object" src="<?php echo $url_thumb; ?>" height="64" width="64"></a>
+                 <div class="media-body">
+                    <h4 class="media-heading a-orange">
+                       <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    </h4>
+                 </div>
+                 <br/>
+                 <p class="a-black">
+                 <?php 
+                    $resumo = substr( the_excerpt(), 150 );
+                    echo $resumo;
+                  ?>
+                 
+                 </p>
+              </li>
+          <?php
+            endwhile;
+            wp_reset_query();
+          ?>
+
+         </ul>
+         <!-- END SECTION ULTIMAS NOTICIAS -->
+         <!-- BEGIN SECTION PUBLICACOES-->
+         <div class="box-orange-sidebar hidden-xs hidden-sm hidden-md">
+            <h3>Publicações</h3>
+         </div>
+         <br>
+         <div class="box-sidebar-publicacoes hidden-xs hidden-sm hidden-md">
+            <ul class="media-list">
+              <?php
+                      $args = array(
+                        'post_type' => 'post',
+                        'posts_per_page' => 5,
+                        'category_name' => 'publicacoes',
+                      );
+                      $loop_categoria = new WP_Query($args);
+                      while ($loop_categoria->have_posts()) :$loop_categoria->the_post();
+                      $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
+              ?>
+                <li class="media">
+                    <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
+                    <div class="media-body">
+                       <h4 class="media-heading text-danger">
+                          <a href="<?php the_permalink(); ?>"><?php the_title();?></a>
+                       </h4>
+                    </div>
+                 </li>
+              <?php
+                endwhile;
+                wp_reset_query();
+              ?>
+            </ul>
+
             <?php dynamic_sidebar( 'banner-lista-categoria-lateral1' ); ?>
                         <hr> 
             <?php dynamic_sidebar( 'banner-lista-categoria-lateral2' ); ?> 
@@ -114,7 +188,6 @@ get_header();
         </div>
       </div>
     </div>
-
 
 
 
