@@ -60,7 +60,7 @@ get_header();
                 <a class="pull-left" href="<?php the_permalink(); ?>"><img class="media-object" src="<?php echo $url_thumb ?>" height="64" width="64"></a>
                 <div class="media-body">
                   <h4 class="media-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                  <p class="data"><?php the_date();?></p>
+                  <p class="data"><strong><?php the_date();?></strong></p>
                   <p><?php echo the_excerpt(); ?></p>
                   <p><a href="<?php the_permalink(); ?>">Leia mais</a></p>
                 </div>
