@@ -151,7 +151,7 @@ get_header(); ?>
                   <!-- <div class="media-body">-->
                   <a href="<?php the_permalink() ?>"><img class="media_secondary_responsive" src="<?php echo $url_thumb ?>"></a>
 
-                  <a href="<?php the_permalink() ?>"><span class="media-secondary-heading-h4 text-danger">Monitoramento da Lei de Acesso à Informação Pública em 2014</span></a>
+                  <a href="<?php the_permalink() ?>"><span class="media-secondary-heading-h4 text-danger"><?php the_title(); ?></a>
 
                   <p class="secondary_hg_responsive_date a-black"><?php echo get_the_date( 'd-m-Y'  ,$post->ID); ?></p>
                   <p class="secondary_hg_responsive a-black"><?php echo substr(the_content(), 0, 100); ?></p>
