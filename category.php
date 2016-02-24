@@ -61,7 +61,8 @@ get_header();
                 <div class="media-body">
                   <h4 class="media-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                   <p class="data"><?php the_date();?></p>
-                  <p><a href="<?php the_permalink(); ?>"><?php echo the_excerpt(); ?></a></p>
+                  <p><?php echo the_excerpt(); ?></p>
+                  <p><a href="<?php the_permalink(); ?>">Leia mais</a></p>
                 </div>
               </li><hr>
 
@@ -136,12 +137,11 @@ get_header();
                  </div>
                  <br/>
                  <p class="a-black">
-                  <a href="<?php the_permalink(); ?>">
-                  <?php 
+                 <?php 
                     $resumo = substr( the_excerpt(), 150 );
                     echo $resumo;
                   ?>
-                 </a>
+                 
                  </p>
               </li>
           <?php
@@ -189,8 +189,6 @@ get_header();
         </div>
       </div>
             </div>
-
-
 
 
 <?php
