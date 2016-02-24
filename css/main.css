@@ -7339,6 +7339,11 @@ margin-bottom: 1px;
   font-size: 14px;
   font-weight: bold;
   font-family: Lato;
+  -webkit-font-smoothing: auto;
+}
+
+li.dropdown a.dropdown-toggle {
+  margin-left: -6px;
 }
 
 #mapa-site .sub-menu{
