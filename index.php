@@ -197,7 +197,6 @@ get_header(); ?>
         <div class="row">
 
           <div class="col-md-12 box-orange-artigo">
-            <a href="#" class="">
             <img style="width:250px;" src="<?php bloginfo('template_url'); ?>/cat-img/4.svg" title="Artigo 19 na TV" alt="img"/>
           </div>
 
@@ -260,7 +259,7 @@ get_header(); ?>
             <div class="col-md-6 title-box">
                 <h3>
                     <b>
-                        <a href="categoria.html">PUBLICAÇÕES</a>
+                        PUBLICAÇÕES
                     </b>
                 </h3>
                 <div class="box-publicacoes">
@@ -296,7 +295,7 @@ get_header(); ?>
             <div class="col-md-3 title-box">
                 <h3>
                     <b>
-                        <a href="categoria.html">ARTIGO19 NA MÍDIA</a>
+                        NA MÍDIA
                     </b>
                 </h3>
                 <ul class="media-list">
@@ -345,7 +344,7 @@ get_header(); ?>
       <div class="container">
          <div class="row">
            <div class="col-md-12 title-box">
-             <h3><b><a href="categoria.html">Áreas</a></b></h3>
+             <h3><b>Projetos</b></h3>
 	   </div>
           
 	<div class="col-md-12 title-box"> 
