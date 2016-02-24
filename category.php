@@ -109,8 +109,8 @@ get_header();
               <hr>
             </div>
             -->
-             <div class="col-md-3 hidden-xs hidden-sm hidden-md">
-               <div class="box-orange-sidebar">
+             <div class="col-md-4 hidden-xs hidden-sm hidden-md">
+               <div class="box-orange-artigo">
             <h3>Últimas Notícias</h3>
                <div>
          <br>
