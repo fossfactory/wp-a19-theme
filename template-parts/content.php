@@ -129,7 +129,7 @@ $post_id = get_the_id();
 			        ?>
 			            <li>
 	                        <!-- <div class="media-body">-->
-	                        <a href="<?php the_permalink(); ?>"><img class="media_secondary_responsive" src="<?php echo $thumbnail; ?>"></a>
+	                        <a href="<?php the_permalink(); ?>"><img class="media_secondary_responsive" src="<?php echo $url_thumb; ?>"></a>
 	                        <a href="<?php the_permalink(); ?>"><span class="media-secondary-heading-h4 text-danger"><?php the_title( ); ?></span></a>
 	                        <p class="secondary_hg_responsive_date a-black"><?php the_date(); ?></p>
 	                        <!-- </div>-->
