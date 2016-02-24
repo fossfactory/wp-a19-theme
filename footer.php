@@ -58,7 +58,7 @@
 
                                 $defaults = array(
                                     'theme_location'  => '',
-                                    'menu'            => 'menu-1',
+                                    'menu'            => 'footer',
                                     'container'       => 'div',
                                     'container_class' => '',
                                     'container_id'    => '',
@@ -181,39 +181,6 @@
 </div>
               <div style=""><span class="button-close-footer fa fa-2x fa-times-circle-o text-inverse" onclick="$('#footer-bar').toggle();"></span></div>
       </div>
-
-
-<!--
-<div id="footer-bar" class="section hidden-xs">
-     <div id="footer-news-letter">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-md-12 text-center">
-        <p class="newsletter-custom-element text-center newsletter-text">Receba nosso boletim!</p>
-        <form role="form">
-                <input class="newsletter-custom-element text-center" type="text" placeholder="NOME">
-                <input class="newsletter-custom-element text-center" type="text" placeholder="E-MAIL">
-                <span class="newsletter-custom-element input-group-btn text-center">
-                    <a class="btn-news" type="submit">Assinar!</a>
-                </span>
-                </form>
-
-      </div>
-
-     </div>
-        </div>
-      </div>
-
-    </div>
--->
-
-<!-- FIM FOOTER NEWS LETTER para DESKTOP -->
-
-<!--
-            </div>
-        </div>
-  -->    
 
 
 <?php wp_footer(); ?>
