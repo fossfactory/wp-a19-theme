@@ -84,14 +84,14 @@
                             </div>
                             <div class="col-sm-2">
                                 <span class="footer-links">
-                                      Programas<br>
+                                      <a href="#">Programas</a><br>
                                 </span>
 
                                 <?php wp_nav_menu( array( 'menu' => 'programas', 'link_before' => '<h5><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i>', 'link_after' => '</h5>' ) ); ?>
                             </div>
                             <div class="col-sm-3">
                                 <span class="footer-links">
-                                    Quem somos<br>
+                                  <a href="#">Quem somos</a><br>
                                 </span>
                                 <?php wp_nav_menu( array( 'menu' => 'quem-somos', 'link_before' => '<h5><i class="fa fa-angle-right fa-fw fa-lg text-warning pull-left"></i>', 'link_after' => '</h5>' ) ); ?>
 
