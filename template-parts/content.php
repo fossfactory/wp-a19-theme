@@ -57,7 +57,7 @@ $post_id = get_the_id();
                <a href="#"><i class="fa fa-1x fa-fw fa-google-plus-square fa-lg hub text-danger"></i></a>
       
             </div>
-            <div style:"float:left; margin-top:9px; margin-bottom:2px;"><?php echo wp_get_shortlink(); ?></div>
+            <div style:"float:left; margin-top:9px; margin-bottom:2px;"><b>LINK: </b><?php echo wp_get_shortlink(); ?></div>
          <hr>
          <!-- INICIO Notícias Relacionadas -->
          <!-- <div class="title-box hidden-sm hidden-md">-->
@@ -148,7 +148,7 @@ $post_id = get_the_id();
       <!-- BEGIN SECTION ULTIMAS NOTICIAS -->
       <div class="col-md-3 hidden-xs hidden-sm hidden-md">
          <div class="box-orange-sidebar">
-            <h3 class=""><a href="">Últimas Notícias</a></h3>
+            <h3>Últimas Notícias</h3>
          </div>
          <br>
          <ul class="media-list">
