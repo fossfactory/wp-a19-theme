@@ -181,13 +181,6 @@ get_header();
                 wp_reset_query();
               ?>
             </ul>
-            <hr>
-         </div>
-                </div>
-              </div>
-            </div>
-<!-- fim da parte da coluna da direita -->
-
             <?php dynamic_sidebar( 'banner-lista-categoria-lateral1' ); ?>
                         <hr> 
             <?php dynamic_sidebar( 'banner-lista-categoria-lateral2' ); ?> 
