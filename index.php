@@ -344,7 +344,7 @@ get_header(); ?>
       <div class="container">
          <div class="row">
            <div class="col-md-12 title-box">
-             <h3><b>Projetos</b></h3>
+             <h3><b>PROJETOS</b></h3>
 	   </div>
           
 	<div class="col-md-12 title-box"> 
