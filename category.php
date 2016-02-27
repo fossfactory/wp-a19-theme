@@ -48,7 +48,7 @@ get_header();
                
                $url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' );
                if( empty( $url_thumb ) ){
-                  $url_thumb = get_template_directory_uri() . "/images/thumbnaillogo.png";
+                  $url_thumb = get_template_directory_uri() . "/cat-img/thumbnaillogo.png";
                }else{
                  $url_thumb = $url_thumb[0];
                }
