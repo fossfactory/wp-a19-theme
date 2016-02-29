@@ -23,7 +23,7 @@ get_header();
         array(
             'paged'         => $paged, 
             'category_name' => $category,
-            'order'         => 'asc',
+            'order'         => 'desc',
             'post_type'     => 'post',
             'post_status'   => 'publish',
             'posts_per_page' => 8,
