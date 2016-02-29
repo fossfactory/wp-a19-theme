@@ -363,10 +363,10 @@ get_header(); ?>
                   ?>
                   <div class="col-md-3-projetos">
                           <div class="min-3md-box-home">
-                           <a href="<?php the_permalink(); ?>"><img src="<?php echo $url_thumb ?>" class="img-responsive"></a>
+                           <img src="<?php echo $url_thumb ?>" class="img-responsive">
                               <p class="title areas"><b><?php the_title(); ?></b></p>
                               <BR>
-                              <p><?php the_excerpt(); ?></p>
+                              <p align="justify"><?php the_excerpt(); ?></p>
                           </div>
                   </div>
                   <?php
