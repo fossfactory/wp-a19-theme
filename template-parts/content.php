@@ -48,7 +48,9 @@ $post_id = get_the_id();
             <hr>
             </hr>
            		<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-float' ) ); ?>
-           		<?php the_content( ); ?>
+           		<div style="color: #333; font-size: 1.26em; letter-spacing: -0.02em; line-height: 1.45em; padding-bottom: 1.5em; align: justify;">
+           			<?php the_content( ); ?>
+           		</div>
             <hr>
             <div style="float:right; margin-top:2px; margin-bottom:1px;">
                <a href="whatsapp://send?text=Compartilhe a Artigo 19!" data-action="share/whatsapp/share"><i class="fa fa-1x fa-fw fa-lg fa-whatsapp text-danger"></i></a>
