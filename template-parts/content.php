@@ -40,8 +40,8 @@ $post_id = get_the_id();
 
             <div style="float: right; margin-top:7px;">
                <a href="whatsapp://send?text=Compartilhe a Artigo 19!" data-action="share/whatsapp/share"><i class="fa fa-1x fa-fw fa-lg fa-whatsapp text-danger"></i></a>
-               <a href="https://twitter.com/home/?status=<?php the_title();?> - <?php echo wp_get_shortlink();?> "title="Tweet this!"><i class="fa fa-1x fa-fw fa-lg fa-twitter text-danger"></i> Twitter</a>
-               <a href="https://www.facebook.com/sharer.php?u=<?php the_permalink();?> - <?php echo wp_get_shortlink();?> "title="Share on Facebook!"><i class="fa fa-1x fa-fw fa-lg fa-facebook"></i>  Facebook</a>
+               <a href="https://twitter.com/home/?status=<?php the_title();?> - <?php echo wp_get_shortlink();?> "title="Tweet this!"><i class="fa fa-1x fa-fw fa-lg fa-twitter text-danger"></i></a>
+               <a href="https://www.facebook.com/sharer.php?u=<?php the_permalink();?> - <?php echo wp_get_shortlink();?> "title="Share on Facebook!"><i class="fa fa-1x fa-fw fa-lg fa-facebook"></i></a>
             </div>
             <br>
             <hr>
@@ -52,6 +52,8 @@ $post_id = get_the_id();
             <hr>
             <div style="float:right; margin-top:2px; margin-bottom:1px;">
                <a href="whatsapp://send?text=Compartilhe a Artigo 19!" data-action="share/whatsapp/share"><i class="fa fa-1x fa-fw fa-lg fa-whatsapp text-danger"></i></a>
+               <a href="https://twitter.com/home/?status=<?php the_title();?> - <?php echo wp_get_shortlink();?> "title="Tweet this!"><i class="fa fa-1x fa-fw fa-lg fa-twitter text-danger"></i></a>
+               <a href="https://www.facebook.com/sharer.php?u=<?php the_permalink();?> - <?php echo wp_get_shortlink();?> "title="Share on Facebook!"><i class="fa fa-1x fa-fw fa-lg fa-facebook"></i></a>
          
             </div>
             <div style:"float:left; margin-top:9px; margin-bottom:2px;"><b>LINK: </b><?php echo wp_get_shortlink(); ?></div>
@@ -87,22 +89,7 @@ $post_id = get_the_id();
           ?>
 	    </div>
        <hr /> 
-         <!-- BEGIN COMMENTS SECTION -->
-         <div class="comentario">
-         
-         <?php
-			
-      			// If comments are open or we have at least one comment, load up the comment template.
-      			if ( comments_open() || get_comments_number() ) :
-      				comments_template();
-      			endif;
-
-         ?>
-       </div>
-         <!-- end comments section -->
-      </div>
-      <!-- FIM Notícias Relacionadas -->
-      <!-- BEGIN NOTICIAS RELACIONADAS RESPONSIVE SECTION -->
+             <!-- BEGIN NOTICIAS RELACIONADAS RESPONSIVE SECTION -->
       <div class="section hidden-lg hidden-md">
          <div class="container">
             <div class="row">
@@ -142,6 +129,22 @@ $post_id = get_the_id();
          </div>
       </div>
       <!-- END NOTICIAS RELACIONADAS RESPONSIVE SECTION -->
+         <!-- BEGIN COMMENTS SECTION -->
+         <div class="comentario">
+         
+         <?php
+			
+      			// If comments are open or we have at least one comment, load up the comment template.
+      			if ( comments_open() || get_comments_number() ) :
+      				comments_template();
+      			endif;
+
+         ?>
+       </div>
+         <!-- end comments section -->
+      </div>
+      <!-- FIM Notícias Relacionadas -->
+
       <!-- BEGIN SECTION ULTIMAS NOTICIAS -->
       <div class="col-md-3 hidden-xs hidden-sm hidden-md">
          <div class="box-orange-sidebar">
