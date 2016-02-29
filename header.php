@@ -55,7 +55,7 @@
 <div class="navbar navbar-default navbar-static-top">
     <div class="container correction-nav">
         <div class="navbar-header">
-                <a href="<?php home_url( '/' )  ?>">
+                <a href="/">
                   <span class="hidden-xs hidden-sm navbar-logo-desktop"></span>
                   <span class="hidden-lg hidden-md navbar-logo"></span>
                 </a>
