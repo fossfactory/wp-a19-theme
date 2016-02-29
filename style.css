@@ -6909,7 +6909,7 @@ body {
   background-attachment: fixed;
 }
 
-/* Estilos customizados */
+/* carrossel */
 
 .box-carrossel-responsivo{
 	display: block;
@@ -7160,7 +7160,7 @@ margin-bottom: 1px;
 /**   background:#12ADA9; **/
     background:#3d3d3d;
 }
-
+/** Newsletter **/
 .newsletter-custom-element {
 	display: inline-block;
 	max-height: 35px;
@@ -7365,4 +7365,14 @@ margin-bottom: 1px;
     padding-left: 10px;
     font-size:11px;
     word-spacing:normal;
+}
+
+/** post style **/
+
+.materia-conteudo p {
+   color: #333;
+   font-size: 1.26em;
+   letter-spacing: -0.02em;
+   line-height: 1.45em;
+   padding-bottom: 1.5em; 
 }
