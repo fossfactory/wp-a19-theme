@@ -41,7 +41,8 @@ function article_19_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-
+	set_post_thumbnail_size( 64, 64);
+	
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'article-19' ),
