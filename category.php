@@ -57,7 +57,7 @@ get_header();
                
         ?>
                <li class="media">
-                <a class="pull-left" href="<?php the_permalink(); ?>"><img class="media-object" src="<?php the_post_thumbnail(); ?>"></a>
+                <a class="pull-left" href="<?php the_permalink(); ?>"><img class="media-object" src="<?php echo $url_thumb ?>" height="64" width="64"></a>
                 <div class="media-body">
                   <h4 class="media-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                   <p class="data"><strong><?php the_date();?></strong></p>
