@@ -73,6 +73,7 @@ get_header();
               
               
             </ul>
+            <div class="paginator">
             <ul class="pagination">
             <?php
             
@@ -87,6 +88,7 @@ get_header();
 
              ?>
             </ul>
+            </div>
           </div>
           
 <!--          
