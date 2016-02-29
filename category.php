@@ -61,7 +61,7 @@ get_header();
                 <div class="media-body">
                   <h4 class="media-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                   <p class="data"><strong><?php the_date();?></strong></p>
-                  <p><?php echo the_excerpt(); ?></p>
+                  <p align="justify"><?php echo the_excerpt(); ?></p>
                   <p><a href="<?php the_permalink(); ?>">Leia mais</a></p>
                 </div>
               </li><hr>
