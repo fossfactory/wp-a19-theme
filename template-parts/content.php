@@ -47,7 +47,6 @@ $post_id = get_the_id();
             <br>
             <hr>
             </hr>
-           		<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-float' ) ); ?>
            		<div class="materia-conteudo">
            			<?php the_content( ); ?>
            		</div>
