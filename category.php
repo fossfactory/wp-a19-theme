@@ -74,7 +74,7 @@ get_header();
               
             </ul>
             <div class="paginator">
-            <ul class="pagination">
+            <ul>
             <?php
             
             $big = 999999999; // need an unlikely integer
