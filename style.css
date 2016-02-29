@@ -7386,3 +7386,8 @@ margin-bottom: 1px;
    margin-top: 10px;
    color: #9A9A9A;
 }
+
+/** areas **/
+.areas {
+  letter-spacing: -0.05em;
+}
