@@ -48,7 +48,7 @@ $post_id = get_the_id();
             <hr>
             </hr>
            		<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-float' ) ); ?>
-           		<div style="color: #333; font-size: 1.26em; letter-spacing: -0.02em; line-height: 1.45em; padding-bottom: 1.5em; align: justify;">
+           		<div class="materia-conteudo">
            			<?php the_content( ); ?>
            		</div>
             <hr>
