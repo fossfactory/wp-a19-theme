@@ -46,7 +46,7 @@ get_header(); ?>
                         }
                         ?>
                         <div class="item <?php echo $active ?>">
-                            <img src="<?php echo $url_thumb ?>">
+                           <a href="<?php the_permalink() ?>"><img src="<?php echo $url_thumb ?>"></a>
 
                             <div class="carousel-text-banner hidden-sm hidden-xs">
                                 <div class="carousel-caption">
