@@ -366,7 +366,7 @@ get_header(); ?>
                            <img src="<?php echo $url_thumb ?>" class="img-responsive">
                               <p class="title areas"><b><?php the_title(); ?></b></p>
                               <BR>
-                                <p><?php the_excerpt(); ?></p>
+                                <p class="corpo-areas"><?php the_excerpt(); ?></p>
 			</div>
                   </div>
                   <?php
