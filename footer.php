@@ -104,7 +104,7 @@
                             <div class="col-sm-2">
                                 <a><i class="fa fa-2x fa-fw text-warning fa-angle-double-up pull-left"></i></a>
                                 <span class="footer-links">
-                                    <a data-scroll href="#">Topo</a>
+                                    <a class="data-scroll" href="#top">Topo</a>
                                 </span><br>
                             </div>
                         </div>
