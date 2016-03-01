@@ -7389,5 +7389,9 @@ margin-bottom: 1px;
 
 /** areas **/
 .areas {
-  letter-spacing: -0.05em;
+   	letter-spacing: -0.05em;
+   	color: #ffffff;
+}
+.areas a, link, p, visited, hover, active {
+	color: #ffffff;
 }
