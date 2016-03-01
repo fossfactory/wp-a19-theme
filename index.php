@@ -362,13 +362,12 @@ get_header(); ?>
                         $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
                   ?>
                   <div class="col-md-3-projetos">
-                          <div class="min-3md-box-home">
+                        <div class="min-3md-box-home">
                            <img src="<?php echo $url_thumb ?>" class="img-responsive">
                               <p class="title areas"><b><?php the_title(); ?></b></p>
                               <BR>
                                 <p><?php the_excerpt(); ?></p>
-                              </div>
-                          </div>
+			</div>
                   </div>
                   <?php
                     endwhile;
