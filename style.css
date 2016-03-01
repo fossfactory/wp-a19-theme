@@ -7391,6 +7391,6 @@ margin-bottom: 1px;
 .areas {
    	letter-spacing: -0.05em;
 }
-.areas a, link, p, visited, hover, active {
+.areas a, link, visited, hover, active {
 	color: #ffffff;
 }
