@@ -267,7 +267,7 @@ function article_19_scripts() {
 
 	wp_enqueue_script( 'article-19-boostrap', 'http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array(), '20151212', true );
 	
-	wp_enqueue_script( 'data-scroll', get_template_directory_uri() . '/js/smoothscroll.js', array ( 'jquery'), '', true );
+	wp_enqueue_script( 'data-scroll', get_template_directory_uri() . '/js/smooth-scroll.js', array ( 'jquery'), '', true );
 
 	/*
 	 * Undescore.me
