@@ -365,7 +365,7 @@ get_header(); ?>
                           <div class="min-3md-box-home">
                            <img src="<?php echo $url_thumb ?>" class="img-responsive">
                               <p class="title areas"><b><?php the_title(); ?></b></p>
-                              <br>
+                              <BR>
                                 <p class="corpo-area"><?php the_excerpt(); ?></p>
                               </div>
                           </div>
