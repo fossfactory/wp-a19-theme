@@ -7390,14 +7390,12 @@ margin-bottom: 1px;
 /** areas **/
 .areas {
    	letter-spacing: -0.05em;
-   	text-align: center;
 }
 .areas a, link, visited, hover, active {
 	color: #ffffff;
 }
 .corpo-area p {
-	text-size: 16px;
+	text-size: 14px;
 	color: #ffffff;
 	font-weight: bold;
-	text-align: center;
 }
