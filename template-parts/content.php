@@ -41,7 +41,7 @@ $post_id = get_the_id();
             <div style="float: right; margin-top:7px;">
                <a href="whatsapp://send?text=Compartilhe a Artigo 19!" data-action="share/whatsapp/share"><i class="fa fa-1x fa-fw fa-lg fa-whatsapp text-danger"></i></a>
                <a href="https://twitter.com/home/?status=<?php the_title();?> - <?php echo wp_get_shortlink();?> "title="Tweet this!"><i class="fa fa-1x fa-fw fa-lg fa-twitter text-danger"></i></a>
-               <a href="https://www.facebook.com/sharer.php?u=<?php the_permalink();?> - <?php echo wp_get_shortlink();?> "title="Share on Facebook!"><i class="fa fa-1x fa-fw fa-lg fa-facebook"></i></a>
+               <a href="https://www.facebook.com/sharer.php?u=<?php the_permalink();?> - <?php echo wp_get_shortlink();?> "title="Share on Facebook!"><i class="fa fa-1x fa-fw fa-lg fa-facebook text-danger"></i></a>
             </div>
             <br>
             <hr>
@@ -53,7 +53,7 @@ $post_id = get_the_id();
             <div style="float:right; margin-top:2px; margin-bottom:1px;">
                <a href="whatsapp://send?text=Compartilhe a Artigo 19!" data-action="share/whatsapp/share"><i class="fa fa-1x fa-fw fa-lg fa-whatsapp text-danger"></i></a>
                <a href="https://twitter.com/home/?status=<?php the_title();?> - <?php echo wp_get_shortlink();?> "title="Tweet this!"><i class="fa fa-1x fa-fw fa-lg fa-twitter text-danger"></i></a>
-               <a href="https://www.facebook.com/sharer.php?u=<?php the_permalink();?> - <?php echo wp_get_shortlink();?> "title="Share on Facebook!"><i class="fa fa-1x fa-fw fa-lg fa-facebook"></i></a>
+               <a href="https://www.facebook.com/sharer.php?u=<?php the_permalink();?> - <?php echo wp_get_shortlink();?> "title="Share on Facebook!"><i class="fa fa-1x fa-fw fa-lg fa-facebook text-danger"></i></a>
          
             </div>
             <div style:"float:left; margin-top:9px; margin-bottom:2px;"><b>LINK: </b><?php echo wp_get_shortlink(); ?></div>
