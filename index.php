@@ -364,9 +364,9 @@ get_header(); ?>
                   <div class="col-md-3-projetos">
                           <div class="min-3md-box-home">
                            <img src="<?php echo $url_thumb ?>" class="img-responsive">
-                              <p class="title areas"><b><?php the_title(); ?></b></p>
+                              <div class="title areas"><p><b><?php the_title(); ?></b></p></div>
                               <BR>
-                              <div class="areas">
+                              <div class="corpo-areas">
                               	<p align="justify"><?php the_excerpt(); ?></p>
                               </div>
                           </div>
