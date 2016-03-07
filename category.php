@@ -26,7 +26,7 @@ get_header();
             'order'         => 'desc',
             'post_type'     => 'post',
             'post_status'   => 'publish',
-            'posts_per_page' => 8,
+            'posts_per_page' => 1,
         )
     );
 
@@ -61,7 +61,7 @@ get_header();
                 <div class="media-body">
                   <h4 class="media-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                   <p class="data"><strong><?php the_date();?></strong></p>
-                  <p align="justify"><?php echo the_excerpt(); ?></p>
+                  <p align="justify"><?php echo the_excerpt('',FALSE,''); ?></p>
                   <p><a href="<?php the_permalink(); ?>">Leia mais</a></p>
                 </div>
               </li><hr>
@@ -73,8 +73,8 @@ get_header();
               
               
             </ul>
-            <div class="paginator">
-            <ul>
+            <div >
+            <ul class="pagination">
             <?php
             
             $big = 999999999; // need an unlikely integer
@@ -140,7 +140,7 @@ get_header();
                  <br/>
                  <p class="a-black">
                  <?php 
-                    $resumo = substr( the_excerpt(), 150 );
+                    $resumo = substr( the_excerpt( '',FALSE,'' ), 150 );
                     echo $resumo;
                   ?>
                  
