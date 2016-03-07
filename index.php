@@ -112,7 +112,7 @@ get_header(); ?>
                     <a href="<?php the_permalink(); ?>"><?php the_title() ?></a>
                 </h3>
                 <div class="a-black">
-                    <p class="a-black"><a href="<?php the_permalink() ?>"><?php echo substr(the_content(), 0, 100); ?></a></p>
+                    <p class="a-black"><a href="<?php the_permalink() ?>"><?php echo substr(the_content('',FALSE,''), 0,100); ?></a></p>
                 </div>
                 <div class="date-news"><?php echo get_the_date( 'd-m-Y'  ,$post->ID); ?></div>
             </div>
