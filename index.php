@@ -352,7 +352,7 @@ get_header(); ?>
                         $args = array(
                           'post_type' => 'post',
                           'posts_per_page' => 4,
-                          'category_name' => 'areas',
+                          'category_name' => 'projetos',
                         );
 
                         $loop_projetos = new WP_Query($args);
@@ -362,12 +362,17 @@ get_header(); ?>
                         $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
                   ?>
                   <div class="col-md-3-projetos">
-                        <div class="min-3md-box-home">
+                      <div class="min-3md-box-home">
+                        <?php 
+                            $link = get_post_meta($post->ID, 'link', true);
+                        ?>
+                        <a href="<?php  echo $link  ?>" target="_blank" >
                            <img src="<?php echo $url_thumb ?>" class="img-responsive">
                               <p class="title areas"><b><?php the_title(); ?></b></p>
                               <BR>
-                                <p class="corpo-areas"><?php the_excerpt(); ?></p>
-			</div>
+                              <p class="corpo-areas"><?php the_excerpt(); ?></p>
+                        </a>
+			               </div>
                   </div>
                   <?php
                     endwhile;

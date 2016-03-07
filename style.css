@@ -7049,14 +7049,20 @@ margin-bottom: 1px;
 	float: left;
 }
 
-.min-3md-box:hover{
+
+.min-3md-box-home a{
+  color:#fff!important;
+}
+.min-3md-box:hover  a{
 	background-color: #fff;
 	color: #f05133;
+      padding: 5px!important;
 }
 
-.min-3md-box-home:hover{
-    background-color: #fff;
-    color: #f05133;
+.min-3md-box-home:hover a{
+    background-color: #fff!important;
+    color: #f05133!important;
+    text-decoration: none!important;
 }
 
 .min-3md-box-home p.title, p{
