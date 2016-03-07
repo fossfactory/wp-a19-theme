@@ -128,7 +128,12 @@ get_header();
                     );
                     $loop_categoria = new WP_Query($args);
                     while ($loop_categoria->have_posts()) :$loop_categoria->the_post();
-                    $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
+                     $url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' );
+                     if( empty( $url_thumb ) ){
+                        $url_thumb = get_template_directory_uri() . "/cat-img/thumbnaillogo.png";
+                     }else{
+                       $url_thumb = $url_thumb[0];
+                     }
             ?>
                 <li class="media">
                  <a class="pull-left" href="<?php the_permalink(); ?>"><img class="media-object" src="<?php echo $url_thumb; ?>" height="64" width="64"></a>
@@ -173,7 +178,12 @@ get_header();
                       );
                       $loop_categoria = new WP_Query($args);
                       while ($loop_categoria->have_posts()) :$loop_categoria->the_post();
-                      $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
+                      $url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' );
+                       if( empty( $url_thumb ) ){
+                          $url_thumb = get_template_directory_uri() . "/cat-img/thumbnaillogo.png";
+                       }else{
+                         $url_thumb = $url_thumb[0];
+                       }
               ?>
                 <li class="media">
                     <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
