@@ -188,6 +188,12 @@ $post_id = get_the_id();
             endwhile;
             wp_reset_query();
           ?>
+           <?php
+              $category_id = get_cat_ID( 'noticias' );
+              $category_link = get_category_link( $category_id );
+          ?><li>
+          <a href="<?php echo esc_url( $category_link ); ?>" title="noticias" class="a-orange">Notícias >></a>
+         </li>
 
          </ul>
          <!-- END SECTION ULTIMAS NOTICIAS -->
@@ -223,6 +229,12 @@ $post_id = get_the_id();
 		            endwhile;
 		            wp_reset_query();
 		          ?>
+               <?php
+              $category_id = get_cat_ID( 'publicacoes' );
+              $category_link = get_category_link( $category_id );
+          ?><li>
+          <a href="<?php echo esc_url( $category_link ); ?>" title="publicacoes" class="a-orange">Publicações >></a>
+         </li>
             </ul>
             <hr>
          </div>

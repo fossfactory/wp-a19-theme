@@ -26,7 +26,7 @@ get_header();
             'order'         => 'desc',
             'post_type'     => 'post',
             'post_status'   => 'publish',
-            'posts_per_page' => 1,
+            'posts_per_page' => 8,
         )
     );
 
@@ -115,16 +115,16 @@ get_header();
          <div class="col-md-3 hidden-xs hidden-sm hidden-md">
             <div class="box-orange-sidebar">
             <h3>Últimas Notícias</h3>
-               </div>
+          </div>
          <br>
          <ul class="media-list">
           <?php
+
                     $args = array(
                       'post_type' => 'post',
                       'post__not_in' => array( $post_id ) ,
                       'posts_per_page' => 4,
                       'category_name' => $categoria_slug,
-                      
                     );
                     $loop_categoria = new WP_Query($args);
                     while ($loop_categoria->have_posts()) :$loop_categoria->the_post();
@@ -150,7 +150,12 @@ get_header();
             endwhile;
             wp_reset_query();
           ?>
-
+          <?php
+              $category_id = get_cat_ID( 'noticias' );
+              $category_link = get_category_link( $category_id );
+          ?><li>
+          <a href="<?php echo esc_url( $category_link ); ?>" title="noticias" class="a-orange">Notícias >></a>
+         </li>
          </ul>
          <!-- END SECTION ULTIMAS NOTICIAS -->
          <!-- BEGIN SECTION PUBLICACOES-->
@@ -182,6 +187,11 @@ get_header();
                 endwhile;
                 wp_reset_query();
               ?>
+              <?php
+                  $category_id = get_cat_ID( 'publicacoes' );
+                  $category_link = get_category_link( $category_id );
+              ?>
+              <li><a href="<?php echo esc_url( $category_link ); ?>" title="publicacoes" class="a-orange">Publicações >></a></li>
             </ul>
             <?php dynamic_sidebar( 'banner-lista-categoria-lateral1' ); ?>
                         <hr> 
