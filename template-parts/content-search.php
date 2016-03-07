@@ -7,24 +7,21 @@
  * @package Article_19
  */
 
+$url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' );
+               if( empty( $url_thumb ) ){
+                  $url_thumb = get_template_directory_uri() . "/cat-img/thumbnaillogo.png";
+               }else{
+                 $url_thumb = $url_thumb[0];
+               }
+
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php article_19_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php article_19_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+ <li class="media">
+                <a class="pull-left" href="<?php the_permalink(); ?>"><img class="media-object" src="<?php echo $url_thumb ?>" height="64" width="64"></a>
+                <div class="media-body">
+                  <h4 class="media-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                  <p class="data"><strong><?php the_date();?></strong></p>
+                  <p align="justify"><?php echo the_excerpt('',FALSE,''); ?></p>
+                  <p><a href="<?php the_permalink(); ?>">Leia mais</a></p>
+                </div>
+              </li><hr
