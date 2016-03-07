@@ -6,6 +6,9 @@
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
 
+ smoothScroll.init();
+
+
 ( function( $ ) {
 	// Site title and description.
 	wp.customize( 'blogname', function( value ) {
@@ -37,4 +40,8 @@
 			}
 		} );
 	} );
+
+
+
+
 } )( jQuery );

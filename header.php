@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 
-<div class="section-danger2">
+<div  id="top" class="section-danger2">
     <div class="container">
         <div class="row">
         <div class="col-md-8 hidden-xs text-right space-correction2">
@@ -52,7 +52,7 @@
         <!--- end row -->
     </div>
 </div>
-<div class="navbar navbar-default navbar-static-top">
+<div  class="navbar navbar-default navbar-static-top">
     <div class="container correction-nav">
         <div class="navbar-header">
                 <a href="/">

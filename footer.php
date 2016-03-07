@@ -21,6 +21,12 @@
 
 </script>
 
+<script>
+    smoothScroll.init();
+</script>
+
+
+
 <!-- BEGIN NEWSLETTER RESPONSIVE SECTION -->
     <div class="hidden-lg hidden-md hidden-sm section news-letter-desktop-box">
       <div class="container">
@@ -104,7 +110,7 @@
                             <div class="col-sm-2">
                                 <a><i class="fa fa-2x fa-fw text-warning fa-angle-double-up pull-left"></i></a>
                                 <span class="footer-links">
-                                    <a class="data-scroll" href="#top">Topo</a>
+                                    <a data-scroll href="#top">Topo</a>
                                 </span><br>
                             </div>
                         </div>
