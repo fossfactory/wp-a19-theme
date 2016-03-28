@@ -36,7 +36,7 @@
                <a href="whatsapp://send?text=Compartilhe a Artigo 19!" data-action="share/whatsapp/share"><i class="fa fa-1x fa-fw fa-lg fa-whatsapp text-danger"></i></a>
                <a target="_blank" href="http://twitter.com/artigo19"><i class="fa fa-1x fa-fw fa-lg fa-twitter text-danger"></i></a>
                <a target="_blank" href="https://www.facebook.com/artigo19brasil"><i class="fa fa-1x fa-facebook fa-fw fa-lg text-danger"></i></a>
-               <a href="#"><i class="fa fa-1x fa-fw fa-google-plus-square fa-lg hub text-danger"></i></a>
+           
             </div>
             <br>
             <hr>
@@ -48,8 +48,7 @@
                <a href="whatsapp://send?text=Compartilhe a Artigo 19!" data-action="share/whatsapp/share"><i class="fa fa-1x fa-fw fa-lg fa-whatsapp text-danger"></i></a>
                <a target="_blank" href="http://twitter.com/artigo19"><i class="fa fa-1x fa-fw fa-lg fa-twitter text-danger"></i></a>
                <a target="_blank" href="https://www.facebook.com/artigo19brasil"><i class="fa fa-1x fa-facebook fa-fw fa-lg text-danger"></i></a>
-               <a href="#"><i class="fa fa-1x fa-fw fa-google-plus-square fa-lg hub text-danger"></i></a>
-      
+
             </div>
             <div style:"float:left; margin-top:9px; margin-bottom:2px;"><b>LINK:</b> <a class="barra-ferramentas_input"> <?php echo get_permalink(); ?>  </a>
          </div>
