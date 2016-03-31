@@ -26,7 +26,7 @@ get_header(); ?>
                       <h1>Fale conosco</h1>
                       <p>Conheça o trabalho da ARTIGO 19, receba nossas informações.</p>
 
-                      <p>Envie uma mensagem para a ARTIGO 199.</p>
+                      <p>Envie uma mensagem para a ARTIGO 19.</p>
                       </div>
 
                         <?php 
