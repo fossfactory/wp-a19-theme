@@ -154,7 +154,7 @@ get_header(); ?>
                   <a href="<?php the_permalink() ?>"><span class="media-secondary-heading-h4 text-danger"><?php the_title(); ?></a>
 
                   <p class="secondary_hg_responsive_date a-black"><?php echo get_the_date( 'd-m-Y'  ,$post->ID); ?></p>
-                  <p class="secondary_hg_responsive a-black"><?php echo substr(the_content(), 0, 100); ?></p>
+                  <p class="secondary_hg_responsive a-black"><?php the_excerpt(); ?></p>
                   <!-- </div>-->
               </li>
               <hr></hr>
