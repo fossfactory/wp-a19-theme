@@ -24,9 +24,9 @@ get_header(); ?>
                   <div class="col-md-9 text-news">
                     <div class="text">
                       <h1>Fale conosco</h1>
-                      <p>Conheça o trabalho da Artigo19, receba nossas informações.</p>
+                      <p>Conheça o trabalho da ARTIGO 19, receba nossas informações.</p>
 
-                      <p>Envie uma mensagem para a Artigo19.</p>
+                      <p>Envie uma mensagem para a ARTIGO 199.</p>
                       </div>
 
                         <?php 
