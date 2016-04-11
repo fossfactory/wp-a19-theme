@@ -40,7 +40,6 @@
             </div>-->
             <br>
             <hr>
-            </hr>
            		<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-float' ) ); ?>
            		<?php the_content( ); ?>
             <hr>
@@ -52,7 +51,6 @@
             </div>
             <div style:"float:left; margin-top:9px; margin-bottom:2px;"><b>LINK:</b> <a class="barra-ferramentas_input"> <?php echo get_permalink(); ?>  </a>
          </div>-->
-         <hr>
          <!-- INICIO Notícias Relacionadas -->
          <!-- <div class="title-box hidden-sm hidden-md">-->
 <!--         <div class="row">
@@ -83,7 +81,6 @@
             wp_reset_query();
           ?>
 	    </div>-->
-          <hr /> 
          <!-- BEGIN COMMENTS SECTION -->
          <div class="comentario">
          
