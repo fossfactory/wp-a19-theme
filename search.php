@@ -18,7 +18,7 @@ get_header(); ?>
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Resultado da busca por : %s', 'article-19' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title"><?php printf( __( 'Resultado da busca por : %s', 'article-19' ), get_search_query() ); ?></h1>
 			</header><!-- .page-header -->
 		<ul>
 			<?php
