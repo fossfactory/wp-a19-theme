@@ -56,7 +56,7 @@ $post_id = get_the_id();
                <a href="https://www.facebook.com/sharer.php?u=<?php the_title(); ?> - <?php echo wp_get_shortlink();?>" title="Compartilhe no Facebook!"><i class="fa fa-1x fa-fw fa-lg fa-facebook text-danger"></i></a>
          
             </div>
-            <div style:"float:left; margin-top:9px; margin-bottom:2px;"><b>LINK: </b><a href="<?php echo wp_get_shortlink(); ?>"></a></div>
+            <div style:"float:left; margin-top:9px; margin-bottom:2px;"><b>LINK: </b><?php echo wp_get_shortlink(); ?></div>
          <hr>
          <!-- INICIO Notícias Relacionadas -->
          <!-- <div class="title-box hidden-sm hidden-md">-->
