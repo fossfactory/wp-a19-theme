@@ -123,7 +123,7 @@ $post_id = get_the_id();
 	                        <p class="secondary_hg_responsive_date a-black"><?php the_date(); ?></p>
 	                        <!-- </div>-->
 	                     </li>
-                    	 <hr></hr>
+                    	 <hr>
 			          <?php
 			            endwhile;
 			            wp_reset_query();
