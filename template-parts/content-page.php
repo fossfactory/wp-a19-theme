@@ -32,30 +32,30 @@
 				endif; ?>
 			</header><!-- .entry-header -->
 
-            <div style="float: right; margin-top:7px;">
+<!--            <div style="float: right; margin-top:7px;">
                <a href="whatsapp://send?text=Compartilhe a Artigo 19!" data-action="share/whatsapp/share"><i class="fa fa-1x fa-fw fa-lg fa-whatsapp text-danger"></i></a>
                <a target="_blank" href="http://twitter.com/artigo19"><i class="fa fa-1x fa-fw fa-lg fa-twitter text-danger"></i></a>
                <a target="_blank" href="https://www.facebook.com/artigo19brasil"><i class="fa fa-1x fa-facebook fa-fw fa-lg text-danger"></i></a>
            
-            </div>
+            </div>-->
             <br>
             <hr>
             </hr>
            		<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-float' ) ); ?>
            		<?php the_content( ); ?>
             <hr>
-            <div style="float:right; margin-top:2px; margin-bottom:1px;">
+<!--            <div style="float:right; margin-top:2px; margin-bottom:1px;">
                <a href="whatsapp://send?text=Compartilhe a Artigo 19!" data-action="share/whatsapp/share"><i class="fa fa-1x fa-fw fa-lg fa-whatsapp text-danger"></i></a>
                <a target="_blank" href="http://twitter.com/artigo19"><i class="fa fa-1x fa-fw fa-lg fa-twitter text-danger"></i></a>
                <a target="_blank" href="https://www.facebook.com/artigo19brasil"><i class="fa fa-1x fa-facebook fa-fw fa-lg text-danger"></i></a>
 
             </div>
             <div style:"float:left; margin-top:9px; margin-bottom:2px;"><b>LINK:</b> <a class="barra-ferramentas_input"> <?php echo get_permalink(); ?>  </a>
-         </div>
+         </div>-->
          <hr>
          <!-- INICIO Notícias Relacionadas -->
          <!-- <div class="title-box hidden-sm hidden-md">-->
-         <div class="row">
+<!--         <div class="row">
             <div class="col-md-12">
                <h4 class="hidden-sm hidden-xs hidden-md"><b>Notícias relacionadas</b></h4>
             </div>
@@ -82,7 +82,7 @@
             endwhile;
             wp_reset_query();
           ?>
-	    </div>
+	    </div>-->
           <hr /> 
          <!-- BEGIN COMMENTS SECTION -->
          <div class="comentario">
@@ -99,46 +99,7 @@
          <!-- end comments section -->
       </div>
       <!-- FIM Notícias Relacionadas -->
-      <!-- BEGIN NOTICIAS RELACIONADAS RESPONSIVE SECTION -->
-      <div class="section hidden-lg hidden-md">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-3 title-box hidden-lg hidden-md">
-                  <h3><b>Notícias relacionadas</b></h3>
-                  <ul class="media-list">
-                  	<?php
-	                    $args = array(
-	                      'post_type' => 'post',
-	                      'post__not_in' => array( $post_id ) ,
-	                      'posts_per_page' => 4,
-	                      'category_name' => $categoria_slug,
-	                      
-	                    );
 
-	                    $loop_categoria = new WP_Query($args);
-
-	                    while ($loop_categoria->have_posts()) :$loop_categoria->the_post();
-
-	                    $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
-			        ?>
-			            <li>
-	                        <!-- <div class="media-body">-->
-	                        <a href="<?php the_permalink(); ?>"><img class="media_secondary_responsive" src="<?php echo $thumbnail; ?>"></a>
-	                        <a href="<?php the_permalink(); ?>"><span class="media-secondary-heading-h4 text-danger"><?php the_title( ); ?></span></a>
-	                        <p class="secondary_hg_responsive_date a-black"><?php the_date(); ?></p>
-	                        <!-- </div>-->
-	                     </li>
-                    	 <hr></hr>
-			          <?php
-			            endwhile;
-			            wp_reset_query();
-			          ?>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- END NOTICIAS RELACIONADAS RESPONSIVE SECTION -->
       <!-- BEGIN SECTION ULTIMAS NOTICIAS -->
       <div class="col-md-3 hidden-xs hidden-sm hidden-md">
          <div class="box-orange-sidebar">
