@@ -116,7 +116,7 @@ $post_id = get_the_id();
                          $url_thumb = $url_thumb[0];
                        }
 			        ?>
-			            <li>
+			     <li>
 	                        <!-- <div class="media-body">-->
 	                        <a href="<?php the_permalink(); ?>"><img class="media_secondary_responsive" src="<?php echo $url_thumb; ?>"></a>
 	                        <a href="<?php the_permalink(); ?>"><span class="media-secondary-heading-h4 text-danger"><?php the_title( ); ?></span></a>
@@ -124,6 +124,7 @@ $post_id = get_the_id();
 	                        <!-- </div>-->
 	                     </li>
                     	 <hr>
+                    	 <br />
 			          <?php
 			            endwhile;
 			            wp_reset_query();
