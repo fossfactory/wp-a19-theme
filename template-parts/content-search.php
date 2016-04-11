@@ -24,4 +24,4 @@ $url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 't
                   <p align="justify"><?php echo the_excerpt('',FALSE,''); ?></p>
                   <p><a href="<?php the_permalink(); ?>">Leia mais</a></p>
                 </div>
-              </li><hr
+              </li><hr>
