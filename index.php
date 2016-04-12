@@ -197,7 +197,7 @@ get_header(); ?>
         <div class="row">
 
           <div class="col-md-12 box-orange-artigo">
-            <img style="width:250px;" src="<?php bloginfo('template_url'); ?>/cat-img/4.svg" title="Artigo 19 na TV" alt="img"/>
+            <a href="/category/artigo19tv"><img style="width:250px;" src="<?php bloginfo('template_url'); ?>/cat-img/4.svg" title="Artigo 19 na TV" alt="img"/></a>
           </div>
 
           <div class="col-md-12">
