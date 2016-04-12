@@ -186,13 +186,13 @@ $post_id = get_the_id();
 	                  </h4>
 	               </div>
 	               <br/>
-	               <p class="a-black">
-	               	<a href="<?php the_permalink(); ?>">
+	               <p class="a-black" style:"align=justify">
+	               
 	               	<?php 
 	               		$resumo = substr( the_excerpt(), 150 );
 	               		echo $resumo;
 	               	?>
-	               </a>
+	              
 	               </p>
 	            </li>
           <?php
