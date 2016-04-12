@@ -94,7 +94,7 @@ get_header(); ?>
             $args = array(
                 'post_type' => 'post',
                 'posts_per_page' => 3,
-                'category_name' => 'destaquesecundario',
+                'category_name' => 'secundario',
                 );
 
             $loop_carrousel = new WP_Query($args);
@@ -135,7 +135,7 @@ get_header(); ?>
               $args = array(
                 'post_type' => 'post',
                 'posts_per_page' => 3,
-                'category_name' => 'destaquesecundario',
+                'category_name' => 'secundario',
                 );
 
               $loop_carrousel = new WP_Query($args);
