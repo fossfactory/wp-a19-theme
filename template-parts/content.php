@@ -203,7 +203,7 @@ $post_id = get_the_id();
               $category_id = get_cat_ID( 'noticias' );
               $category_link = get_category_link( $category_id );
           ?><li>
-          <a href="<?php echo esc_url( $category_link ); ?>" title="noticias" class="text-orange"><b>Veja mais</b></a>
+          <p class="a-black"><a href="<?php echo esc_url( $category_link ); ?>" title="noticias" class="a-black"><b>Veja mais</b></a></p>
          </li>
 
          </ul>
