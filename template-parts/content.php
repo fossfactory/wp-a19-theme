@@ -203,8 +203,8 @@ $post_id = get_the_id();
               $category_id = get_cat_ID( 'noticias' );
               $category_link = get_category_link( $category_id );
           ?>
-          <li class="media a-orange">
-          <a href="<?php echo esc_url( $category_link ); ?>" title="noticias" class="a-orange"><b>Veja mais</b></a>
+         <li class="media a-orange">
+          <h5><a href="<?php echo esc_url( $category_link ); ?>" title="noticias" class="a-orange">Veja mais</a></h5>
          </li>
 
          </ul>
@@ -244,8 +244,9 @@ $post_id = get_the_id();
                <?php
               $category_id = get_cat_ID( 'publicacoes' );
               $category_link = get_category_link( $category_id );
-          ?><li>
-          <a href="<?php echo esc_url( $category_link ); ?>" title="publicacoes" class="text-orange"><b>Veja mais</b></a>
+          ?>
+          <li class="media a-orange">
+          <h5><a href="<?php echo esc_url( $category_link ); ?>" title="publicacoes" class="text-orange">Veja mais</a></h5>
          </li>
             </ul>
             <hr>
