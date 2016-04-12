@@ -204,7 +204,7 @@ $post_id = get_the_id();
               $category_link = get_category_link( $category_id );
           ?>
          <li class="media a-orange">
-          <h5><a href="<?php echo esc_url( $category_link ); ?>" title="noticias" class="a-orange">Veja mais</a></h5>
+          <h4><a href="<?php echo esc_url( $category_link ); ?>" title="noticias" class="text-orange">Veja mais</a></h4>
          </li>
 
          </ul>
@@ -246,7 +246,7 @@ $post_id = get_the_id();
               $category_link = get_category_link( $category_id );
           ?>
           <li class="media a-orange">
-          <h5><a href="<?php echo esc_url( $category_link ); ?>" title="publicacoes" class="text-orange">Veja mais</a></h5>
+          <h4><a href="<?php echo esc_url( $category_link ); ?>" title="publicacoes" class="text-orange">Veja mais</a></h4>
          </li>
             </ul>
             <hr>
