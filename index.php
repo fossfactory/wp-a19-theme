@@ -197,7 +197,7 @@ get_header(); ?>
         <div class="row">
 
           <div class="col-md-12 box-orange-artigo">
-            <a href="<?php echo home_url('/'); ?>category/artigo19tv"><img style="width:250px;" src="<?php bloginfo('template_url'); ?>/cat-img/4.svg" title="Artigo 19 na TV" alt="img"/></a>
+            <a href="blog/category/artigo19tv"><img style="width:250px;" src="<?php bloginfo('template_url'); ?>/cat-img/4.svg" title="Artigo 19 na TV" alt="img"/></a>
           </div>
 
           <div class="col-md-12">
@@ -259,7 +259,7 @@ get_header(); ?>
             <div class="col-md-6 title-box">
                 <h3>
                     <b>
-                        <a href="<?php bloginfo('url'); ?>/category/publicacoes">PUBLICAÇÕES</a>
+                        <a href="blog/category/publicacoes">PUBLICAÇÕES</a>
                     </b>
                 </h3>
                 <div class="box-publicacoes">
@@ -295,7 +295,7 @@ get_header(); ?>
             <div class="col-md-3 title-box">
                 <h3>
                     <b>
-                        <a href="<?php bloginfo('url'); ?>/category/artigo19namidia">NA MÍDIA</a>
+                        <a href="blog/category/artigo19namidia">NA MÍDIA</a>
                     </b>
                 </h3>
                 <ul class="media-list">
@@ -344,7 +344,7 @@ get_header(); ?>
       <div class="container">
          <div class="row">
            <div class="col-md-12 title-box">
-             <h3><b><a href="<?php bloginfo('url'); ?>/category/areas">PROJETOS</a></b></h3>
+             <h3><b><a href="blog/category/areas">PROJETOS</a></b></h3>
 	   </div>
           
 	<div class="col-md-12 title-box"> 
