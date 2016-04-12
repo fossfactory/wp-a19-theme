@@ -154,8 +154,9 @@ get_header();
            <?php
               $category_id = get_cat_ID( 'noticias' );
               $category_link = get_category_link( $category_id );
-          ?><li>
-          <a href="<?php echo esc_url( $category_link ); ?>" title="noticias" class="a-orange">Notícias >></a>
+          ?>
+         <li class="media a-orange">
+              <div align="center"><h4><a href="<?php echo esc_url( $category_link ); ?>" title="noticias" class="text-orange">Veja mais</a></h4></div>
          </li>
          </ul>
          <!-- END SECTION ULTIMAS NOTICIAS -->
@@ -196,8 +197,9 @@ get_header();
                <?php
               $category_id = get_cat_ID( 'publicacoes' );
               $category_link = get_category_link( $category_id );
-          ?><li>
-          <a href="<?php echo esc_url( $category_link ); ?>" title="publicacoes" class="a-orange">Publicações >></a>
+          ?>
+          <li class="media a-orange">
+           <div align="center"><h4><a href="<?php echo esc_url( $category_link ); ?>" title="publicacoes" class="text-orange">Veja mais</a></h4></div>
          </li>
             </ul>
 
