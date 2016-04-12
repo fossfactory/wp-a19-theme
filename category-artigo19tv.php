@@ -87,27 +87,7 @@ get_header();
              ?>
             </ul>
           </div>
-<!--          
-          <div class="col-md-4">
-            <div class="box-orange-artigo">
-              <h3>Publicações</h3>
-            </div>
-            <br>
-            <div class="box-sidebar-publicacoes">
-              <ul class="media-list">
-                <li class="media">
-                  <a><i class="fa fa-2x fa-fw text-muted fa-caret-right pull-left"></i></a>
-                  <div class="media-body">
-                    <h4 class="media-heading text-danger">
-                      <a href="pagina.html">Monitoramento da Lei de Acesso à Informação Pública em 2014</a>
-                    </h4>
-                  </div>
-                </li>
-               
-              </ul>
-              <hr>
-            </div>
--->
+          
          <div class="col-md-3 hidden-xs hidden-sm hidden-md">
             <div class="box-orange-sidebar">
             <h3>Últimas Notícias</h3>
