@@ -47,13 +47,9 @@ $post_id = get_the_id();
             <hr>
             </hr>
            		
-           		<div class="img-responsive">
-           			<?php the_post_thumbnail('featured-posts'); ?>
-           		</div>
-           		<div class="materia-conteudo">
+           	<!--         		<div class="materia-conteudo">-->
            			<?php the_content(); ?>
-           		
-           		</div>
+           	
             <hr>
             <div style="float:right; margin-top:2px; margin-bottom:1px;">
                <a href="whatsapp://send?text=<?php the_title();?> - <?php echo wp_get_shortlink();?>" data-action="share/whatsapp/share"><i class="fa fa-1x fa-fw fa-lg fa-whatsapp text-danger"></i></a>
