@@ -7069,8 +7069,6 @@ margin-bottom: 1px;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 10px;
-    color: #333;   
-    font-size: 1.26em;
 }
 
 .date-news {
@@ -7377,7 +7375,8 @@ margin-bottom: 1px;
 }
 
 /** post style **/
-.materia-conteudo {
+.materia-conteudo,
+.materia-conteudo p {
    color: #333;
    font-size: 1.26em;
 }
