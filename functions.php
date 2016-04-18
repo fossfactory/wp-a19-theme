@@ -337,11 +337,6 @@ function add_menuclass( $ulclass ) {
 }
 add_filter('wp_nav_menu','add_menuclass');
 
-/*
-* removing p from the content
-*/
-remove_filter('the_content', 'wpautop');
-
 
 
 
