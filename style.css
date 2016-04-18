@@ -7375,6 +7375,14 @@ margin-bottom: 1px;
 }
 
 /** post style **/
+.materia-conteudo:before,
+.materia-conteudo:after {
+	content:"";
+	display: table;
+}
+.materia-conteudo:after {
+	clear: both;
+}
 .materia-conteudo {
    color: #333;
    font-size: 1.26em;
