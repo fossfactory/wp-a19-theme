@@ -46,10 +46,11 @@ $post_id = get_the_id();
             <br>
             <hr>
             </hr>
-           		<div class="materia-conteudo">
-           		<div class="img-float"><?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-responsive' ) ); ?></div>
+           		<!--<div class="materia-conteudo">-->
+           		
            		<?php the_content( ); ?>
-           		</div>
+           		
+           		<!--</div>-->
             <hr>
             <div style="float:right; margin-top:2px; margin-bottom:1px;">
                <a href="whatsapp://send?text=<?php the_title();?> - <?php echo wp_get_shortlink();?>" data-action="share/whatsapp/share"><i class="fa fa-1x fa-fw fa-lg fa-whatsapp text-danger"></i></a>
