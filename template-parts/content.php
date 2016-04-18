@@ -46,7 +46,7 @@ $post_id = get_the_id();
             <br>
             <hr>
             </hr>
-           		<div class="materia-conteudo">
+           		<div class="materia-conteudo img-responsive">
            			<?php the_content( ); ?>
            		</div>
             <hr>
