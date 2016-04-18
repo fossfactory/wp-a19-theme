@@ -7069,6 +7069,8 @@ margin-bottom: 1px;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 10px;
+    color: #333;   
+    font-size: 1.26em;
 }
 
 .date-news {
@@ -7375,14 +7377,6 @@ margin-bottom: 1px;
 }
 
 /** post style **/
-.materia-conteudo:before,
-.materia-conteudo:after {
-	content:"";
-	display: table;
-}
-.materia-conteudo:after {
-	clear: both;
-}
 .materia-conteudo {
    color: #333;
    font-size: 1.26em;
@@ -7412,11 +7406,10 @@ margin-bottom: 1px;
 	text-align: center;
 }
 
-
 a.a-orange{
   color: #f05236;
     font-size: 2em;
     margin: 0 auto;
     display: block;
-        margin: 10px;
+    margin: 10px;
 }
