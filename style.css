@@ -7380,8 +7380,8 @@ margin-bottom: 1px;
    color: #333;
    font-size: 1.26em;
    letter-spacing: -0.02em;
-   line-height: 1.45em;
-   padding-bottom: 0.55em; 
+/**   line-height: 1.45em;**/
+/**   padding-bottom: 0.55em; **/
 }
 
 /** paginação categoria **/
