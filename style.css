@@ -7376,7 +7376,7 @@ margin-bottom: 1px;
 
 /** post style **/
 
-.materia-conteudo p {
+.materia-conteudo {
    color: #333;
    font-size: 1.26em;
    letter-spacing: -0.02em;
