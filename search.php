@@ -18,7 +18,7 @@ get_header(); ?>
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Resultado da busca por : %s', 'article-19' ), get_search_query() ); ?></h1>
+				<h1 class="page-title"><?php printf( __( 'Resultado da busca por : %s', 'article-19' ), '<span>' . esc_html ( get_search_query() ) . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
 		<ul>
 			<?php
@@ -35,13 +35,18 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			the_posts_navigation( array (
+				'prev_text'		=> __( 'Página anterior', 'article-19'),
+				'next_text'		=> __( 'Próxima página', 'article-19'),
+				'before_page_number'	=> '<span class="meta-nav">' . __( 'Page', 'article-19') . ' </span>',
+				) );
 
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+		endif; 
+		?>
 	</ul>
 			</div>
 
