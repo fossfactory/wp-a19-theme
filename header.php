@@ -36,8 +36,8 @@
                     <div class="form-group">
                         <div class="input-group">
  <span class="input-group-btn">
-                             <form method="get" id="searchform" action="<?php bloginfo('url'); ?>" role="search">
-                                <label for="s" class="assistive-text"><?php _e( 'Search', 'shape' ); ?></label>
+                             <form method="get" id="searchform" action="<?php echo site_url('/'); ?>" role="search">
+                                <label for="s" class="assistive-text"></label>
                                 <input type="text" class="field form-control" name="s" placeholder="Digite um termo de busca" value="Search" id="s" />
                                 <input type="submit" class="submit btn btn-warning" name="submit" id="searchsubmit" value="buscar" />
                             </form>
