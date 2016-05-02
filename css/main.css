@@ -1364,6 +1364,11 @@ p {
   .lead {
     font-size: 21px;
   }
+  ul.media-list li {
+      display: block;
+      height: 90px;
+  }
+  
 }
 small,
 .small {

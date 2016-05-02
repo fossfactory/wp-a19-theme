@@ -125,7 +125,6 @@ $post_id = get_the_id();
 	                        <!-- </div>-->
 	                     </li>
                     	 <hr>
-                    	 <br />
 			          <?php
 			            endwhile;
 			            wp_reset_query();
