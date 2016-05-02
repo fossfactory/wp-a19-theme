@@ -20,7 +20,7 @@ $url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 't
                 <a class="pull-left" href="<?php the_permalink(); ?>"><img class="media-object" src="<?php echo $url_thumb ?>" height="64" width="64"></a>
                 <div class="media-body">
                   <h4 class="media-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                  <p class="data"><strong><?php the_date();?></strong></p>
+                  <!-- p class="data"><strong>< ?php the_date();? ></strong></p -->
                   <p align="justify"><?php echo the_excerpt('',FALSE,''); ?></p>
                   <p><a href="<?php the_permalink(); ?>">Leia mais</a></p>
                 </div>
