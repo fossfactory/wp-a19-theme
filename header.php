@@ -32,16 +32,14 @@
                 <a target="_blank" href="<?php bloginfo('rss2_url'); ?>"><i class="fa fa-2x fa-fw fa-rss-square text-inverse"></i></a>
             </div>
             <div class="col-md-4 hidden-xs hidden-sm hidden-md text-right space-correction">
-                <form role="form">
+             <form method="get" id="searchform" action="<?php echo home_url( '/' ); ?>" role="search" >
                     <div class="form-group">
                         <div class="input-group">
- <span class="input-group-btn">
-                             <form method="get" id="searchform" action="<?php echo home_url( '/' ); ?>" role="search">
+                            <span class="input-group-btn">
+
                                 <label for="s" class="assistive-text"></label>
                                 <input type="text" class="field form-control" name="s" placeholder="Digite um termo de busca" value="Search" id="s" />
                                 <input type="submit" class="submit btn btn-warning" name="submit" id="searchsubmit" value="buscar" />
-                            </form>
-                          
                              
                             </span>
                         </div>
