@@ -7290,10 +7290,13 @@ margin-bottom: 1px;
 
 .text-orange > h4{
    color: #f05236;
+   clear:both
 }
 
+.a-orange img {padding-right:5px}
+
 .a-orange a{
-   color: #f05236;
+   color: #f05236 !important;
 }
 
 .a-orange a:hover {
