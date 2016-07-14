@@ -1366,7 +1366,7 @@ p {
   }
   ul.media-list li {
       display: block;
-      height: 90px;
+      /*height: 90px;*/
   }
 
 }

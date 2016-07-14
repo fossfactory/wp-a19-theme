@@ -15,8 +15,6 @@
 get_header(); ?>
 
 
-
-
 <!-- INICIO carrossel para DESKTOP -->
 <div class="section">
     <div class="container">
