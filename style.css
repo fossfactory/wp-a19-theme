@@ -7381,6 +7381,10 @@ margin-bottom: 1px;
    font-size: 1.26em;
 }
 
+.materia-conteudo p {
+  padding-bottom: 22px
+}
+
 /** paginação categoria **/
 .paginator {
    border-top: 1px solid #DDD;
