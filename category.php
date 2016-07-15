@@ -26,7 +26,7 @@ get_header();
             'order'         => 'desc',
             'post_type'     => 'post',
             'post_status'   => 'publish',
-            'posts_per_page' => 8,
+            'posts_per_page' => 10,
         )
     );
 
@@ -75,18 +75,11 @@ get_header();
             </ul>
             <div >
             <ul class="pagination">
-            <?php
             
-            $big = 999999999; // need an unlikely integer
+<?php if (function_exists("pagination")) {
+    pagination($additional_loop->max_num_pages);
+} ?>
 
-            echo paginate_links( array(
-                'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-                'format' => '?paged=%#%',
-                'current' => max( 1, get_query_var('paged') ),
-                'total' => $query->max_num_pages
-            ) );
-
-             ?>
             </ul>
             </div>
           </div>
