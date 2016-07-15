@@ -65,29 +65,41 @@ $post_id = get_the_id();
             <div class="col-md-12">
                <h4 class="hidden-sm hidden-xs hidden-md"><b>Notícias relacionadas</b></h4>
             </div>
-			<?php
-                    $args = array(
-                      'post_type' => 'post',
-                      'post__not_in' => array( $post_id ) ,
-                      'posts_per_page' => 4,
-                      'category_name' => $categoria_slug,
-                      
-                    );
 
-                    $loop_categoria = new WP_Query($args);
+	      <?php
+	      $tags = wp_get_post_tags($post->ID);
+	      if ($tags) {
 
-                    while ($loop_categoria->have_posts()) :$loop_categoria->the_post();
-
-                    $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
-            ?>
-                  <div class="col-md-3 hidden-xs hidden-sm hidden-md">
+	      $first_tag = $tags[0]->term_id;
+	      $args=array(
+	      'tag__in' => array($first_tag),
+	      'post__not_in' => array($post->ID),
+	      'posts_per_page'=>4,
+	      'caller_get_posts'=>1,
+	      'orderby'=>'rand'
+	      );
+	      $my_query = new WP_Query($args);
+	      if( $my_query->have_posts() ) {
+	      while ($my_query->have_posts()) : $my_query->the_post(); 
+	      $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
+	      ?>
+			    <div class="col-md-3 hidden-xs hidden-sm hidden-md">
 		               <a href="<?php the_permalink(); ?>"><img src="<?php echo $url_thumb ?>" class="img-responsive"></a>
 		               <h4 class="a-orange"><a href="<?php the_permalink(); ?>"><?php the_title( ); ?></a></h4>
 		            </div>
-          <?php
-            endwhile;
-            wp_reset_query();
-          ?>
+		            
+
+
+<?php
+endwhile;
+}
+wp_reset_query();
+}
+?>
+
+
+            
+
 	    </div>
        <hr /> 
              <!-- BEGIN NOTICIAS RELACIONADAS RESPONSIVE SECTION -->
