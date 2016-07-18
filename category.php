@@ -106,10 +106,13 @@ get_header();
             </div>
             -->
          <div class="col-md-3 hidden-xs hidden-sm hidden-md">
-            <div class="box-orange-sidebar">
-            <h3>Últimas Notícias</h3>
-          </div>
-         <br>
+		  <?php if (in_category('11')) { ?>
+		  <?php }else { ?>
+		  <div class="box-orange-sidebar">
+			<h3>Últimas Notícias</h3>
+		  </div>
+		  
+		  <br />
          <ul class="media-list">
           <?php
 
@@ -155,8 +158,14 @@ get_header();
           <a href="<?php echo esc_url( $category_link ); ?>" title="noticias" class="a-orange">Notícias >></a>
          </li>
          </ul>
+         
+         <?php } ?>
+
          <!-- END SECTION ULTIMAS NOTICIAS -->
          <!-- BEGIN SECTION PUBLICACOES-->
+		  <?php if (in_category('16')) { ?>
+		  <?php }else { ?>
+
          <div class="box-orange-sidebar hidden-xs hidden-sm hidden-md">
             <h3>Publicações</h3>
          </div>
@@ -196,9 +205,12 @@ get_header();
               ?>
               <li><a href="<?php echo esc_url( $category_link ); ?>" title="publicacoes" class="a-orange">Publicações >></a></li>
             </ul>
-            <?php dynamic_sidebar( 'banner-lista-categoria-lateral1' ); ?>
-                        <hr> 
-            <?php dynamic_sidebar( 'banner-lista-categoria-lateral2' ); ?> 
+            <?php } ?>
+            
+		<hr /> 
+		<?php dynamic_sidebar( 'banner-single-lateral2' ); ?>   
+		<hr /> 
+		<?php dynamic_sidebar( 'banner-lista-categoria-lateral1' ); ?>
 
         </div>
         </div>

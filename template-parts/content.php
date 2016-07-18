@@ -265,9 +265,14 @@ wp_reset_query();
          </div>
          <!--                    <a href="#"><img src="imagens_posts/banner.png" class="img-responsive"></a>-->
          <div class="hidden-xs hidden-sm hidden-md">
-         	<?php dynamic_sidebar( 'banner-single-lateral1' ); ?>
-            <br>  
-            <?php dynamic_sidebar( 'banner-single-lateral2' ); ?>   
+		<?php dynamic_sidebar( 'banner-single-lateral1' ); ?>
+		<hr /> 
+		<?php dynamic_sidebar( 'banner-single-lateral2' ); ?>   
+		<hr /> 
+		<?php dynamic_sidebar( 'banner-lista-categoria-lateral1' ); ?>
+		<hr /> 
+		<?php dynamic_sidebar( 'banner-lista-categoria-lateral2' ); ?> 
+
          </div>
          <hr>
          <!--<a href="#"><img src="imagens_posts/artigo19-tv_banner.png" class="img-responsive"></a>-->

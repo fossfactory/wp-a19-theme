@@ -182,11 +182,10 @@ get_header();
            <div align="center"><h4><a href="<?php echo esc_url( $category_link ); ?>" title="publicacoes" class="text-orange">Veja mais</a></h4></div>
          </li>
             </ul>
-
-            <?php dynamic_sidebar( 'banner-lista-categoria-lateral1' ); ?>
-                        <hr> 
-            <?php dynamic_sidebar( 'banner-lista-categoria-lateral2' ); ?> 
-
+		<?php dynamic_sidebar( 'banner-single-lateral1' ); ?>
+		<hr /> 
+		<?php dynamic_sidebar( 'banner-single-lateral2' ); ?>   
+		<hr /> 
         </div>
         </div>
       </div>
