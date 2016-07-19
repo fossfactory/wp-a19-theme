@@ -48,10 +48,9 @@ $post_id = get_the_id();
             </hr>
            		
            <div class="materia-conteudo">
-           			<?php the_content(); ?>
-           			
-           			
-           </div>	
+           	<?php the_content(); ?>
+           </div>
+           
             <hr>
             <div style="float:right; margin-top:2px; margin-bottom:1px;">
                <a href="whatsapp://send?text=<?php the_title();?> - <?php echo wp_get_shortlink();?>" data-action="share/whatsapp/share"><i class="fa fa-1x fa-fw fa-lg fa-whatsapp text-danger"></i></a>
@@ -131,7 +130,7 @@ wp_reset_query();
                          $url_thumb = $url_thumb[0];
                        }
 			        ?>
-			     <li>
+			     <li class="mhg">
 	                        <!-- <div class="media-body">-->
 	                        <a href="<?php the_permalink(); ?>"><img class="media_secondary_responsive" src="<?php echo $url_thumb; ?>"></a>
 	                        <a href="<?php the_permalink(); ?>"><span class="media-secondary-heading-h4 text-danger"><?php the_title( ); ?></span></a>

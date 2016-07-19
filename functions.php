@@ -374,4 +374,3 @@ function pagination($pages = '', $range = 4)
          echo "</div>\n";
      }
 }
-
