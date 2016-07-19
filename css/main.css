@@ -1375,6 +1375,13 @@ p {
   height: 100%;*/
 }
 
+.category-artigo19tv video,
+.category-artigo19tv embed,
+.category-artigo19tv iframe,
+.category-artigo19tv object{
+max-width:100%;
+}
+
 .aligncenter {
 	display: block;
 	margin-left: auto;

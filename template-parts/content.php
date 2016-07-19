@@ -49,6 +49,8 @@ $post_id = get_the_id();
            		
            <div class="materia-conteudo">
            			<?php the_content(); ?>
+           			
+           			
            </div>	
             <hr>
             <div style="float:right; margin-top:2px; margin-bottom:1px;">
