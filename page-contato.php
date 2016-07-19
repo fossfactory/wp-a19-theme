@@ -21,7 +21,7 @@ get_header(); ?>
             <div class="section">
               <div class="container">
                 <div class="row">
-                  <div class="col-md-9 text-news">
+                  <div class="col-md-8 text-news">
                     <div class="text">
                       <h1>Fale conosco</h1>
                       <p>Conheça o trabalho da ARTIGO 19, receba nossas informações.</p>

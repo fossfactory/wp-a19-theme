@@ -184,6 +184,7 @@
             <br>  
             <?php dynamic_sidebar( 'banner-single-lateral2' ); ?>   
 
+
          </div>
          <hr>
          <!--<a href="#"><img src="imagens_posts/artigo19-tv_banner.png" class="img-responsive"></a>-->
