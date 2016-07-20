@@ -308,6 +308,9 @@ th {
   .navbar {
     display: none;
   }
+  
+.mc4wp-success {color:#fff}
+
   .btn > .caret,
   .dropup > .btn > .caret {
     border-top-color: #000 !important;
@@ -7491,7 +7494,7 @@ li.dropdown a.dropdown-toggle {
    width: 49%;
    display: inline-block;
 }
-input[type="text"]{
+input[type="text"], input[type="email"]{
   display: inline-block;
   padding: 10px;
   border: 1px solid #d9d9d9;
