@@ -377,8 +377,8 @@ function pagination($pages = '', $range = 4)
 add_filter('wp_npagination','pagination');
 
 // Override img caption shortcode to fix 10px issue.
-add_filter('img_caption_shortcode', 'fix_img_caption_shortcode', 10, 3);
-
+// add_filter('img_caption_shortcode', 'fix_img_caption_shortcode', 10, 3);
+// 
 function fix_img_caption_shortcode($val, $attr, $content = null) {
     extract(shortcode_atts(array(
         'id'    => '',
@@ -389,5 +389,5 @@ function fix_img_caption_shortcode($val, $attr, $content = null) {
 
     if ( 1 > (int) $width || empty($caption) ) return $val;
 
-    return '<div id="' . $id . '" class="wp-caption ' . esc_attr($align) . '" style="max-width: 90%;margin-left:-15px">' . do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
+    return '<div id="' . $id . '" class="wp-caption ' . esc_attr($align) . '" style="margin-left:-15px">' . do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
 }

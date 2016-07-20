@@ -47,10 +47,10 @@ jQuery(document).ready(function ($) {
                <a href="https://twitter.com/home/?status=<?php the_title();?> - <?php echo wp_get_shortlink();?>" title="Tweet!"><i class="fa fa-1x fa-fw fa-lg fa-twitter text-danger"></i></a>
                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo wp_get_shortlink();?>" title="Compartilhe no Facebook!"><i class="fa fa-1x fa-fw fa-lg fa-facebook text-danger"></i></a>
             </div>
-            <br>
-            <hr>
-            </hr>
-           		
+            <br />
+            <hr />
+
+
            <div class="materia-conteudo">
            	<?php the_content(); ?>
            </div>
@@ -141,7 +141,7 @@ wp_reset_query();
 	                        <p class="secondary_hg_responsive_date a-black"><?php the_date(); ?></p>
 	                        <!-- </div>-->
 	                     </li>
-                    	 <hr>
+                    	 <hr />
 			          <?php
 			            endwhile;
 			            wp_reset_query();
@@ -203,7 +203,7 @@ wp_reset_query();
 	                  </h4>
 	               </div>
 	               <br/>
-	               <p class="a-black" style:"align=justify">
+	               <p class="a-black" style="text-align:justify">
 	               
 	               	<?php 
 	               		$resumo = substr( the_excerpt(), 150 );
@@ -266,7 +266,7 @@ wp_reset_query();
           <div align="center"><h4><a href="<?php echo esc_url( $category_link ); ?>" title="publicacoes" class="text-orange"><img src="<?php bloginfo('template_url'); ?>/images/mais.jpg">Veja mais</a></h4></div>
          </li>
             </ul>
-            <hr>
+            <hr />
          </div>
          <!--                    <a href="#"><img src="imagens_posts/banner.png" class="img-responsive"></a>-->
          <div class="hidden-xs hidden-sm hidden-md">
@@ -287,3 +287,4 @@ wp_reset_query();
 </div>
 
 </article><!-- #post-## -->
+ 
