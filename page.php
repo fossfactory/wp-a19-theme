@@ -36,7 +36,13 @@ get_header(); ?>
 
 
 	
-  
+<script type='text/javascript'>
+jQuery(document).ready(function ($) {
+     $("img").removeAttr("height width");
+
+});
+</script>
+
 <?php
 get_sidebar(); 
 get_footer();
