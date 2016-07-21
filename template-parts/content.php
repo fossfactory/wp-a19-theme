@@ -13,13 +13,6 @@ $post_id = get_the_id();
 
 ?>
 
-<script type='text/javascript'>
-jQuery(document).ready(function ($) {
-     $('img').removeAttr('width').removeAttr('height');
-});
-</script>
-
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 <div class="section">

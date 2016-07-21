@@ -192,5 +192,14 @@
 
 <?php wp_footer(); ?>
 
+<script type='text/javascript'>
+jQuery(document).ready(function ($) {
+     $("img").removeAttr("height width");
+
+});
+</script>
+
+
+
 </body>
 </html>
