@@ -15,7 +15,7 @@ $post_id = get_the_id();
 
 <script type='text/javascript'>
 jQuery(document).ready(function ($) {
-    $('img').removeAttr('width').removeAttr('height');
+     $('img').removeAttr('width').removeAttr('height');
 });
 </script>
 
@@ -35,9 +35,6 @@ jQuery(document).ready(function ($) {
 					}
 
 				if ( 'post' === get_post_type() ) : ?>
-				<div style="float:left; margin-right: 10px;" class="text-orange">
-					 <h4 class="text-orange text-danger"><?php the_date(); ?> - <b> <?php echo $categoria; ?></b></h4>
-				</div><!-- .entry-meta -->
 				<?php
 				endif; ?>
 			</header><!-- .entry-header -->
@@ -63,13 +60,39 @@ jQuery(document).ready(function ($) {
          
             </div>
             <div style="float:left; margin-top:9px; margin-bottom:2px;"><b>LINK: </b><?php echo wp_get_shortlink(); ?></div>
+            
+            
          <hr>
          <!-- INICIO Notícias Relacionadas -->
          <!-- <div class="title-box hidden-sm hidden-md">-->
          <div class="row">
-            <div class="col-md-12">
-               <h4 class="hidden-sm hidden-xs hidden-md"><b>Notícias relacionadas</b></h4>
-            </div>
+	      <?php
+	      $tags = wp_get_post_tags($post->ID);
+	      if ($tags) {
+
+	      $first_tag = $tags[0]->term_id;
+	      $args=array(
+	      'tag__in' => array($first_tag),
+	      'post__not_in' => array($post->ID),
+	      'posts_per_page'=>1,
+	      'suppress_filters' => 0,
+	      );
+	      $my_query = new WP_Query($args);
+	      if( $my_query->have_posts() ) {
+	      while ($my_query->have_posts()) : $my_query->the_post(); 
+	      
+	      ?>
+		    <div class="col-md-12">
+		    <h4 class="hidden-sm hidden-xs hidden-md"><b>Notícias relacionadas</b></h4>
+		    </div>
+	      <?php
+	      endwhile;
+	      }
+	      wp_reset_query();
+	      }
+	      ?>
+
+            
 
 	      <?php
 	      $tags = wp_get_post_tags($post->ID);
@@ -81,13 +104,16 @@ jQuery(document).ready(function ($) {
 	      'post__not_in' => array($post->ID),
 	      'posts_per_page'=>4,
 	      'caller_get_posts'=>1,
-	      'orderby'=>'rand'
+	      'orderby'=>'rand',
+	      'suppress_filters' => 0,
 	      );
 	      $my_query = new WP_Query($args);
 	      if( $my_query->have_posts() ) {
 	      while ($my_query->have_posts()) : $my_query->the_post(); 
 	      $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
+	      
 	      ?>
+
 			    <div class="col-md-3 hidden-xs hidden-sm hidden-md">
 		               <a href="<?php the_permalink(); ?>"><img src="<?php echo $url_thumb ?>" class="img-responsive"></a>
 		               <h4 class="a-orange"><a href="<?php the_permalink(); ?>"><?php the_title( ); ?></a></h4>
@@ -119,8 +145,8 @@ wp_reset_query();
 	                      'post_type' => 'post',
 	                      'post__not_in' => array( $post_id ) ,
 	                      'posts_per_page' => 4,
-	                      'category_name' => $categoria_slug,
-	                      
+	                      'category_name' => $categoria_slug
+
 	                    );
 
 	                    $loop_categoria = new WP_Query($args);
@@ -168,121 +194,8 @@ wp_reset_query();
       </div>
       <!-- FIM Notícias Relacionadas -->
 
-      <!-- BEGIN SECTION ULTIMAS NOTICIAS -->
-      <div class="col-md-3 hidden-xs hidden-sm hidden-md">
-         <div class="box-orange-sidebar">
-            <h3>Últimas Notícias</h3>
-         </div>
-         <br>
-         <ul class="media-list">
-         	<?php
-                    $args = array(
-                      'post_type' => 'post',
-                      'post__not_in' => array( $post_id ) ,
-                      'posts_per_page' => 4,
-                      'category_name' => $categoria_slug,
-                      
-                    );
-
-                    $loop_categoria = new WP_Query($args);
-
-                    while ($loop_categoria->have_posts()) :$loop_categoria->the_post();
-
-                     $url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' );
-                     if( empty( $url_thumb ) ){
-                        $url_thumb = get_template_directory_uri() . "/cat-img/thumbnaillogo.png";
-                     }else{
-                       $url_thumb = $url_thumb[0];
-                     }
-            ?>
-                <li class="media">
-	               <a class="pull-left" href="<?php the_permalink(); ?>"><img class="media-object" src="<?php echo $url_thumb; ?>" height="64" width="64"></a>
-	               <div class="media-body">
-	                  <h4 class="media-heading a-orange">
-	                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-	                  </h4>
-	               </div>
-	               <br/>
-	               <p class="a-black" style="text-align:justify">
-	               
-	               	<?php 
-	               		$resumo = substr( the_excerpt(), 150 );
-	               		echo $resumo;
-	               	?>
-	              
-	               </p>
-	            </li>
-          <?php
-            endwhile;
-            wp_reset_query();
-          ?>
-           <?php
-              $category_id = get_cat_ID( 'noticias' );
-              $category_link = get_category_link( $category_id );
-          ?>
-         <li class="media a-orange">
-          <div align="center"><h4><a href="<?php echo esc_url( $category_link ); ?>" title="noticias" class="text-orange"><img src="<?php bloginfo('template_url'); ?>/images/mais.jpg">Veja mais</a></h4></div>
-         </li>
-
-         </ul>
-         <!-- END SECTION ULTIMAS NOTICIAS -->
-         <!-- BEGIN SECTION PUBLICACOES-->
-         <div class="box-orange-sidebar hidden-xs hidden-sm hidden-md">
-            <h3>Publicações</h3>
-         </div>
-         <br>
-         <div class="box-sidebar-publicacoes hidden-xs hidden-sm hidden-md">
-            <ul class="media-list">
-            	<?php
-	                    $args = array(
-	                      'post_type' => 'post',
-	                      'posts_per_page' => 5,
-	                      'category_name' => 'publicacoes',
-	                    );
-
-	                    $loop_categoria = new WP_Query($args);
-
-	                    while ($loop_categoria->have_posts()) :$loop_categoria->the_post();
-
-	                    $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
-			        ?>
-		            <li class="media">
-	                  <a><i class="fa fa-2x fa-fw text-muted fa-file-text pull-left"></i></a>
-	                  <div class="media-body">
-	                     <h4 class="media-heading text-danger">
-	                        <a href="<?php the_permalink(); ?>"><?php the_title();?></a>
-	                     </h4>
-	                  </div>
-	               </li>
-		          <?php
-		            endwhile;
-		            wp_reset_query();
-		          ?>
-               <?php
-              $category_id = get_cat_ID( 'publicacoes' );
-              $category_link = get_category_link( $category_id );
-          ?>
-          <li class="media a-orange">
-          <div align="center"><h4><a href="<?php echo esc_url( $category_link ); ?>" title="publicacoes" class="text-orange"><img src="<?php bloginfo('template_url'); ?>/images/mais.jpg">Veja mais</a></h4></div>
-         </li>
-            </ul>
-            <hr />
-         </div>
-         <!--                    <a href="#"><img src="imagens_posts/banner.png" class="img-responsive"></a>-->
-         <div class="hidden-xs hidden-sm hidden-md">
-		<?php dynamic_sidebar( 'banner-single-lateral1' ); ?>
-		<hr /> 
-		<?php dynamic_sidebar( 'banner-single-lateral2' ); ?>   
-		<hr /> 
-		<?php dynamic_sidebar( 'banner-lista-categoria-lateral1' ); ?>
-		<hr /> 
-		<?php dynamic_sidebar( 'banner-lista-categoria-lateral2' ); ?> 
-
-         </div>
-         <hr>
-         <!--<a href="#"><img src="imagens_posts/artigo19-tv_banner.png" class="img-responsive"></a>-->
-      </div>
-   </div>
+	  <?php get_sidebar(); ?>
+	  
 </div>
 </div>
 
