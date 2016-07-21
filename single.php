@@ -9,15 +9,18 @@
 
 get_header(); ?>
 
-
-		<?php
-		while ( have_posts() ) : the_post();
-
-			get_template_part( 'template-parts/content', get_post_format() );
-
-		endwhile; // End of the loop.
-		?>
+	<div class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9 text-news">
+					<?php
+					while ( have_posts() ) : the_post();
+						get_template_part( 'template-parts/content', get_post_format() );
+					endwhile; // End of the loop.
+					?>
+				</div>
 
 
 <?php
+get_sidebar(); 
 get_footer();

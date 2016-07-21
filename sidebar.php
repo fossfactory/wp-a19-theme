@@ -12,7 +12,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-
 	<div class="col-md-3 hidden-xs hidden-sm hidden-md">
 	    <?php if (in_category('11')) { ?>
 	    <?php }else { ?>
@@ -122,13 +121,12 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			  <hr /> 
 		      
 		      <?php if (in_category('6')) { ?>
+
 		      <?php }else { ?>
 			    <?php dynamic_sidebar( 'banner-lista-categoria-lateral1' ); ?>
 		      <?php } ?>
-			  <?php //dynamic_sidebar( 'banner-single-lateral1' ); ?>
-			  <?php //dynamic_sidebar( 'banner-lista-categoria-lateral2' ); ?>
+		      
 		</div>
 	</div>
 
-
-
+</div></div>

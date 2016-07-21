@@ -32,12 +32,11 @@ get_header(); ?>
 					endwhile; // End of the loop.
 					?>
 				</div>
-				
-				<?php get_sidebar(); ?>
-			</div>
-		</div>
-	</div>
+
+
+
 	
-	  
+  
 <?php
+get_sidebar(); 
 get_footer();

@@ -10,22 +10,6 @@
  */
 
 ?>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-11585273-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-<script>
-    smoothScroll.init();
-</script>
-
-
 
 <!-- BEGIN NEWSLETTER RESPONSIVE SECTION -->
     <div class="hidden-lg hidden-md hidden-sm section news-letter-desktop-box">
@@ -170,19 +154,9 @@
         <div class="row">
 
           <div class="col-md-12 text-center">
-    <p class="newsletter-custom-element newsletter-text text-center">Receba nosso boletim!</p>
-
-<?php echo do_shortcode('[mc4wp_form id="8677"]'); ?>
-
-<!--<form action="https://docs.google.com/forms/d/1MezS9Q4CN_PJKVXHO5RvAoWAOtJGdqch1mlgDxHzVHo/formResponse" method="POST" id="ss-form" target="iframe_news" onsubmit="">
-      <input type="text" name="entry.1248542274" value="" class="ss-q-short newsletter-custom-element text-center" id="entry_1248542274" dir="auto" aria-label="Nome  "   placeholder="NOME"title="">
-      <input type="text" name="entry.631883918" value="" class="ss-q-short newsletter-custom-element text-center" id="entry_631883918" dir="auto" aria-label="Email  " title=""  placeholder="E-MAIL">
-      <input type="submit" class="btn-news" value="Assinar!">
-</form>-->
-
-<iframe name="iframe_news" id="iframe_news"></iframe>
-
-
+		<p class="newsletter-custom-element newsletter-text text-center">Receba nosso boletim!</p>
+		<?php echo do_shortcode('[mc4wp_form id="8677"]'); ?>
+		<iframe name="iframe_news" id="iframe_news"></iframe>
          </div>
        </div>
 </div>
@@ -197,6 +171,20 @@ jQuery(document).ready(function ($) {
      $("img").removeAttr("height width");
 
 });
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-11585273-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+    smoothScroll.init();
 </script>
 
 
