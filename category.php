@@ -29,9 +29,6 @@ get_header();
             'posts_per_page' => 10,
         )
     );
-
-
-
  ?>
 <div class="section">
       <div class="container">
@@ -64,25 +61,21 @@ get_header();
                   <span align="justify"><?php echo the_excerpt('',FALSE,''); ?></span>
                   <p><a href="<?php the_permalink(); ?>">Leia mais</a></p>
                 </div>
-              </li><hr>
+              </li>
+              <hr />
 
-        <?php
-            endwhile;
-         }
-        ?>
-              
-              
+		<?php
+		    endwhile;
+		}
+		?>
             </ul>
-            <div >
             <ul class="pagination" style="text-align:center;width:100%">
 		<?php if (function_exists("pagination")) {
 			 pagination($additional_loop->max_num_pages);
 		} ?>
-
             </ul>
-            </div>
           </div>
-          </div>
+          
 <?php
 get_sidebar();
 get_footer();

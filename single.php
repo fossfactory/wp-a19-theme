@@ -15,11 +15,10 @@ get_header(); ?>
 				<div class="col-md-9 text-news">
 					<?php
 					while ( have_posts() ) : the_post();
-						get_template_part( 'template-parts/content', get_post_format() );
+						get_template_part( 'template-parts/content', '' );
 					endwhile; // End of the loop.
 					?>
 				</div>
-
 
 <?php
 get_sidebar(); 

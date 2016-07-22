@@ -10,7 +10,6 @@ $categories = get_the_category();
 $categoria =  $categories[0]->name;
 $categoria_slug = $categories[0]->slug;
 $post_id = get_the_id();
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

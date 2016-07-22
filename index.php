@@ -36,15 +36,16 @@ get_header(); ?>
                         while ($loop_carrousel->have_posts()) :$loop_carrousel->the_post();
                         $count_banner++;
 
-                        $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
                         if( $count_banner == 1){
                             $active = "active";
                         }else{
                             $active = " ";
                         }
+                        
+                        $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'slider1');
                         ?>
                         <div class="item <?php echo $active ?>">
-                           <a href="<?php the_permalink() ?>"><img src="<?php echo $url_thumb ?>"></a>
+                           <a href="<?php the_permalink() ?>"><img src="<?php echo $thumb[0] ?>"></a>
 
                             <div class="carousel-text-banner hidden-sm hidden-xs">
                                 <div class="carousel-caption">
@@ -102,10 +103,12 @@ get_header(); ?>
             while ($loop_carrousel->have_posts()) :$loop_carrousel->the_post();
             $count_banner++;
 
-            $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
+
+            
+            $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium');
             ?>
             <div class="col-md-4">
-                <a href="<?php the_permalink(); ?>"><img src="<?php echo $url_thumb ?>" class="img-responsive"></a>
+                <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0] ?>" class="img-responsive"></a>
                 <h3>
                     <a href="<?php the_permalink(); ?>"><?php the_title() ?></a>
                 </h3>
@@ -214,7 +217,7 @@ get_header(); ?>
 
               while ($loop_tv->have_posts()) :$loop_tv->the_post();
 
-              $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
+              $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID));
               ?>
               <?php
 
@@ -313,6 +316,7 @@ get_header(); ?>
                   <li class="media">
                         <a class="pull-left" href="<?php the_permalink(); ?>">
                           <img class="media-object" src="<?php echo $url_thumb; ?>" height="64" width="64"></a>
+                          
                         <div class="media-body">
                             <a href="<?php the_permalink(); ?>"><h4 class="media-heading text-danger">
                                <?php the_title(); ?>
@@ -365,6 +369,7 @@ get_header(); ?>
                             $link = get_post_meta($post->ID, 'link', true);
                         ?>
                         <a href="<?php  echo $link  ?>" target="_blank" >
+
                            <img src="<?php echo $url_thumb ?>" class="img-responsive">
                               <p class="title areas"><b><?php the_title(); ?></b></p>
                               <BR>
