@@ -105,7 +105,7 @@ get_header(); ?>
 
 
             
-            $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium');
+            $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'media');
             ?>
             <div class="col-md-4">
                 <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb[0] ?>" class="img-responsive"></a>

@@ -140,6 +140,7 @@ function article_19_widgets_home() {
 add_action( 'widgets_init', 'article_19_widgets_home' );
 
 add_image_size( 'slider1', 1400, 0, true );
+add_image_size( 'media', 400, 0, true );
 
 
 /**
