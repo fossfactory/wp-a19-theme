@@ -128,13 +128,18 @@ $post_id = get_the_id();
 						    <h3><b>Notícias relacionadas</b></h3>
 						    <ul class="media-list">
 							  <?php
-							      $args = array(
-								'post_type' => 'post',
-								'post__not_in' => array( $post_id ) ,
-								'posts_per_page' => 4,
-								'category_name' => $categoria_slug
+					      $tags = wp_get_post_tags($post->ID);
+					      if ($tags) {
 
-							      );
+					      $first_tag = $tags[0]->term_id;
+					      $args=array(
+					      'tag__in' => array($first_tag),
+					      'post__not_in' => array($post->ID),
+					      'posts_per_page'=>4,
+					      'caller_get_posts'=>1,
+					      'orderby'=>'rand',
+					      'suppress_filters' => 0,
+					      );
 
 							      $loop_categoria = new WP_Query($args);
 

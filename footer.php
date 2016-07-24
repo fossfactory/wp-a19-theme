@@ -19,7 +19,9 @@
           </div>
         <div class="row">
           <div class="col-md-12">
-            <form role="form" class="">
+	    <?php echo do_shortcode('[mc4wp_form id="8677"]'); ?>
+
+<!--            <form role="form" class="">
               <div class="form-group newsletter-text">
                 <label class="control-label" for="exampleInputEmail1">Nome</label>
                 <input class="form-control" id="exampleInputEmail1" placeholder="NOME"
@@ -31,7 +33,7 @@
                 type="password">
               </div>
               <button type="submit" class="btn btn-default">Assinar!</button>
-            </form>
+            </form>-->
           </div>
         </div>
       </div>
