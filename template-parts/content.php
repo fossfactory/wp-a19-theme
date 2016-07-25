@@ -36,6 +36,10 @@ jQuery(document).ready(function ($) {
 							}
 
 						if ( 'post' === get_post_type() ) : ?>
+						<div style="float:left; margin-right: 10px;" class="text-orange">
+                                         <h4 class="text-orange text-danger"><?php the_date(); ?> - <b> <?php echo $categoria; ?></b></h4>
+                                </div>
+
 						<?php
 						endif; ?>
 					</header><!-- .entry-header -->
@@ -45,7 +49,9 @@ jQuery(document).ready(function ($) {
 					  <a href="https://twitter.com/home/?status=<?php the_title();?> - <?php echo wp_get_shortlink();?>" title="Tweet!"><i class="fa fa-1x fa-fw fa-lg fa-twitter text-danger"></i></a>
 					  <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo wp_get_shortlink();?>" title="Compartilhe no Facebook!"><i class="fa fa-1x fa-fw fa-lg fa-facebook text-danger"></i></a>
 					</div>
-
+					
+				<br />
+                                <hr />
 
 					<div class="materia-conteudo">
 						  <?php the_content(); ?>
