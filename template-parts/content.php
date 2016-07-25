@@ -12,6 +12,16 @@ $categoria_slug = $categories[0]->slug;
 $post_id = get_the_id();
 ?>
 
+<script type='text/javascript' src='https://code.jquery.com/jquery-git.min.js'></script>
+<script type='text/javascript'>
+jQuery(document).ready(function ($) {
+     $("img").removeAttr("height width");
+
+});
+</script>
+
+
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="section">
 		<div class="container">
@@ -30,32 +40,31 @@ $post_id = get_the_id();
 						endif; ?>
 					</header><!-- .entry-header -->
 
-					<div style="float: right; margin-top:7px;">
+					<div style="float: right; margin-top:7px">
 					  <a href="whatsapp://send?text=<?php the_title();?> - <?php echo wp_get_shortlink();?>" data-action="share/whatsapp/share"><i class="fa fa-1x fa-fw fa-lg fa-whatsapp text-danger"></i></a>
 					  <a href="https://twitter.com/home/?status=<?php the_title();?> - <?php echo wp_get_shortlink();?>" title="Tweet!"><i class="fa fa-1x fa-fw fa-lg fa-twitter text-danger"></i></a>
 					  <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo wp_get_shortlink();?>" title="Compartilhe no Facebook!"><i class="fa fa-1x fa-fw fa-lg fa-facebook text-danger"></i></a>
 					</div>
 
-					<br />
-					<hr />
 
 					<div class="materia-conteudo">
 						  <?php the_content(); ?>
 					</div>
-           
-					<hr />
-					<div style="float:right; margin-top:2px; margin-bottom:1px;">
+					<hr />           
+					<div style="float:right; margin-top:2px; margin-bottom:1px">
 						<a href="whatsapp://send?text=<?php the_title();?> - <?php echo wp_get_shortlink();?>" data-action="share/whatsapp/share"><i class="fa fa-1x fa-fw fa-lg fa-whatsapp text-danger"></i></a>
 						<a href="https://twitter.com/home/?status=<?php the_title();?> - <?php echo wp_get_shortlink();?>" title="Twitter!"><i class="fa fa-1x fa-fw fa-lg fa-twitter text-danger"></i></a>
 						<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo wp_get_shortlink();?>" title="Compartilhe no Facebook!"><i class="fa fa-1x fa-fw fa-lg fa-facebook text-danger"></i></a>
 					</div>
+
+
 					
 					<div style="float:left; margin-top:9px; margin-bottom:2px;">
 						<b>LINK: </b><?php echo wp_get_shortlink(); ?>
 					</div>
             
             
-					<hr />
+
 					<!-- INICIO Notícias Relacionadas -->
 					<!-- <div class="title-box hidden-sm hidden-md">-->
 					<div class="row">
@@ -128,18 +137,13 @@ $post_id = get_the_id();
 						    <h3><b>Notícias relacionadas</b></h3>
 						    <ul class="media-list">
 							  <?php
-					      $tags = wp_get_post_tags($post->ID);
-					      if ($tags) {
+							      $args = array(
+								'post_type' => 'post',
+								'post__not_in' => array( $post_id ) ,
+								'posts_per_page' => 4,
+								'category_name' => $categoria_slug
 
-					      $first_tag = $tags[0]->term_id;
-					      $args=array(
-					      'tag__in' => array($first_tag),
-					      'post__not_in' => array($post->ID),
-					      'posts_per_page'=>4,
-					      'caller_get_posts'=>1,
-					      'orderby'=>'rand',
-					      'suppress_filters' => 0,
-					      );
+							      );
 
 							      $loop_categoria = new WP_Query($args);
 

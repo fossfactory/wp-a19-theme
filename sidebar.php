@@ -7,9 +7,6 @@
  * @package Article_19
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
 ?>
 
 	<div class="col-md-3 hidden-xs hidden-sm hidden-md">
