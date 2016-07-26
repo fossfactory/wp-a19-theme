@@ -140,27 +140,52 @@ jQuery(document).ready(function ($) {
 					  <div class="container">
 					      <div class="row">
 						<div class="col-md-3 title-box hidden-lg hidden-md">
-						    <h3><b>Notícias relacionadas</b></h3>
+						    <?php
+					      $tags = wp_get_post_tags($post->ID);
+					      if ($tags) {
+
+					      $first_tag = $tags[0]->term_id;
+					      $args=array(
+					      'tag__in' => array($first_tag),
+					      'post__not_in' => array($post->ID),
+					      'posts_per_page'=>1,
+					      'suppress_filters' => 0,
+					      );
+					      $my_query = new WP_Query($args);
+					      if( $my_query->have_posts() ) {
+					      while ($my_query->have_posts()) : $my_query->the_post(); 
+					      
+					      ?>
+						    <div class="col-md-12">
+						    <h4 class="hidden-sm hidden-xs hidden-md"><b>Notícias relacionadas</b></h4>
+						    </div>
+					      <?php
+					      endwhile;
+					      }
+					      wp_reset_query();
+					      }
+					      ?>
+					      
 						    <ul class="media-list">
 							  <?php
-							      $args = array(
-								'post_type' => 'post',
-								'post__not_in' => array( $post_id ) ,
-								'posts_per_page' => 4,
-								'category_name' => $categoria_slug
+					      $tags = wp_get_post_tags($post->ID);
+					      if ($tags) {
 
-							      );
+					      $first_tag = $tags[0]->term_id;
+					      $args=array(
+					      'tag__in' => array($first_tag),
+					      'post__not_in' => array($post->ID),
+					      'posts_per_page'=>4,
+					      'caller_get_posts'=>1,
+					      'orderby'=>'rand',
+					      'suppress_filters' => 0,
+					      );
+					      $my_query = new WP_Query($args);
+					      if( $my_query->have_posts() ) {
+					      while ($my_query->have_posts()) : $my_query->the_post(); 
+					      $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
 
-							      $loop_categoria = new WP_Query($args);
-
-							      while ($loop_categoria->have_posts()) :$loop_categoria->the_post();
-
-							      $url_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' );
-							if( empty( $url_thumb ) ){
-							    $url_thumb = get_template_directory_uri() . "/cat-img/thumbnaillogo.png";
-							}else{
-							  $url_thumb = $url_thumb[0];
-							}
+					      
 								  ?>
 							      <li class="mhg">
 								  <!-- <div class="media-body">-->
@@ -171,9 +196,11 @@ jQuery(document).ready(function ($) {
 							      </li>
 							  <hr />
 								    <?php
-								      endwhile;
-								      wp_reset_query();
-								    ?>
+					      endwhile;
+					      }
+					      wp_reset_query();
+					      }
+					      ?>
 						    </ul>
 						</div>
 					      </div>

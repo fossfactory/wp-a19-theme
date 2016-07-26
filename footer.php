@@ -112,7 +112,13 @@
                                 <span class="footer-highlight">ARTIGO19 Brasil</span><br><br>
                                 <span class="footer-text"><i class="fa fa-1x fa-fw fa-map-marker text-inverse"></i>Edifício das Bandeiras Rua João Adolfo, 118 - conjunto 802 - São Paulo/SP</span><br>
                                 <span class="footer-text"><i class="fa fa-1x fa-fw fa-phone text-inverse"></i>+55 (11) 3057 0042</span><br>
-                                <span class="footer-text"><i class="fa fa-1x fa-fw fa-envelope text-inverse"></i> comunicacao (arroba) artigo19.org</span><br>
+                                <span class="footer-text"><i class="fa fa-1x fa-fw fa-envelope text-inverse"></i> 
+                                <script type="text/javascript">
+				  //<![CDATA[
+				    var folhas = "comunicacao" + "@"
+				    folhas += "artigo19.org";
+				  document.write( '<a style="color:#fff" href="mailto:'+folhas+'">'+folhas+'<\/a>' );
+				  //]]></script></li></span><br />
                                 <br><br>
                             </div>
                         </div>
