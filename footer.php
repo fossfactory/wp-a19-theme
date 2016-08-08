@@ -20,7 +20,6 @@
         <div class="row">
           <div class="col-md-12">
 	    <?php echo do_shortcode('[mc4wp_form id="8677"]'); ?>
-
 <!--            <form role="form" class="">
               <div class="form-group newsletter-text">
                 <label class="control-label" for="exampleInputEmail1">Nome</label>
@@ -129,7 +128,10 @@
                                     <a target="_blank" href="http://twitter.com/artigo19"><i class="fa fa-2x fa-fw fa-twitter text-inverse"></i></a>
                                     <a target="_blank" href="https://www.facebook.com/artigo19brasil"><i class="fa fa-2x fa-facebook fa-fw text-inverse"></i></a>
                                     <a href="#"><i class="fa fa-2x fa-fw fa-rss-square text-inverse"></i></a>
- 
+
+                                    
+                                    
+
                                   <br><br>
                                    </div> 
                                 </div>

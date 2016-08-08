@@ -52,7 +52,7 @@
     </div>
 </div>
 <div  class="navbar navbar-default navbar-static-top">
-    <div class="container correction-nav">
+    <div class="container correction-nav">    
         <div class="navbar-header">
                 <a href="/">
                   <span class="hidden-xs hidden-sm navbar-logo-desktop"></span>
@@ -64,7 +64,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+                
             </button>
+            
+            
         </div>
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
 
@@ -93,8 +96,21 @@
 
         ?>
 		
-	
+	<div class="hidden-lg hidden-md" style="width:250px">
+             <form method="get" id="searchform" action="<?php echo home_url( '/' ); ?>" role="search" >
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-btn">
 
+                                <label for="s" class="assistive-text"></label>
+                                <input type="text" class="field form-control" name="s" placeholder="Digite um termo de busca" value="" id="s" style="float:initial;margin-right:10px" />
+                                <input type="submit" class="submit btn btn-warning" name="submit" id="searchsubmit" value="buscar" />
+                             
+                            </span>
+                        </div>
+                    </div>
+                </form>
+</div>
             
         </div>
     </div>
