@@ -74,32 +74,7 @@ jQuery(document).ready(function ($) {
 					<!-- INICIO Notícias Relacionadas -->
 					<!-- <div class="title-box hidden-sm hidden-md">-->
 					<div class="row">
-					      <?php
-					      $tags = wp_get_post_tags($post->ID);
-					      if ($tags) {
 
-					      $first_tag = $tags[0]->term_id;
-					      $args=array(
-					      'tag__in' => array($first_tag),
-					      'post__not_in' => array($post->ID),
-					      'posts_per_page'=>1,
-					      'suppress_filters' => 0,
-					      );
-					      $my_query = new WP_Query($args);
-					      if( $my_query->have_posts() ) {
-					      while ($my_query->have_posts()) : $my_query->the_post(); 
-					      
-					      ?>
-						    <div class="col-md-12">
-						    <h4 class="hidden-sm hidden-xs hidden-md"><b>Notícias relacionadas</b></h4>
-						    </div>
-
-					      <?php
-					      endwhile;
-					      }
-					      wp_reset_query();
-					      }
-					      ?>
 
 					      <?php
 					      $tags = wp_get_post_tags($post->ID);
@@ -116,23 +91,26 @@ jQuery(document).ready(function ($) {
 					      );
 					      $my_query = new WP_Query($args);
 					      if( $my_query->have_posts() ) {
+					      ?>
+						    <div class="col-md-12">
+						    <h4 class="hidden-sm hidden-xs hidden-md"><b>Notícias relacionadas</b></h4>
+						    </div>
+
+					      <?php
 					      while ($my_query->have_posts()) : $my_query->the_post(); 
 					      $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
 					      ?>
 		         
-			    <div class="col-md-3 hidden-xs hidden-sm hidden-md">
-		               <a href="<?php the_permalink(); ?>"><img src="<?php echo $url_thumb ?>" class="img-responsive"></a>
-		               <h4 class="a-orange"><a href="<?php the_permalink(); ?>"><?php the_title( ); ?></a></h4>
-		            </div>
+					      <div class="col-md-3 hidden-xs hidden-sm hidden-md">
+							<a href="<?php the_permalink(); ?>"><img src="<?php echo $url_thumb ?>" class="img-responsive"></a>
+							<h4 class="a-orange"><a href="<?php the_permalink(); ?>"><?php the_title( ); ?></a></h4>
+					      </div>
 					      <?php
 					      endwhile;
 					      }
 					      wp_reset_query();
 					      }
-					      ?>
-
-    
- 
+					      ?> 
 					</div>
 					
 					<hr /> 
@@ -142,34 +120,8 @@ jQuery(document).ready(function ($) {
 					  <div class="container">
 					      <div class="row">
 						<div class="col-md-3 title-box hidden-lg hidden-md">
-						    <?php
-					      $tags = wp_get_post_tags($post->ID);
-					      if ($tags) {
-
-					      $first_tag = $tags[0]->term_id;
-					      $args=array(
-					      'tag__in' => array($first_tag),
-					      'post__not_in' => array($post->ID),
-					      'posts_per_page'=>1,
-					      'suppress_filters' => 0,
-					      );
-					      $my_query = new WP_Query($args);
-					      if( $my_query->have_posts() ) {
-					      while ($my_query->have_posts()) : $my_query->the_post(); 
-					      
-					      ?>
-						    <div class="col-md-12">
-						    <h4 class="hidden-sm hidden-xs hidden-md"><b>Notícias relacionadas</b></h4>
-						    </div>
-					      <?php
-					      endwhile;
-					      }
-					      wp_reset_query();
-					      }
-					      ?>
-					      
 						    <ul class="media-list">
-							  <?php
+					      <?php
 					      $tags = wp_get_post_tags($post->ID);
 					      if ($tags) {
 
@@ -184,11 +136,14 @@ jQuery(document).ready(function ($) {
 					      );
 					      $my_query = new WP_Query($args);
 					      if( $my_query->have_posts() ) {
+					      ?>
+						    <div class="col-md-12">
+						    <h4 class="hidden-sm hidden-xs hidden-md"><b>Notícias relacionadas</b></h4>
+						    </div>
+					      <?php
 					      while ($my_query->have_posts()) : $my_query->the_post(); 
 					      $url_thumb = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
-
-					      
-								  ?>
+   					      ?>
 							      <li class="mhg">
 								  <!-- <div class="media-body">-->
 								  <a href="<?php the_permalink(); ?>"><img class="media_secondary_responsive" src="<?php echo $url_thumb; ?>"></a>
